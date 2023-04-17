@@ -10,7 +10,7 @@ namespace EstherMod.Common
 {
     public class EstherMenu : ModMenu
 	{
-		private const string menuAssetPath = "EstherMod/Assets/Textures/Menu"; // Creates a constant variable representing the texture path, so we don't have to write it out multiple times
+		private const string menuAssetPath = "EstherMod/Assets/Textures/Menu";
 
 		public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("EstherMod/Assets/Textures/Logo");
 
@@ -33,7 +33,6 @@ namespace EstherMod.Common
 		{
 			logoDrawCenter += new Vector2(0, 14);
 			logoScale *= 1.45f;
-			//drawColor = Main.DiscoColor; // Changes the draw color of the logo
 			return true;
 		}
 	}
