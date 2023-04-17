@@ -15,8 +15,8 @@ namespace EstherMod.Content.Items.Weapons
 
             Item.damage = 10;
             Item.DamageType = DamageClass.Ranged;
-            Item.width = 64;
-            Item.height = 20;
+            Item.width = 54;
+            Item.height = 28;
             Item.useTime = 4;
             Item.useAnimation = 12;
             Item.useStyle = 5;
