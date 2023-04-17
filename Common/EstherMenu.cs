@@ -26,7 +26,7 @@ namespace EstherMod.Common
 
 		public override void OnSelected()
 		{
-			SoundEngine.PlaySound(SoundID.Thunder); // Plays a thunder sound when this ModMenu is selected
+			SoundEngine.PlaySound(SoundID.Thunder);
 		}
 
 		public override bool PreDrawLogo(SpriteBatch spriteBatch, ref Vector2 logoDrawCenter, ref float logoRotation, ref float logoScale, ref Color drawColor)
