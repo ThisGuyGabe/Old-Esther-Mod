@@ -1,0 +1,191 @@
+
+Mods: {
+	EstherMod: {
+		Items: {
+			HauntedCandle: {
+				DisplayName: Haunted Candle
+				Tooltip:
+					'''
+					increases magic damage by 5%. 
+					Increases critical strike chance for mage weapons by 6.
+					Maximum mana increases by 20 and the lower your health is the more damage you do works with all classes.
+					Also wearing this accessory increases spawn rates like a water candle.
+					'''
+			}
+
+			MagneticDynamo: {
+				DisplayName: Magnetic Dynamo
+				Tooltip:
+					'''
+					Makes u attack faster but at the cost of some damage
+					Increases attack speed by 12% and decreases damage by 6%
+					'''
+			}
+
+			ManaNecklace: {
+				DisplayName: Mana Necklace
+				Tooltip: Effects of the Mana Regeneration Band and Mana Flower
+			}
+
+			TestAccessory: {
+				DisplayName: READ THE DESCRIPTION OF THIS ITEM
+				Tooltip: This is a test item for haunted candle it stops life regen so u can see if haunted candle is balanced or not
+			}
+
+			ArcaneLens.DisplayName: Arcane Lens
+			ChargedCap.DisplayName: Charged Cap
+
+			ChargedPlating: {
+				DisplayName: Charged Plating
+				Tooltip: Increases crit by 5%
+			}
+
+			ChargedTracers: {
+				DisplayName: Charged Tracers
+				Tooltip:
+					'''
+					Charged to perfection.
+					10% increased movement speed and double jump
+					'''
+			}
+
+			GalvanicBar.DisplayName: Galvanic Bar
+			ImpHorn.DisplayName: Imp Horn
+			GalvanicOre.DisplayName: Galvanic Ore
+			PixilWood.DisplayName: Pixil Wood
+			PixilWoodWall.DisplayName: Pixil Wood Wall
+			RetroWood.DisplayName: Retro Wood
+			RetroWoodWall.DisplayName: Retro Wood Wall
+			SoulPearl.DisplayName: Soul Pearl
+			SoulPebble.DisplayName: Soul Pebble
+			Ameliorate.DisplayName: Ameliorate
+
+			BeamBow: {
+				DisplayName: Beam Bow
+				Tooltip: Converts ALL arrows to lazers, and it seems its bugged.
+			}
+
+			BloomingBane: {
+				DisplayName: Blooming Bane
+				Tooltip:
+					'''
+					Wielded by the purest of warriors 
+					Has a chance to inflict poison for a short duration when hitting an enemy
+					'''
+			}
+
+			Bonestromstaff: {
+				DisplayName: Bonestrom Staff
+				Tooltip: Shoots a sigil that summons necromantidc shards that home in on your cursor.
+			}
+
+			DragonsKarma.DisplayName: Dragon's Karma
+
+			EmpyrealStaff: {
+				DisplayName: Empyreal Staff
+				Tooltip: Use this during night for a mana discount, faster speed, but less damage.
+			}
+
+			Esther.DisplayName: THIS IS GETTING REWORKED THAT'S WHY NO PROJ
+
+			FireStormSlasher: {
+				DisplayName: Firestorm Slasher
+				Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
+			}
+
+			ForgedFury.DisplayName: Forged Fury
+			GoldenReckage.DisplayName: Golden Wreckage
+			NaturaEvolutionis.DisplayName: Natura Evolutionis
+
+			Needle: {
+				DisplayName: Needle
+				Tooltip:
+					'''
+					Throws out a needle that goes in a line and retreats. 
+					If it's used in the air it lets the player hover.
+					'''
+			}
+
+			PeaShooter: {
+				DisplayName: Peashooter
+				Tooltip: Kill those zombies!
+			}
+
+			PermaFrost: {
+				DisplayName: Perma Frost
+				Tooltip: When you hit an enemy it shoots an icicle that deals damage.
+			}
+
+			Rubyo.DisplayName: Rub-yo
+
+			SantasLittleHelper: {
+				DisplayName: Santa's Little Helper
+				Tooltip:
+					'''
+					Festive! 
+					Shoots three random colored presents that bounce and release coal on death.
+					'''
+			}
+
+			SilverCrippler.DisplayName: Silver Crippler
+
+			SolarRecurve: {
+				DisplayName: Solar Recurve
+				Tooltip: Shoots more arrows every time.
+			}
+
+			SoulSlaughter: {
+				DisplayName: Soul Slaughter
+				Tooltip:
+					'''
+					The souls of the dead hold up your blade.
+					"Is this a JoJo's reference?"
+					'''
+			}
+
+			ThePhoenixFlame.DisplayName: The Phoenix Flame
+			Vulcano.DisplayName: Vulcano
+			Zeus.DisplayName: Zeus
+			SpookStoneRelic.DisplayName: Spookstone Relic
+		}
+
+		Projectiles: {
+			NeedleProj.DisplayName: Needle Proj
+			BloomingBaneProjectile.DisplayName: BloomingBaneProjectile
+			BluePresent.DisplayName: Blue Present
+			BonestromBolt.DisplayName: Bonestrom Bolt
+			BonestromSigil.DisplayName: Bonestrom Sigil
+			Coal.DisplayName: Coal
+			CrimsonRailgun_Pro.DisplayName: Crimson Beam
+			DragonsKarmaProjectile.DisplayName: Dragons Karma Projectile
+			FireStream.DisplayName: Magmatica Dramatica
+			Frostpike.DisplayName: Frostpike
+			GreenPresent.DisplayName: Green Present
+			SpookStoneMinion.DisplayName: Spooky Stone Boi
+			NaturaProjectile.DisplayName: Natura Projectile
+			PartyBombProjectile.DisplayName: Party Bomb Projectile
+			PeaShooterProjectile.DisplayName: Peashooter Projectile
+			Ruby.DisplayName: Ruby
+			RubyoProj.DisplayName: Rubyo Proj
+			SoulSlaughter_Projectile.DisplayName: Soul Slaughter
+			SoulSlaughterHighlight.DisplayName: Soul Slaughter
+			YellowPresent.DisplayName: Yellow Present
+			ZeusArrow.DisplayName: Zeus Arrow
+		}
+
+		NPCs.BloodCultist.DisplayName: Blood Cultist
+
+		Buffs: {
+			SpookstoneMinionBuff: {
+				DisplayName: Spookstone Mininon
+				Description: It's Spooky Time
+			}
+		}
+
+		Tiles: {
+			GalvanicOreTile.MapEntry: Galvanic Ore
+			PixilWoodTile.MapEntry: Pixil Wood
+			RetroWoodTile.MapEntry: Retro Wood
+		}
+	}
+}

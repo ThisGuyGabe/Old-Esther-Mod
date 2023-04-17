@@ -1,0 +1,14 @@
+displayName = The Esther Mod
+author = The Esther Mod Team
+version = 0.2
+
+hideCode = true
+
+includePDB = true
+
+hideResources = false
+
+includeSource = false
+
+homepage = https://discord.gg/j9gbbXaUQ5
+
