@@ -34,11 +34,11 @@ namespace EstherMod.Content.Items.Weapons
 			Item.value = Item.sellPrice(gold: 1, silver: 40);
 
 			Item.DamageType = DamageClass.Ranged;
-			Item.damage = 16;
+			Item.damage = 21;
 			Item.knockBack = 8;
 
 			Item.shoot = 1;
-			Item.shootSpeed = 7.5f;
+			Item.shootSpeed = 8.25f;
 			Item.useAmmo = AmmoID.Bullet;
 		}
 
