@@ -205,12 +205,17 @@ Mods: {
 				DisplayName: Spook Stone Relic
 				Tooltip: ""
 			}
+			
+			SurgeCannon: {
+				DisplayName: Surge Cannon
+				Tooltip: "Turns bullets into a surge of water."
+			}
 		}
 
 		Tiles: {
-			GalvanicOreTile.MapEntry: Galvanic Ore Tile
-			PixilWoodTile.MapEntry: Pixil Wood Tile
-			RetroWoodTile.MapEntry: Retro Wood Tile
+			GalvanicOreTile.MapEntry: Galvanic Ore
+			PixilWoodTile.MapEntry: Pixil Wood
+			RetroWoodTile.MapEntry: Retro Wood
 		}
 
 		Buffs: {
