@@ -1,8 +1,6 @@
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.ID;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent.ItemDropRules;
 
 namespace EstherMod
 {
@@ -15,19 +13,22 @@ namespace EstherMod
             {
                 Chest chest = Main.chest[chestIndex];
                 int[] ItemChestLoot = { Mod.Find<ModItem>("Needle").Type };
-                int NeedleNum = Main.rand.Next(1, 1);
+                int NeedleNum = 1;
 
                 // Spider chest btw
                 if (chest != null && Main.tile[chest.x, chest.y].TileType == TileID.Containers && Main.tile[chest.x, chest.y].TileFrameX == 15 * 36)
                 {
-                    for (int inventoryIndex = 0; inventoryIndex < 40; inventoryIndex++)
+                    if (Main.rand.NextBool(2)) // the chance!!!
                     {
-                        if (chest.item[inventoryIndex].type == 0)
+                        for (int inventoryIndex = 0; inventoryIndex < 40; inventoryIndex++)
                         {
-                            chest.item[inventoryIndex].SetDefaults(ItemChestLoot[itemstoPlaceInChestChoice]); // fills slot with item
-                            chest.item[inventoryIndex].stack = NeedleNum;
-                            itemstoPlaceInChestChoice = (itemstoPlaceInChestChoice + 1) % ItemChestLoot.Length;
-                            break;
+                            if (chest.item[inventoryIndex].type == 0)
+                            {
+                                chest.item[inventoryIndex].SetDefaults(ItemChestLoot[itemstoPlaceInChestChoice]); // fills slot with item
+                                chest.item[inventoryIndex].stack = NeedleNum;
+                                itemstoPlaceInChestChoice = (itemstoPlaceInChestChoice + 1) % ItemChestLoot.Length;
+                                break;
+                            }
                         }
                     }
                 }
