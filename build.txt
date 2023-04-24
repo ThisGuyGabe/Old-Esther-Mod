@@ -11,4 +11,4 @@ hideResources = false
 includeSource = false
 
 homepage = https://discord.gg/j9gbbXaUQ5
-
+modReferences = StructureHelper, ParticleLibrary
