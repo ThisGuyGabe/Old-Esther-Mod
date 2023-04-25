@@ -57,7 +57,6 @@ Mods: {
 			RetroWoodWall.DisplayName: Retro Wood Wall
 			SoulPearl.DisplayName: Soul Pearl
 			SoulPebble.DisplayName: Soul Pebble
-			Ameliorate.DisplayName: Ameliorate
 
 			BeamBow: {
 				DisplayName: Beam Bow
@@ -175,9 +174,7 @@ Mods: {
 			BonestromBolt.DisplayName: Bonestrom Bolt
 			BonestromSigil.DisplayName: Bonestrom Sigil
 			Coal.DisplayName: Coal
-			CrimsonRailgun_Pro.DisplayName: Crimson Beam
 			DragonsKarmaProjectile.DisplayName: Dragons Karma Projectile
-			FireStream.DisplayName: Magmatica Dramatica
 			Frostpike.DisplayName: Frostpike
 			GreenPresent.DisplayName: Green Present
 			SpookStoneMinion.DisplayName: Spooky Stone Boi
