@@ -71,12 +71,24 @@ namespace EstherMod.Content.Items.Weapons
 		}
 
 		public override void AddRecipes() {
-			CreateRecipe()
-			.AddIngredient(ItemID.Boomstick, 1)
-            .AddIngredient(ItemID.CopperBar, 30)
-            .AddIngredient(ItemID.IllegalGunParts, 1)
-            .AddTile(TileID.Anvils)
-            .Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ItemID.Boomstick, 1);
+            	recipe.AddIngredient(ItemID.CopperBar, 30);
+		recipe.AddIngredient(ItemID.ShadowScale, 15);
+            	recipe.AddIngredient(ItemID.IllegalGunParts, 1);
+		
+            	recipe.AddTile(TileID.Anvils);
+            	recipe.Register();
+		
+		Recipe recipe = CreateRecipe();
+		recipe1.AddIngredient(ItemID.Boomstick, 1);
+            	recipe.AddIngredient(ItemID.CopperBar, 30);
+		recipe.AddIngredient(1329, 15); // Tissue Sample
+            	recipe.AddIngredient(ItemID.IllegalGunParts, 1);
+		
+            	recipe.AddTile(TileID.Anvils);
+            	recipe.Register();
+		
 		}
 	}
 }
