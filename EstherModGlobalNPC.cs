@@ -13,35 +13,26 @@ namespace EstherMod
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.SoulPebble>(), 2, 1, 2));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.SoulPearl>(), 5, 1, 1));
-                npcLoot.Add(ItemDropRule.Common(ItemID.Present, 13, 1, 1));
-                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 80, 1, 1));
             }
 
             if (npc.type == NPCID.SkeletronHead)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.SoulPearl>(), 1, 3, 3));
-                npcLoot.Add(ItemDropRule.Common(ItemID.Present, 13, 1, 1));
-                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 80, 1, 1));
             }
 
             if (npc.type == NPCID.AngryBones)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.SoulPebble>(), 2, 1, 2));
-                npcLoot.Add(ItemDropRule.Common(ItemID.Present, 13, 1, 1));
             }
 
             if (npc.type == NPCID.DarkCaster)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.SoulPebble>(), 2, 1, 2));
-                npcLoot.Add(ItemDropRule.Common(ItemID.Present, 13, 1, 1));
-                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 80, 1, 1));
             }
 
             if (npc.type == NPCID.DungeonSlime)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.SoulPebble>(), 2, 1, 2));
-                npcLoot.Add(ItemDropRule.Common(ItemID.Present, 13, 1, 1));
-                npcLoot.Add(ItemDropRule.Common(ItemID.GoodieBag, 80, 1, 1));
             }
         }
     }
