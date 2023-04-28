@@ -7,9 +7,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
 using System;
-using CascadeMod.Content.Dusts;
 
-namespace CascadeMod.Content.esther
+namespace EstherMod.Content.Projectiles
 {
     public class GoldenReckageProjectile : ModProjectile
     {
