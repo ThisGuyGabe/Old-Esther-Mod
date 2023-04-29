@@ -57,24 +57,21 @@ namespace EstherMod.Content.Items.Weapons
         public override Vector2? HoldoutOffset() { // So you are holding the gun properly.
             return new Vector2(2f, 0f);
         }
+	
+	public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.TinBar, 40);
+            recipe.AddIngredient(ItemID.ShadowScale, 15);
+            recipe.AddIngredient(ItemID.IllegalGunParts, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
 
-        public override void AddRecipes() {
-	    Recipe recipe = CreateRecipe();
-            	recipe.AddIngredient(ItemID.TinBar, 40);
-		recipe.AddIngredient(ItemID.ShadowScale, 15);
-            	recipe.AddIngredient(ItemID.IllegalGunParts, 2);
-		
-            	recipe.AddTile(TileID.Anvils);
-            	recipe.Register();
-		
-		Recipe recipe = CreateRecipe();
-            	recipe.AddIngredient(ItemID.TinBar, 40);
-		recipe.AddIngredient(1329, 15); // Tissue Sample
-            	recipe.AddIngredient(ItemID.IllegalGunParts, 2);
-		
-            	recipe.AddTile(TileID.Anvils);
-            	recipe.Register();
+            recipe.AddIngredient(ItemID.TinBar, 40);
+            recipe.AddIngredient(ItemID.TissueSample, 15);
+            recipe.AddIngredient(ItemID.IllegalGunParts, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
         }
-
     }
 }
