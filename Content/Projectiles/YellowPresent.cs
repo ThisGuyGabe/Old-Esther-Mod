@@ -29,11 +29,11 @@ namespace EstherMod.Content.Projectiles
 			Projectile.tileCollide = true;
 			Projectile.timeLeft = 800;
 			Projectile.penetrate = 5;
-            AIType = ProjectileID.PewMaticHornShot;
+            		AIType = ProjectileID.CursedFlameFriendly;
         }
 
 		int bounce = 0;
-		int maxBounces = 4;
+		int maxBounces = 2;
 
 		public override void Kill(int timeLeft)
 		{
@@ -54,7 +54,6 @@ namespace EstherMod.Content.Projectiles
 			}
 			if (Projectile.velocity.X != oldVelocity.X) Projectile.velocity.X = -oldVelocity.X;
 			if (Projectile.velocity.Y != oldVelocity.Y) Projectile.velocity.Y = -oldVelocity.Y;
-			Projectile.aiStyle = 2;
 
 			if (bounce >= maxBounces) return true;
 			else return false;
