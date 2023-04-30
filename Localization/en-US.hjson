@@ -26,13 +26,15 @@ Mods: {
 				Tooltip: Effects of the Mana Regeneration Band and Mana Flower
 			}
 
-			TestAccessory: {
-				DisplayName: READ THE DESCRIPTION OF THIS ITEM
-				Tooltip: This is a test item for haunted candle it stops life regen so u can see if haunted candle is balanced or not
+			ArcaneLens: {
+				DisplayName: Arcane Lens
+				Tooltip: Give this to the blood cultist for a reward.
 			}
 
-			ArcaneLens.DisplayName: Arcane Lens
-			ChargedCap.DisplayName: Charged Cap
+			ChargedCap: {
+				DisplayName: Charged Cap
+				Tooltip: ""
+			}
 
 			ChargedPlating: {
 				DisplayName: Charged Plating
@@ -48,15 +50,50 @@ Mods: {
 					'''
 			}
 
-			GalvanicBar.DisplayName: Galvanic Bar
-			ImpHorn.DisplayName: Imp Horn
-			GalvanicOre.DisplayName: Galvanic Ore
-			PixilWood.DisplayName: Pixil Wood
-			PixilWoodWall.DisplayName: Pixil Wood Wall
-			RetroWood.DisplayName: Retro Wood
-			RetroWoodWall.DisplayName: Retro Wood Wall
-			SoulPearl.DisplayName: Soul Pearl
-			SoulPebble.DisplayName: Soul Pebble
+			GalvanicBar: {
+				DisplayName: Galvanic Bar
+				Tooltip: ""
+			}
+
+			ImpHorn: {
+				DisplayName: Imp Horn
+				Tooltip: Give this to the blood cultist for a reward.
+			}
+
+			GalvanicOre: {
+				DisplayName: Galvanic Ore
+				Tooltip: ""
+			}
+
+			PixilWood: {
+				DisplayName: Pixil Wood
+				Tooltip: ""
+			}
+
+			PixilWoodWall: {
+				DisplayName: Pixil Wood Wall
+				Tooltip: ""
+			}
+
+			RetroWood: {
+				DisplayName: Retro Wood
+				Tooltip: ""
+			}
+
+			RetroWoodWall: {
+				DisplayName: Retro Wood Wall
+				Tooltip: ""
+			}
+
+			SoulPearl: {
+				DisplayName: Soul Pearl
+				Tooltip: ""
+			}
+
+			SoulPebble: {
+				DisplayName: Soul Pebble
+				Tooltip: ""
+			}
 
 			BeamBow: {
 				DisplayName: Beam Bow
@@ -77,23 +114,40 @@ Mods: {
 				Tooltip: Shoots a sigil that summons necromantidc shards that home in on your cursor.
 			}
 
-			DragonsKarma.DisplayName: Dragon's Karma
+			DragonsKarma: {
+				DisplayName: Dragon's Karma
+				Tooltip: ""
+			}
 
 			EmpyrealStaff: {
 				DisplayName: Empyreal Staff
 				Tooltip: Use this during night for a mana discount, faster speed, but less damage.
 			}
 
-			Esther.DisplayName: THIS IS GETTING REWORKED THAT'S WHY NO PROJ
+			Esther: {
+				DisplayName: Esther
+				Tooltip: ""
+			}
 
 			FireStormSlasher: {
 				DisplayName: Firestorm Slasher
 				Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
 			}
 
-			ForgedFury.DisplayName: Forged Fury
-			GoldenReckage.DisplayName: Golden Wreckage
-			NaturaEvolutionis.DisplayName: Natura Evolutionis
+			ForgedFury: {
+				DisplayName: Forged Fury
+				Tooltip: ""
+			}
+
+			GoldenReckage: {
+				DisplayName: Golden Wreckage
+				Tooltip: ""
+			}
+
+			NaturaEvolutionis: {
+				DisplayName: Natura Evolutionis
+				Tooltip: ""
+			}
 
 			Needle: {
 				DisplayName: Needle
@@ -114,7 +168,10 @@ Mods: {
 				Tooltip: When you hit an enemy it shoots an icicle that deals damage.
 			}
 
-			Rubyo.DisplayName: Rub-yo
+			Rubyo: {
+				DisplayName: Rub-yo
+				Tooltip: ""
+			}
 
 			SantasLittleHelper: {
 				DisplayName: Santa's Little Helper
@@ -125,7 +182,10 @@ Mods: {
 					'''
 			}
 
-			SilverCrippler.DisplayName: Silver Crippler
+			SilverCrippler: {
+				DisplayName: Silver Crippler
+				Tooltip: ""
+			}
 
 			SolarRecurve: {
 				DisplayName: Solar Recurve
@@ -140,12 +200,12 @@ Mods: {
 					"Is this a JoJo's reference?"
 					'''
 			}
-			
+
 			Tinuzi: {
-				DisplayName: Tinuzi
-				Tooltip: "Shoot out bullets at high speeds!"
+				DisplayName: Tin Uzi
+				Tooltip: Shoots out bullets at high speeds!
 			}
-			
+
 			CopperPopper: {
 				DisplayName: Copper Popper
 				Tooltip: ""
@@ -153,23 +213,63 @@ Mods: {
 
 			SurgeCannon: {
 				DisplayName: Surge Cannon
-				Tooltip: "Turns bullets into a surge of water."
-			}
-			
-			Riptide: {
-				DisplayName: Riptide
-				Tooltip: "Cast a explosing of water at your enemies feet!"
+				Tooltip: Turns bullets into a surge of water.
 			}
 
-			ThePhoenixFlame.DisplayName: The Phoenix Flame
-			Vulcano.DisplayName: Vulcano
-			Zeus.DisplayName: Zeus
-			SpookStoneRelic.DisplayName: Spookstone Relic
+			Riptide: {
+				DisplayName: Riptide
+				Tooltip: Cast a explosing of water at your enemies feet!
+			}
+
+			ThePhoenixFlame: {
+				DisplayName: The Phoenix Flame
+				Tooltip: ""
+			}
+
+			Vulcano: {
+				DisplayName: Vulcano
+				Tooltip: ""
+			}
+
+			Zeus: {
+				DisplayName: Zeus
+				Tooltip: ""
+			}
+
+			SpookStoneRelic: {
+				DisplayName: Spookstone Relic
+				Tooltip: ""
+			}
+
+			AquaticBoots: {
+				DisplayName: Aquatic Boots
+				Tooltip: ""
+			}
+
+			AquaticDiverHelmet: {
+				DisplayName: Aquatic Diver Helmet
+				Tooltip: ""
+			}
+
+			AquaticPlating: {
+				DisplayName: Aquatic Plating
+				Tooltip: ""
+			}
+
+			UmbraStone: {
+				DisplayName: Umbrastone
+				Tooltip: ""
+			}
+
+			BonestromStaff: {
+				DisplayName: Bonestrom Staff
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
 			NeedleProj.DisplayName: Needle Proj
-			BloomingBaneProjectile.DisplayName: BloomingBaneProjectile
+			BloomingBaneProjectile.DisplayName: Blooming Bane Projectile
 			BluePresent.DisplayName: Blue Present
 			BonestromBolt.DisplayName: Bonestrom Bolt
 			BonestromSigil.DisplayName: Bonestrom Sigil
@@ -187,9 +287,15 @@ Mods: {
 			SoulSlaughterHighlight.DisplayName: Soul Slaughter
 			YellowPresent.DisplayName: Yellow Present
 			ZeusArrow.DisplayName: Zeus Arrow
+			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
+			RiptideProjectile.DisplayName: Riptide Projectile
+			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
 		}
 
-		NPCs.BloodCultist.DisplayName: Blood Cultist
+		NPCs: {
+			BloodCultist.DisplayName: Blood Cultist
+			AbyssalAbhorrence.DisplayName: Abyssal Abhorrence
+		}
 
 		Buffs: {
 			SpookstoneMinionBuff: {
@@ -202,6 +308,7 @@ Mods: {
 			GalvanicOreTile.MapEntry: Galvanic Ore
 			PixilWoodTile.MapEntry: Pixil Wood
 			RetroWoodTile.MapEntry: Retro Wood
+			UmbraStoneTile.MapEntry: Umbrastone
 		}
 	}
 }
