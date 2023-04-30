@@ -1,9 +1,12 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
+using Terraria.DataStructures;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 
 namespace EstherMod.Content.Items.Weapons
 {
@@ -56,6 +59,27 @@ namespace EstherMod.Content.Items.Weapons
             .AddIngredient(ItemID.Ruby, 1)
             .AddTile(TileID.Anvils)
             .Register();
+        }
+	
+	public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
+        {
+            Texture2D texture = ModContent.Request<Texture2D>("EstherMod/Content/GlowMasks/BonestromStaff_Glowmask", AssetRequestMode.ImmediateLoad).Value;
+            spriteBatch.Draw
+            (
+                texture,
+                new Vector2
+                (
+                    Item.position.X - Main.screenPosition.X + Item.width * 0.5f,
+                    Item.position.Y - Main.screenPosition.Y + Item.height - texture.Height * 0.5f + 2f
+                ),
+                new Rectangle(0, 0, texture.Width, texture.Height),
+                Color.White,
+                rotation,
+                texture.Size() * 0.5f,
+                scale,
+                SpriteEffects.None,
+                0f
+            );
         }
     }
 } 
