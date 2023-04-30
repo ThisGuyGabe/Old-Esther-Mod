@@ -13,7 +13,7 @@ namespace EstherMod.Content.Items
 
 		public override void SetDefaults() {
 			Item.width = 24;
-			Item.height = 32;
+			Item.height = 30;
 			Item.rare = ItemRarityID.Quest;
 			Item.maxStack = 999;
 		}
