@@ -265,6 +265,11 @@ Mods: {
 				DisplayName: Bonestrom Staff
 				Tooltip: ""
 			}
+			
+			StellarRain: {
+				DisplayName: Stellar Rain
+				Tooltip: "'Raining knives of the heavens!'"
+			}
 		}
 
 		Projectiles: {
@@ -290,6 +295,7 @@ Mods: {
 			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
 			RiptideProjectile.DisplayName: Riptide Projectile
 			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
+			StellarRainProjectile.DisplayName: Stellar Rain Projectile
 		}
 
 		NPCs: {
