@@ -59,7 +59,7 @@ namespace EstherMod.Content.Items.Weapons
         }
 	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            velocity = velocity.RotatedByRandom(MathHelper.ToRadians(8)); // inaccuracy of the gun
+            velocity = velocity.RotatedByRandom(MathHelper.ToRadians(6)); // inaccuracy of the gun
         }
 	
 	public override void AddRecipes()
