@@ -67,6 +67,7 @@ namespace EstherMod.Content.Items.Weapons
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
 
+            recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.TinBar, 40);
             recipe.AddIngredient(ItemID.TissueSample, 15);
             recipe.AddIngredient(ItemID.IllegalGunParts, 2);
