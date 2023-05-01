@@ -82,7 +82,7 @@ namespace EstherMod.Content.Items.Weapons
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Boomstick, 1);
 			recipe.AddIngredient(ItemID.CopperBar, 30);
-			recipe.AddIngredient(1329, 15); // Tissue Sample
+			recipe.AddIngredient(ItemID.TissueSample, 15); // Tissue Sample
 			recipe.AddIngredient(ItemID.IllegalGunParts, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
