@@ -15,23 +15,19 @@ namespace EstherMod.Content.Items.Weapons
 		}
 
 		public override void SetDefaults() {
-			Item.width = 18;
-			Item.height = 18;
-
+			Item.width = 36;
+			Item.height = 36;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useTime = 32;
 			Item.useAnimation = 32;
 			Item.autoReuse = true;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
-
-			Item.DamageType = DamageClass.Ranged;
+			Item.DamageType = DamageClass.Melee;
 			Item.damage = 21;
 			Item.knockBack = 3;
-
-			Item.value = Item.buyPrice(gold: 5);
+			Item.value = Item.sellPrice(gold: 1);
 			Item.rare = ItemRarityID.Green;
-
 			Item.shoot = Mod.Find<ModProjectile>("StellarRainProjectile").Type;
 			Item.shootSpeed = 7.5f; 
 
