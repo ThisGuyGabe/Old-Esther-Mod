@@ -1,8 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
+using Terraria.Audio;
 
 namespace EstherMod.Content.Projectiles
 {
@@ -11,6 +14,8 @@ namespace EstherMod.Content.Projectiles
         public override void SetStaticDefaults()
         {
             //DisplayName.SetDefault("Hypno's Arrow");
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5; // trail length
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 1;
         }
 
         public override void SetDefaults()
@@ -27,6 +32,16 @@ namespace EstherMod.Content.Projectiles
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.extraUpdates = 2;
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            for (var i = 0; i < 4; i++)
+            {
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 24, 0f, 0f, 0, default(Color), 1f);
+                SoundEngine.PlaySound(SoundID.Dig.WithVolumeScale(0.5f).WithPitchOffset(0.8f), Projectile.position);
+            }
+            return true;
         }
 
         public override void AI()
@@ -104,5 +119,18 @@ namespace EstherMod.Content.Projectiles
                 }
             }
         }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
+            for (int k = 0; k < Projectile.oldPos.Length; k++)
+            {
+                Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+                Color color = Projectile.GetAlpha(lightColor) * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+                Main.spriteBatch.Draw(TextureAssets.Projectile[Projectile.type].Value, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0f);
+            }
+            return true;
+        }
     }
 }
+
