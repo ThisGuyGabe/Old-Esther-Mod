@@ -202,11 +202,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Zeus: {
-				DisplayName: Zeus
-				Tooltip: ""
-			}
-
 			SpookStoneRelic: {
 				DisplayName: Spookstone Relic
 				Tooltip: ""
@@ -320,7 +315,6 @@ Mods: {
 			SoulSlaughter_Projectile.DisplayName: Soul Slaughter
 			SoulSlaughterHighlight.DisplayName: Soul Slaughter
 			YellowPresent.DisplayName: Yellow Present
-			ZeusArrow.DisplayName: Zeus Arrow
 			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
 			RiptideProjectile.DisplayName: Riptide Projectile
 			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
