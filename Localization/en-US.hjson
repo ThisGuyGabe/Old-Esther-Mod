@@ -23,46 +23,17 @@ Mods: {
 
 			ManaNecklace: {
 				DisplayName: Mana Necklace
-				Tooltip: Effects of the Mana Regeneration Band and Mana Flower
+				Tooltip: "Effects of the Mana Regeneration Band and Mana Flower"
 			}
 
 			ArcaneLens: {
 				DisplayName: Arcane Lens
-				Tooltip: Give this to the blood cultist for a reward.
-			}
-
-			ChargedCap: {
-				DisplayName: Charged Cap
-				Tooltip: ""
-			}
-
-			ChargedPlating: {
-				DisplayName: Charged Plating
-				Tooltip: Increases crit by 5%
-			}
-
-			ChargedTracers: {
-				DisplayName: Charged Tracers
-				Tooltip:
-					'''
-					Charged to perfection.
-					10% increased movement speed and double jump
-					'''
-			}
-
-			GalvanicBar: {
-				DisplayName: Galvanic Bar
-				Tooltip: ""
+				Tooltip: "Give this to the blood cultist for a reward."
 			}
 
 			ImpHorn: {
 				DisplayName: Imp Horn
-				Tooltip: Give this to the blood cultist for a reward.
-			}
-
-			GalvanicOre: {
-				DisplayName: Galvanic Ore
-				Tooltip: ""
+				Tooltip: "Give this to the blood cultist for a reward."
 			}
 
 			PixilWood: {
@@ -97,7 +68,7 @@ Mods: {
 
 			BeamBow: {
 				DisplayName: Beam Bow
-				Tooltip: Converts ALL arrows to lazers, and it seems its bugged.
+				Tooltip: "Converts ALL arrows to lazers, and it seems its bugged."
 			}
 
 			BloomingBane: {
@@ -111,7 +82,7 @@ Mods: {
 
 			Bonestromstaff: {
 				DisplayName: Bonestrom Staff
-				Tooltip: Shoots a sigil that summons necromantidc shards that home in on your cursor.
+				Tooltip: "Shoots a sigil that summons necromantic shards that home in on your cursor."
 			}
 
 			DragonsKarma: {
@@ -121,7 +92,7 @@ Mods: {
 
 			EmpyrealStaff: {
 				DisplayName: Empyreal Staff
-				Tooltip: Use this during night for a mana discount, faster speed, but less damage.
+				Tooltip: "Use this during night for a mana discount, faster speed, but less damage."
 			}
 
 			Esther: {
@@ -131,7 +102,7 @@ Mods: {
 
 			FireStormSlasher: {
 				DisplayName: Firestorm Slasher
-				Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
+				Tooltip: "Upon hitting an enemy they explode dealing 2 times more damage than the sword itself."
 			}
 
 			ForgedFury: {
@@ -160,12 +131,12 @@ Mods: {
 
 			PeaShooter: {
 				DisplayName: Peashooter
-				Tooltip: Kill those zombies!
+				Tooltip: "Kill those zombies!"
 			}
 
 			PermaFrost: {
 				DisplayName: Perma Frost
-				Tooltip: When you hit an enemy it shoots an icicle that deals damage.
+				Tooltip: "When you hit an enemy it shoots an icicle that deals damage."
 			}
 
 			Rubyo: {
@@ -189,7 +160,7 @@ Mods: {
 
 			SolarRecurve: {
 				DisplayName: Solar Recurve
-				Tooltip: Shoots more arrows every time.
+				Tooltip: "Shoots more arrows every time."
 			}
 
 			SoulSlaughter: {
@@ -197,13 +168,13 @@ Mods: {
 				Tooltip:
 					'''
 					The souls of the dead hold up your blade.
-					"Is this a JoJo's reference?"
+					Is this a JoJo's reference?
 					'''
 			}
 
 			Tinuzi: {
 				DisplayName: Tin Uzi
-				Tooltip: Shoots out bullets at high speeds!
+				Tooltip: "Shoots out bullets at high speeds!"
 			}
 
 			CopperPopper: {
@@ -213,12 +184,12 @@ Mods: {
 
 			SurgeCannon: {
 				DisplayName: Surge Cannon
-				Tooltip: Turns bullets into a surge of water.
+				Tooltip: "Turns bullets into a surge of water."
 			}
 
 			Riptide: {
 				DisplayName: Riptide
-				Tooltip: Cast a explosing of water at your enemies feet!
+				Tooltip: "Cast a explosing of water at your enemies feet!"
 			}
 
 			ThePhoenixFlame: {
@@ -265,10 +236,68 @@ Mods: {
 				DisplayName: Bonestrom Staff
 				Tooltip: ""
 			}
-			
+
 			StellarRain: {
 				DisplayName: Stellar Rain
-				Tooltip: "'Raining knives of the heavens!'"
+				Tooltip: "Raining knives of the heavens!"
+			}
+
+			Froster: {
+				DisplayName: Froster
+				Tooltip: ""
+			}
+
+			EthericScrap: {
+				DisplayName: Etheric Scrap
+				Tooltip: ""
+			}
+
+			HypnoplateItem: {
+				DisplayName: Hypnoplate
+				Tooltip: ""
+			}
+
+			EchoBreaker: {
+				DisplayName: Echo Breaker
+				Tooltip: "Using right click releases a powerful swing with a 10 second delay."
+			}
+
+			EthericalChant: {
+				DisplayName: Etherical Chant
+				Tooltip: "Shoots 3-6 floating sparks which home into enemies after a short delay."
+			}
+
+			EthericalDagger: {
+				DisplayName: Etherical Dagger
+				Tooltip: ""
+			}
+
+			HypnosStorm: {
+				Tooltip: ""
+				DisplayName: Hypnos Storm
+			}
+
+			EthericalBow: {
+				Tooltip: ""
+				DisplayName: Etherical Bow
+			}
+
+			CosmicTome: {
+				Tooltip: ""
+				DisplayName: Cosmic Tome
+			}
+
+			TheSoul: {
+				Tooltip:
+					'''
+					Increases damage by 4%. 
+					Decreases damage reduction by 5%.
+					Increases max life by 50.
+					Gives a jump boost.
+					Increases attack speed by 5%.
+					And decreases defense by 6.
+					'''
+				DisplayName: The Soul
 			}
 		}
 
@@ -296,25 +325,36 @@ Mods: {
 			RiptideProjectile.DisplayName: Riptide Projectile
 			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
 			StellarRainProjectile.DisplayName: Stellar Rain Projectile
+			FrosterProj.DisplayName: Froster Proj
+			ChantSpark.DisplayName: Chant Spark
+			EchoBreakerProjectile.DisplayName: Echo Breaker Projectile
+			EthericalDaggerProjectile.DisplayName: Etherical Dagger Projectile
+			HypnosArrow.DisplayName: Hypnos Arrow
 		}
 
 		NPCs: {
 			BloodCultist.DisplayName: Blood Cultist
 			AbyssalAbhorrence.DisplayName: Abyssal Abhorrence
+			SpiritualConstruct.DisplayName: Spiritual Construct
 		}
 
 		Buffs: {
 			SpookstoneMinionBuff: {
 				DisplayName: Spookstone Mininon
-				Description: It's Spooky Time
+				Description: It's Spooky Time.
+			}
+
+			EchoBreakCooldown: {
+				DisplayName: Echo Break Cooldown
+				Description: You can't use Echo Break now.
 			}
 		}
 
 		Tiles: {
-			GalvanicOreTile.MapEntry: Galvanic Ore
 			PixilWoodTile.MapEntry: Pixil Wood
 			RetroWoodTile.MapEntry: Retro Wood
 			UmbraStoneTile.MapEntry: Umbrastone
+			Hypnoplate.MapEntry: Hypnoplate
 		}
 	}
 }
