@@ -48,7 +48,7 @@ namespace EstherMod.Content.Items.Weapons
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            player.AddBuff(ModContent.BuffType<EchoBreakCooldown>(), 1500);
+            player.AddBuff(ModContent.BuffType<EchoBreakCooldown>(), 600); // 10 seconds btw
             SoundStyle style = new SoundStyle("Terraria/Sounds/Item_107");
             SoundEngine.PlaySound(style);
             return base.Shoot(player, source, position, velocity, type, damage, knockback);
