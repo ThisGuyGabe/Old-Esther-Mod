@@ -23,17 +23,17 @@ Mods: {
 
 			ManaNecklace: {
 				DisplayName: Mana Necklace
-				Tooltip: "Effects of the Mana Regeneration Band and Mana Flower"
+				Tooltip: Effects of the Mana Regeneration Band and Mana Flower
 			}
 
 			ArcaneLens: {
 				DisplayName: Arcane Lens
-				Tooltip: "Give this to the blood cultist for a reward."
+				Tooltip: Give this to the blood cultist for a reward.
 			}
 
 			ImpHorn: {
 				DisplayName: Imp Horn
-				Tooltip: "Give this to the blood cultist for a reward."
+				Tooltip: Give this to the blood cultist for a reward.
 			}
 
 			PixilWood: {
@@ -68,7 +68,7 @@ Mods: {
 
 			BeamBow: {
 				DisplayName: Beam Bow
-				Tooltip: "Converts ALL arrows to lazers, and it seems its bugged."
+				Tooltip: Converts ALL arrows to lazers, and it seems its bugged.
 			}
 
 			BloomingBane: {
@@ -82,7 +82,7 @@ Mods: {
 
 			Bonestromstaff: {
 				DisplayName: Bonestrom Staff
-				Tooltip: "Shoots a sigil that summons necromantic shards that home in on your cursor."
+				Tooltip: Shoots a sigil that summons necromantic shards that home in on your cursor.
 			}
 
 			DragonsKarma: {
@@ -92,7 +92,7 @@ Mods: {
 
 			EmpyrealStaff: {
 				DisplayName: Empyreal Staff
-				Tooltip: "Use this during night for a mana discount, faster speed, but less damage."
+				Tooltip: Use this during night for a mana discount, faster speed, but less damage.
 			}
 
 			Esther: {
@@ -102,7 +102,7 @@ Mods: {
 
 			FireStormSlasher: {
 				DisplayName: Firestorm Slasher
-				Tooltip: "Upon hitting an enemy they explode dealing 2 times more damage than the sword itself."
+				Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
 			}
 
 			ForgedFury: {
@@ -131,12 +131,12 @@ Mods: {
 
 			PeaShooter: {
 				DisplayName: Peashooter
-				Tooltip: "Kill those zombies!"
+				Tooltip: Kill those zombies!
 			}
 
 			PermaFrost: {
-				DisplayName: Perma Frost
-				Tooltip: "When you hit an enemy it shoots an icicle that deals damage."
+				DisplayName: Permafrost
+				Tooltip: When you hit an enemy it shoots an icicle that deals damage.
 			}
 
 			Rubyo: {
@@ -160,7 +160,7 @@ Mods: {
 
 			SolarRecurve: {
 				DisplayName: Solar Recurve
-				Tooltip: "Shoots more arrows every time."
+				Tooltip: Shoots more arrows every time.
 			}
 
 			SoulSlaughter: {
@@ -174,7 +174,7 @@ Mods: {
 
 			Tinuzi: {
 				DisplayName: Tin Uzi
-				Tooltip: "Shoots out bullets at high speeds!"
+				Tooltip: Shoots out bullets at high speeds!
 			}
 
 			CopperPopper: {
@@ -184,12 +184,17 @@ Mods: {
 
 			SurgeCannon: {
 				DisplayName: Surge Cannon
-				Tooltip: "Turns bullets into a surge of water."
+				Tooltip: Turns bullets into a surge of water.
 			}
 
 			Riptide: {
 				DisplayName: Riptide
-				Tooltip: "Cast a explosing of water at your enemies feet!"
+				Tooltip: Cast a explosing of water at your enemies feet!
+			}
+
+			ThePhoenixFlame: {
+				DisplayName: The Phoenix Flame
+				Tooltip: ""
 			}
 
 			Vulcano: {
@@ -229,7 +234,7 @@ Mods: {
 
 			StellarRain: {
 				DisplayName: Stellar Rain
-				Tooltip: "Raining knives of the heavens!"
+				Tooltip: Raining knives of the heavens!
 			}
 
 			Froster: {
@@ -249,12 +254,12 @@ Mods: {
 
 			EchoBreaker: {
 				DisplayName: Echo Breaker
-				Tooltip: "Using right click releases a powerful swing with a 10 second delay."
+				Tooltip: Using right click releases a powerful swing with a 10 second delay.
 			}
 
 			EthericalChant: {
 				DisplayName: Etherical Chant
-				Tooltip: "Shoots 3-6 floating sparks which home into enemies after a short delay."
+				Tooltip: Shoots 3-6 floating sparks which home into enemies after a short delay.
 			}
 
 			EthericalDagger: {
@@ -289,14 +294,49 @@ Mods: {
 					'''
 				DisplayName: The Soul
 			}
-	
-			PhoenixFlame: {
-				DisplayName: Phoenix 
-				Tooltip: '''
-						Shoot in a 3 shot rapid burst.
-						Turns arrows into phoenix arrows.
-						Turns flaming arrows into hellfire arrows.
+
+			EmberFlamethrower: {
+				Tooltip: ""
+				DisplayName: Ember Flamethrower
+			}
+
+			DayBreakStar: {
+				Tooltip:
 					'''
+					Turns day to night and vice-versa.
+					Blue means it's night and yellow means day.
+					'''
+				DisplayName: Daybreak Star
+			}
+
+			CogwheelFirearm: {
+				DisplayName: Cogwheel Firearm
+				Tooltip: ""
+			}
+
+			CopperTrumpet: {
+				DisplayName: Copper Trumpet
+				Tooltip: ""
+			}
+
+			FlaxenMoss: {
+				DisplayName: Flaxen Moss
+				Tooltip: ""
+			}
+
+			FlaxenMossWall: {
+				DisplayName: Flaxen Moss Wall
+				Tooltip: ""
+			}
+
+			Rootstone: {
+				DisplayName: Rootstone
+				Tooltip: ""
+			}
+
+			PhoenixFlame: {
+				Tooltip: ""
+				DisplayName: Phoenix Flame
 			}
 		}
 
@@ -320,6 +360,7 @@ Mods: {
 			SoulSlaughterHighlight.DisplayName: Soul Slaughter
 			YellowPresent.DisplayName: Yellow Present
 			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
+			RiptideProjectile.DisplayName: Riptide Projectile
 			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
 			StellarRainProjectile.DisplayName: Stellar Rain Projectile
 			FrosterProj.DisplayName: Froster Proj
@@ -327,12 +368,28 @@ Mods: {
 			EchoBreakerProjectile.DisplayName: Echo Breaker Projectile
 			EthericalDaggerProjectile.DisplayName: Etherical Dagger Projectile
 			HypnosArrow.DisplayName: Hypnos Arrow
-			PhoenixFlameProjectile.DisplayName: Phoenix arrow
-			RiptideExplosion.DisplayName: Riptide Explosion
+			EmberFlamethrowerProj.DisplayName: Ember Flamethrower Proj
+			CogProjectile.DisplayName: Cog Projectile
+			TrumpetThing.DisplayName: Trumpet Thing
+			PhoenixFlameProjectile.DisplayName: Phoenix Flame Projectile
 		}
 
 		NPCs: {
-			BloodCultist.DisplayName: Blood Cultist
+			BloodCultist: {
+				DisplayName: Blood Cultist
+
+				TownNPCMood: {
+					Content: I am content.
+					NoHome: I hate not having a home.
+					FarFromHome: I am too far from home.
+					LoveSpace: I love having so much space.
+					DislikeCrowded: I dislike how crowded I am.
+					HateCrowded: I hate how crowded I am.
+					LikeNPC_Princess: I like {NPCName}.
+					Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
 			AbyssalAbhorrence.DisplayName: Abyssal Abhorrence
 			SpiritualConstruct.DisplayName: Spiritual Construct
 		}
