@@ -29,17 +29,19 @@ namespace EstherMod.Content.Projectiles
 
 			AIType = ProjectileID.WoodenArrowFriendly; 
 		}
-
+		
+		public override Color? GetAlpha(Color lightColor) {
+			return new Color(255, 243, 64, 150);
+		}
+		
 		public override void AI() {
 
 			int dustnumber = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 0.8f);
 			Main.dust[dustnumber].velocity *= 1.3f;
-			//Main.dust[dust].noGravity = true;
-
 		}
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
-			target.AddBuff(BuffID.Daybreak, 60 * 2);
+			target.AddBuff(BuffID.Daybreak, 30 * 5);
 		}
 
 		public override bool PreDraw(ref Color lightColor) {
