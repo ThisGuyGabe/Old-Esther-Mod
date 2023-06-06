@@ -17,13 +17,13 @@ namespace EstherMod.Content.Items.Weapons
         }
         public override void SetDefaults()
         {
-            Item.damage = 56;
+            Item.damage = 65;
             Item.rare = ItemRarityID.Yellow;
             Item.width = 28;
             Item.height = 80;
-            Item.useAnimation = 30;
-            Item.useTime = 10;
-            Item.reuseDelay = 25;
+            Item.useAnimation = 25;
+            Item.useTime = 8;
+            Item.reuseDelay = 20;
 
             Item.consumeAmmoOnLastShotOnly = true;
             Item.useStyle = ItemUseStyleID.Shoot;
@@ -44,7 +44,7 @@ namespace EstherMod.Content.Items.Weapons
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.HellwingBow, 1);
+            recipe.AddIngredient(ItemID.HellwingBow, 2);
             recipe.AddIngredient(ItemID.LihzahrdPowerCell, 10);
             recipe.AddIngredient(ItemID.SoulofFright, 15);
             recipe.AddIngredient(ItemID.HellstoneBar, 30);
