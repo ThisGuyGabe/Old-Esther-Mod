@@ -192,11 +192,6 @@ Mods: {
 				Tooltip: "Cast a explosing of water at your enemies feet!"
 			}
 
-			ThePhoenixFlame: {
-				DisplayName: The Phoenix Flame
-				Tooltip: ""
-			}
-
 			Vulcano: {
 				DisplayName: Vulcano
 				Tooltip: ""
@@ -294,6 +289,15 @@ Mods: {
 					'''
 				DisplayName: The Soul
 			}
+	
+			PhoenixFlame: {
+				DisplayName: Phoenix 
+				Tooltip: '''
+						Shoot in a 3 shot rapid burst.
+						Turns arrows into phoenix arrows.
+						Turns flaming arrows into hellfire arrows.
+					'''
+			}
 		}
 
 		Projectiles: {
@@ -316,7 +320,6 @@ Mods: {
 			SoulSlaughterHighlight.DisplayName: Soul Slaughter
 			YellowPresent.DisplayName: Yellow Present
 			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
-			RiptideProjectile.DisplayName: Riptide Projectile
 			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
 			StellarRainProjectile.DisplayName: Stellar Rain Projectile
 			FrosterProj.DisplayName: Froster Proj
@@ -324,6 +327,8 @@ Mods: {
 			EchoBreakerProjectile.DisplayName: Echo Breaker Projectile
 			EthericalDaggerProjectile.DisplayName: Etherical Dagger Projectile
 			HypnosArrow.DisplayName: Hypnos Arrow
+			PhoenixFlameProjectile.DisplayName: Phoenix arrow
+			RiptideExplosion.DisplayName: Riptide Explosion
 		}
 
 		NPCs: {
