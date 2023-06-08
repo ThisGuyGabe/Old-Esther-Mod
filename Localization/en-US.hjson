@@ -110,6 +110,7 @@ Mods: {
 				Tooltip: '''
 					Turns arrows into flaming arrows.
 					Turns flaming arrows into fury arrows.
+					'''
 			}
 
 			GoldenReckage: {
@@ -196,7 +197,10 @@ Mods: {
 
 			PhoenixFlame: {
 				DisplayName: Phoenix Flame
-				Tooltip: "Turns arrows into Phoenix arrows."
+				Tooltip: '''
+					Shoot in a 3 shot rapid burst.
+					Turns arrows into Phoenix arrows.
+					'''
 			}
 
 			Vulcano: {
@@ -355,7 +359,7 @@ Mods: {
 			SoulSlaughterHighlight.DisplayName: Soul Slaughter
 			YellowPresent.DisplayName: Yellow Present
 			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
-			RiptideProjectile.DisplayName: Riptide Projectile
+			RiptideExplosion.DisplayName: Riptide Explosion
 			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
 			StellarRainProjectile.DisplayName: Stellar Rain Projectile
 			FrosterProj.DisplayName: Froster Proj
@@ -363,11 +367,11 @@ Mods: {
 			EchoBreakerProjectile.DisplayName: Echo Breaker Projectile
 			EthericalDaggerProjectile.DisplayName: Etherical Dagger Projectile
 			HypnosArrow.DisplayName: Hypnos Arrow
-			EmberFlamethrowerProj.DisplayName: Ember Flamethrower Proj
 			CogProjectile.DisplayName: Cog Projectile
 			TrumpetThing.DisplayName: Trumpet Thing
 			PhoenixFlameProjectile.DisplayName: Phoenix arrow
 			ForgedFuryProjectile.DisplayName: Fury arrow
+			VulcanoProjectile.DisplayName: Vulcano Lava
 		}
 
 		NPCs: {
