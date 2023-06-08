@@ -1,4 +1,5 @@
-﻿using Terraria;
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -16,7 +17,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
         }
         public override void SetDefaults()
         {
-            Item.damage = 22;
+            Item.damage = 36;
             Item.crit = 4;
             Item.rare = 2;
             Item.width = 20;
@@ -34,19 +35,30 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.useAmmo = AmmoID.Arrow;
         }
 
+         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
+            if (type == ProjectileID.WoodenArrowFriendly) {
+                type = ProjectileID.FireArrow; // Turns wooden Arrows into fire arrows
+            }
+
+             if (type == ProjectileID.FireArrow) {
+                type = Mod.Find<ModProjectile>("ForgedFuryProjectile").Type; // Turns flaming arrows into fury arrows.
+            }
+
+        }
+
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.ShadewoodBow, 1);
-            recipe.AddIngredient(ItemID.AshBlock, 15);
-            recipe.AddIngredient(ItemID.Hellstone, 15);
+            recipe.AddIngredient(ItemID.Obsidian, 15);
+            recipe.AddIngredient(ItemID.HellstoneBar, 15);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
 
             recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.EbonwoodBow, 1);
-            recipe.AddIngredient(ItemID.AshBlock, 15);
-            recipe.AddIngredient(ItemID.Hellstone, 15);
+            recipe.AddIngredient(ItemID.Obsidian, 15);
+            recipe.AddIngredient(ItemID.HellstoneBar, 15);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
 
