@@ -94,7 +94,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
                 if (Projectile.timeLeft > 50)
                 {
                     Vector2 vel = Vector2.Normalize(-Projectile.velocity).RotatedByRandom(0.4f) * Main.rand.NextFloat(2, 5);
-                    Dust.NewDustPerfect(Projectile.Center + (vel * 4), ModContent.DustType<Dusts.GlowLine>(), vel, 0, Color.White, 0.5f);
+                    Dust.NewDustPerfect(Projectile.Center + (vel * 4), ModContent.DustType<Content.Dusts.GlowLine>(), vel, 0, Color.White, 0.5f);
                 }
                 owner.velocity = Vector2.Zero;
                 Projectile.velocity *= 0.935f;
