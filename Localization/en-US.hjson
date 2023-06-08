@@ -201,7 +201,10 @@ Mods: {
 
 			Vulcano: {
 				DisplayName: Vulcano
-				Tooltip: ""
+				Tooltip: '''
+					Rain arrows from the sky!
+					Turns most arrows into lava
+					'''
 			}
 
 			SpookStoneRelic: {
