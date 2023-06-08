@@ -107,7 +107,9 @@ Mods: {
 
 			ForgedFury: {
 				DisplayName: Forged Fury
-				Tooltip: ""
+				Tooltip: '''
+					Turns arrows into flaming arrows.
+					Turns flaming arrows into fury arrows.
 			}
 
 			GoldenReckage: {
@@ -173,7 +175,7 @@ Mods: {
 			}
 
 			Tinuzi: {
-				DisplayName: Tin Uzi
+				DisplayName: Tinuzi
 				Tooltip: Shoots out bullets at high speeds!
 			}
 
@@ -192,9 +194,9 @@ Mods: {
 				Tooltip: Cast a explosing of water at your enemies feet!
 			}
 
-			ThePhoenixFlame: {
-				DisplayName: The Phoenix Flame
-				Tooltip: ""
+			PhoenixFlame: {
+				DisplayName: Phoenix Flame
+				Tooltip: "Turns arrows into Phoenix arrows."
 			}
 
 			Vulcano: {
@@ -295,11 +297,6 @@ Mods: {
 				DisplayName: The Soul
 			}
 
-			EmberFlamethrower: {
-				Tooltip: ""
-				DisplayName: Ember Flamethrower
-			}
-
 			DayBreakStar: {
 				Tooltip:
 					'''
@@ -332,11 +329,6 @@ Mods: {
 			Rootstone: {
 				DisplayName: Rootstone
 				Tooltip: ""
-			}
-
-			PhoenixFlame: {
-				Tooltip: ""
-				DisplayName: Phoenix Flame
 			}
 		}
 
@@ -371,7 +363,8 @@ Mods: {
 			EmberFlamethrowerProj.DisplayName: Ember Flamethrower Proj
 			CogProjectile.DisplayName: Cog Projectile
 			TrumpetThing.DisplayName: Trumpet Thing
-			PhoenixFlameProjectile.DisplayName: Phoenix Flame Projectile
+			PhoenixFlameProjectile.DisplayName: Phoenix arrow
+			ForgedFuryProjectile.DisplayName: Fury arrow
 		}
 
 		NPCs: {
