@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -17,13 +17,13 @@ namespace EstherMod.Content.Items.Weapons.Ranged
         }
         public override void SetDefaults()
         {
-            Item.damage = 65;
+            Item.damage = 70;
             Item.rare = ItemRarityID.Yellow;
             Item.width = 28;
             Item.height = 80;
-            Item.useAnimation = 25;
-            Item.useTime = 8;
-            Item.reuseDelay = 20;
+            Item.useAnimation = 20;
+            Item.useTime = 6;
+            Item.reuseDelay = 15;
 
             Item.consumeAmmoOnLastShotOnly = true;
             Item.useStyle = ItemUseStyleID.Shoot;
@@ -44,8 +44,8 @@ namespace EstherMod.Content.Items.Weapons.Ranged
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.HellwingBow, 2);
-            recipe.AddIngredient(ItemID.LihzahrdPowerCell, 10);
+            recipe.AddIngredient(ItemID.HellwingBow, 1);
+            recipe.AddIngredient(ItemID.FragmentSolar, 25);
             recipe.AddIngredient(ItemID.SoulofFright, 15);
             recipe.AddIngredient(ItemID.HellstoneBar, 30);
             recipe.AddTile(TileID.MythrilAnvil);
