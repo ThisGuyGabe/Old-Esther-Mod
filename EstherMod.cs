@@ -8,9 +8,8 @@ using ReLogic.Content;
 
 namespace EstherMod
 {
-    public class EsthrMod : Mod
+    public class EstherMod : Mod
     {
-
         public override void Load()
         {
             if (Main.netMode != NetmodeID.Server)
