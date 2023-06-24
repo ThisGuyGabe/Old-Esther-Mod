@@ -47,7 +47,7 @@ namespace EstherMod.Content.Projectiles
                         Filters.Scene.Activate("HydraShockwave", Projectile.Center).GetShader().UseColor(pulseCount, rippleSize, speed).UseTargetPosition(Projectile.Center);
                     }
 
-                    Main.player[Projectile.owner].GetModPlayer<EstherModPlayer>().partyBombActive = true;
+                    Main.player[Projectile.owner].GetModPlayer<EstherPlayer>().partyBombActive = true;
 
                     SoundEngine.PlaySound(SoundID.Item62, Projectile.position);
                     SoundEngine.PlaySound(SoundID.NPCDeath58.WithPitchOffset(-0.4f), Projectile.position);

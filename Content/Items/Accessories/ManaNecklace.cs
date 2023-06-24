@@ -1,48 +1,37 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
-namespace EstherMod.Content.Items.Accessories
-{
-	public class ManaNecklace : ModItem
+namespace EstherMod.Content.Items.Accessories;
+
+public sealed class ManaNecklace : ModItem {
+	public override void SetStaticDefaults() {
+		Item.ResearchUnlockCount = 1;
+	}
+
+	public override void SetDefaults()
 	{
+		Item.width = 34;
+		Item.height = 38;
+		Item.rare = ItemRarityID.Green;
 
-		public override void SetDefaults()
-		{
+		Item.accessory = true;
+		Item.value = Item.sellPrice(gold: 1, silver: 30);
+	}
 
-			Item.width = 34;
-			Item.height = 38;
-			Item.rare = 2;
-			Item.accessory = true;
-			Item.value = Item.sellPrice(gold: 1, silver: 30);
-		}
+	public override void UpdateAccessory(Player player, bool hideVisual) {
+		player.manaCost -= 0.08f;
+		player.statManaMax2 += 20;
+		player.manaFlower = true;
+		player.manaRegen += 5;
+	}
 
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Mana Necklace");
-			// Tooltip.SetDefault("Effects of the Mana Regeneration Band and Mana Flower");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			//DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Naszyjnik Many");
-		}
-
-		public override void AddRecipes()
-		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.ManaFlower, 1);
-			recipe.AddIngredient(ItemID.ManaRegenerationBand, 1);
-			recipe.AddTile(114);
-			recipe.Register();
-		}
-
-		public override void UpdateAccessory(Player player, bool hideVisual)
-		{
-			player.manaCost -= 0.08f;
-			player.statManaMax2 += 20;
-			player.manaFlower = true;
-			player.manaRegen += 5;
-
-		}
+	public override void AddRecipes()
+	{
+		CreateRecipe()
+			.AddIngredient(ItemID.ManaFlower, 1)
+			.AddIngredient(ItemID.ManaRegenerationBand, 1)
+			.AddTile(TileID.TinkerersWorkbench)
+			.Register();
 	}
 }
