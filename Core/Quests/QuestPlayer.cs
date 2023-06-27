@@ -38,7 +38,7 @@ public sealed class QuestPlayer : ModPlayer {
 		GoalsCompletedByQuest = new();
 	}
 
-	public sealed unsafe override void SaveData(TagCompound tag) {
+	public sealed override void SaveData(TagCompound tag) {
 		tag[nameof(ActiveQuests)] = ActiveQuests;
 		tag[nameof(CompletedQuests)] = CompletedQuests.ToList();
 		tag[nameof(CompletedQuests2)] = CompletedQuests2.ToList();
@@ -46,7 +46,7 @@ public sealed class QuestPlayer : ModPlayer {
 		tag[nameof(GoalsCompletedByQuest) + "Values"] = GoalsCompletedByQuest.Values.ToList();
 	}
 
-	public sealed unsafe override void LoadData(TagCompound tag) {
+	public sealed override void LoadData(TagCompound tag) {
 		if (tag.TryGet(nameof(ActiveQuests), out string[] activeQuests))
 			activeQuests.CopyTo(ActiveQuests, 0);
 		if (tag.TryGet(nameof(CompletedQuests), out List<string> completedQuests))
