@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using EstherMod.Common;
+using EstherMod.Content;
 using EstherMod.Content.NPCs;
 using EstherMod.Core.Fusions;
 using EstherMod.Core.Quests;
@@ -42,6 +44,41 @@ public sealed class BloodCultistUI : ILoadable {
 			}
 		}
 	}
+	private sealed class FuseGlobalItem : GlobalItem {
+		private static SpriteBatchSnapshot spriteBatchSnapshot;
+
+		public bool IsFusionDummy { get; set; }
+		public float FusionFade { get; set; }
+
+		public override bool InstancePerEntity => true;
+
+		public override bool AppliesToEntity(Item entity, bool lateInstantiation) => lateInstantiation && FusionDatabase.ResultTypes.Contains(entity.type);
+
+		public override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale) {
+			if (IsFusionDummy) {
+				spriteBatchSnapshot = spriteBatch.TakeSnapshot();
+				var copy = spriteBatchSnapshot;
+				copy.Effect = EstherEffects.GrayOutItem.Shader;
+				copy.Effect.Parameters["fade"].SetValue(FusionFade);
+
+				spriteBatch.End();
+				spriteBatch.Begin(copy);
+
+				EstherEffects.GrayOutItem.Apply(null);
+			}
+			return true;
+		}
+
+		public override void PostDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale) {
+			if (IsFusionDummy) {
+				spriteBatch.End();
+				spriteBatch.Begin(spriteBatchSnapshot);
+
+				spriteBatchSnapshot = default;
+			}
+		}
+	}
+
 	public sealed class ChatBoxPanel : UIPanel {
 		public int AmountOfLines { get; set; }
 
@@ -219,14 +256,16 @@ public sealed class BloodCultistUI : ILoadable {
 			};
 			takeQuestPanel.OnLeftClick += (UIMouseEvent evt, UIElement listeningElement) => {
 				if (currentQuestChosen != null && Main.LocalPlayer.TryGetModPlayer(out QuestPlayer questPlayer)) {
-					if (currentQuestChosen.quest.IsCompleted(Main.LocalPlayer) && !questPlayer.CompletedQuests2.Contains(currentQuestChosen.quest.FullName)) {
-						foreach (var reward in currentQuestChosen.quest.Rewards) {
-							reward.Grant(Main.LocalPlayer);
-						}
-						questPlayer.CompletedQuests2.Add(currentQuestChosen.quest.FullName);
+					if (currentQuestChosen.quest.IsCompleted(Main.LocalPlayer)) {
+						if (!questPlayer.CompletedQuests2.Contains(currentQuestChosen.quest.FullName)) {
+							foreach (var reward in currentQuestChosen.quest.Rewards) {
+								reward.Grant(Main.LocalPlayer);
+							}
+							questPlayer.CompletedQuests2.Add(currentQuestChosen.quest.FullName);
 
-						if (Main.netMode == NetmodeID.MultiplayerClient) {
-							Esther.Instance.Packet_ClaimQuestRewards(Main.myPlayer, currentQuestChosen.quest.FullName);
+							if (Main.netMode == NetmodeID.MultiplayerClient) {
+								Esther.Instance.Packet_ClaimQuestRewards(Main.myPlayer, currentQuestChosen.quest.FullName);
+							}
 						}
 					}
 					else {
@@ -291,6 +330,7 @@ public sealed class BloodCultistUI : ILoadable {
 		private UIConfigurableItemSlot mainSlot; // Item 1
 		private UIConfigurableItemSlot secondSlot; // Item 2
 		private UIConfigurableItemSlot resultSlot; // Result
+		private float fade;
 
 		public override void OnInitialize() {
 			Append(panel);
@@ -335,6 +375,7 @@ public sealed class BloodCultistUI : ILoadable {
 				if (Main.HoverItem.IsAir && !mainSlot.Item.IsAir && !secondSlot.Item.IsAir && !resultSlot.Item.IsAir) {
 					var item = resultSlot.Item;
 					Utils.Swap(ref Main.mouseItem, ref item);
+					Main.mouseItem.GetGlobalItem<FuseGlobalItem>().IsFusionDummy = false;
 					resultSlot.Item = item;
 
 					mainSlot.Item.TurnToAir();
@@ -342,6 +383,14 @@ public sealed class BloodCultistUI : ILoadable {
 				}
 			};
 			panel.Append(fusionIcon);
+
+			var fusionText = new UIText("Fuse") {
+				Width = StyleDimension.FromPixels(40f),
+				Height = StyleDimension.FromPixels(20f),
+				HAlign = 0.5f,
+				VAlign = 0.7f,
+			};
+			panel.Append(fusionText);
 		}
 
 		public override void Update(GameTime gameTime) {
@@ -349,16 +398,29 @@ public sealed class BloodCultistUI : ILoadable {
 
 			base.Update(gameTime);
 
+			const float add = 0.01f;
 			if (mainSlot.Item.IsAir && secondSlot.Item.IsAir && !resultSlot.Item.IsAir) {
-				resultSlot.Item.TurnToAir();
+				if (resultSlot.Item.TryGetGlobalItem(out FuseGlobalItem globalItem)) {
+					globalItem.FusionFade = fade;
+				}
+
+				fade -= add;
+				if (fade < 0.0f) {
+					fade = 0.0f;
+					resultSlot.Item.TurnToAir();
+				}
 			}
 			else if (mainSlot.Item.IsAir && !secondSlot.Item.IsAir && resultSlot.Item.IsAir) {
 				if (FusionDatabase.ItemUsages.TryGetValue(secondSlot.Item.type, out var usages) && usages.Count != 0) {
 					var fusion = usages[0];
 					if (resultSlot.Item.type != fusion.Result) {
 						resultSlot.Item.SetDefaults(fusion.Result);
-						resultSlot.Color = Color.White * 0.5f;
+						resultSlot.Item.GetGlobalItem<FuseGlobalItem>().IsFusionDummy = true;
 					}
+					resultSlot.Item.GetGlobalItem<FuseGlobalItem>().FusionFade = fade;
+					fade += add;
+					if (fade > 0.5f)
+						fade -= add * 4f;
 				}
 			}
 			else if (!mainSlot.Item.IsAir && secondSlot.Item.IsAir && resultSlot.Item.IsAir) {
@@ -366,16 +428,25 @@ public sealed class BloodCultistUI : ILoadable {
 					var fusion = usages[0];
 					if (resultSlot.Item.type != fusion.Result) {
 						resultSlot.Item.SetDefaults(fusion.Result);
-						resultSlot.Color = Color.White * 0.5f;
+						resultSlot.Item.GetGlobalItem<FuseGlobalItem>().IsFusionDummy = true;
 					}
+					resultSlot.Item.GetGlobalItem<FuseGlobalItem>().FusionFade = fade;
+					fade += add;
+					if (fade > 0.5f)
+						fade -= add * 4f;
 				}
 			}
-			if (!mainSlot.Item.IsAir && !secondSlot.Item.IsAir) {
+			else if (!mainSlot.Item.IsAir && !secondSlot.Item.IsAir) {
 				var fusion = FusionDatabase.FusionsByMaterials[mainSlot.Item.type, secondSlot.Item.type] ?? FusionDatabase.FusionsByMaterials[secondSlot.Item.type, mainSlot.Item.type];
-				if (fusion != null && resultSlot.Item.type != fusion.Result) {
-					resultSlot.Item.SetDefaults(fusion.Result);
-					resultSlot.Color = Color.White;
+				if (fusion != null) {
+					if (resultSlot.Item.type != fusion.Result)
+						resultSlot.Item.SetDefaults(fusion.Result);
+					resultSlot.Item.GetGlobalItem<FuseGlobalItem>().IsFusionDummy = true;
 				}
+				resultSlot.Item.GetGlobalItem<FuseGlobalItem>().FusionFade = fade;
+				fade += add;
+				if (fade > 1f)
+					fade = 1f;
 			}
 
 			resultSlot.Option.OverrideHover = !resultSlot.Item.IsAir;

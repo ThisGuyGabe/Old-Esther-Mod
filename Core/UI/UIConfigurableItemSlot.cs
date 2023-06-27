@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EstherMod.Common;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.UI;
@@ -6,7 +7,7 @@ using Terraria.UI;
 namespace EstherMod.Core.UI;
 
 public sealed class UIConfigurableItemSlot : UIElement {
-	public class Options {
+	public sealed class Options {
 		public bool IsLeftClickable { get; set; }
 		public bool IsRightClickable { get; set; }
 		public bool OverrideHover { get; set; }
@@ -25,6 +26,7 @@ public sealed class UIConfigurableItemSlot : UIElement {
 	private readonly Options options;
 
 	public Item Item { get; set; }
+	public float Scale { get; set; } = 1f;
 	public Options Option => options;
 	public Color Color { get; set; } = Color.White;
 
@@ -59,10 +61,17 @@ public sealed class UIConfigurableItemSlot : UIElement {
 	}
 
 	protected override void DrawSelf(SpriteBatch spriteBatch) {
+		var scale = Main.inventoryScale;
+		Main.inventoryScale = Scale;
+
 		HandleItemSlotLogic();
 
-		var item = Item;
 		var position = GetDimensions().Center() + new Vector2(52f, 52f) * -0.5f * Main.inventoryScale;
-		ItemSlot.Draw(spriteBatch, ref item, context, position);
+
+		var itemArray = new Item[1] { Item };
+		ItemSlot.Draw(spriteBatch, itemArray, context, 0, position);
+		Item = itemArray[0];
+
+		Main.inventoryScale = scale;
 	}
 }

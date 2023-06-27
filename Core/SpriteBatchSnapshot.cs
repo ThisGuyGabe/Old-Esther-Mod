@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Linq.Expressions;
-using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace EstherMod.Core;
 
-public sealed class SpriteBatchSnapshot {
+public struct SpriteBatchSnapshot {
 	private sealed record class ReflectionValue<TType, TValue>(in Func<TType, TValue> Getter, in Action<TType, TValue> Setter) {
 		public TValue Get(TType type) => Getter(type);
 
@@ -52,38 +51,21 @@ public sealed class SpriteBatchSnapshot {
 		transformMatrixValue = createValue<Matrix>("transformMatrix");
 	}
 
-	private readonly SpriteBatch spriteBatch;
-
-	public SpriteSortMode SortMode {
-		get => spriteSortModeValue.Get(spriteBatch);
-		set => spriteSortModeValue.Set(spriteBatch, value);
-	}
-	public BlendState BlendState {
-		get => blendStateValue.Get(spriteBatch);
-		set => blendStateValue.Set(spriteBatch, value);
-	}
-	public SamplerState SamplerState {
-		get => samplerStateValue.Get(spriteBatch);
-		set => samplerStateValue.Set(spriteBatch, value);
-	}
-	public DepthStencilState DepthStencilState {
-		get => depthStencilStateValue.Get(spriteBatch);
-		set => depthStencilStateValue.Set(spriteBatch, value);
-	}
-	public RasterizerState RasterizerState {
-		get => rasterizerStateValue.Get(spriteBatch);
-		set => rasterizerStateValue.Set(spriteBatch, value);
-	}
-	public Effect Effect {
-		get => customEffectValue.Get(spriteBatch);
-		set => customEffectValue.Set(spriteBatch, value);
-	}
-	public Matrix TransformationMatrix {
-		get => transformMatrixValue.Get(spriteBatch);
-		set => transformMatrixValue.Set(spriteBatch, value);
-	}
+	public SpriteSortMode SortMode { get; set; }
+	public BlendState BlendState { get; set; }
+	public SamplerState SamplerState { get; set; }
+	public DepthStencilState DepthStencilState { get; set; }
+	public RasterizerState RasterizerState { get; set; }
+	public Effect Effect { get; set; }
+	public Matrix TransformationMatrix { get; set; }
 
 	public SpriteBatchSnapshot(SpriteBatch spriteBatch) {
-		this.spriteBatch = spriteBatch;
+		SortMode = spriteSortModeValue.Get(spriteBatch);
+		BlendState = blendStateValue.Get(spriteBatch);
+		SamplerState = samplerStateValue.Get(spriteBatch);
+		DepthStencilState = depthStencilStateValue.Get(spriteBatch);
+		RasterizerState = rasterizerStateValue.Get(spriteBatch);
+		Effect = customEffectValue.Get(spriteBatch);
+		TransformationMatrix = transformMatrixValue.Get(spriteBatch);
 	}
 }

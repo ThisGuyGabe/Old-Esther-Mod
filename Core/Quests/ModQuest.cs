@@ -63,7 +63,7 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 	}
 
 	public bool TryAssign(Player player) {
-		if (IsUnlocked() && player.TryGetModPlayer(out QuestPlayer questPlayer)) {
+		if (IsUnlocked() && player.TryGetModPlayer(out QuestPlayer questPlayer) && !IsAssignedTo(player)) {
 			int i = 0;
 			foreach (ref var quest in questPlayer.ActiveQuests.AsSpan()) {
 				if (!string.IsNullOrEmpty(quest)) {
@@ -81,6 +81,13 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 				}
 				return true;
 			}
+		}
+		return false;
+	}
+
+	public bool IsAssignedTo(Player player) {
+		if (player.TryGetModPlayer(out QuestPlayer questPlayer)) {
+			return questPlayer.ActiveQuests.AsSpan().Contains(FullName);
 		}
 		return false;
 	}

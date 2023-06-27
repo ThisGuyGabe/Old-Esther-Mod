@@ -19,6 +19,7 @@ public sealed class QuestSystem : ModSystem {
 		IconById = new Asset<Texture2D>[quests.Count];
 		for (int i = 0; i < quests.Count; i++) {
 			IconById[i] = ModContent.Request<Texture2D>(quests[i].Texture, AssetRequestMode.ImmediateLoad);
+			questsByName[quests[i].FullName] = quests[i];
 		}
 	}
 
