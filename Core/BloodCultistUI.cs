@@ -219,7 +219,7 @@ public sealed class BloodCultistUI : ILoadable {
 			};
 			takeQuestPanel.OnLeftClick += (UIMouseEvent evt, UIElement listeningElement) => {
 				if (currentQuestChosen != null && Main.LocalPlayer.TryGetModPlayer(out QuestPlayer questPlayer)) {
-					if (currentQuestChosen.quest.IsCompleted(Main.LocalPlayer)) {
+					if (currentQuestChosen.quest.IsCompleted(Main.LocalPlayer) && !questPlayer.CompletedQuests2.Contains(currentQuestChosen.quest.FullName)) {
 						foreach (var reward in currentQuestChosen.quest.Rewards) {
 							reward.Grant(Main.LocalPlayer);
 						}
