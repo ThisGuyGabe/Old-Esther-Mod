@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Runtime.CompilerServices;
 
 namespace EstherMod.Content.Items;
 
@@ -18,12 +19,12 @@ public sealed class DayBreakStar : ModItem {
 		Item.UseSound = SoundID.Item4;
 	}
 
-	public sealed override unsafe bool? UseItem(Player player) {
+	public sealed override bool? UseItem(Player player) {
 		if (player.itemTime == 0 && player.itemAnimation > 0) {
 			player.itemTime = Item.useTime;
 
 			bool conditionToChange = !Main.dayTime;
-			int dustType = 68 ^ (352 * *(byte*)&conditionToChange);
+			int dustType = 68 ^ (352 * Unsafe.As<bool, byte>(ref conditionToChange));
 
 			for (int i = 0; i < 50; i++) {
 				Vector2 speed = Main.rand.NextVector2CircularEdge(1f, 1f);

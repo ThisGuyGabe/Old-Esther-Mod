@@ -8,15 +8,13 @@
 		<LangVersion>latest</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
 	</ItemGroup>
-	<ItemGroup>
-		<Reference Include="ParticleLibrary">
-			<HintPath>lib\ParticleLibrary.dll</HintPath>
-		</Reference>
-		<Reference Include="StructureHelper">
-			<HintPath>lib\StructureHelper.dll</HintPath>
-		</Reference>
-	</ItemGroup>
+
+	<PropertyGroup>
+		<!-- Opt in to preview features before using them -->
+		<NoWarn>$(NoWarn);CA2252</NoWarn>
+	</PropertyGroup>
 </Project>

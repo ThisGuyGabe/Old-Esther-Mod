@@ -28,11 +28,11 @@ namespace EstherMod.Content.NPCs {
 			}
 			NPC.frameCounter += 1;
 			if (NPC.frameCounter >= 8) {
-				int y = NPC.frame.Y + 1;
-				if (y == 5) {
-					y = 1;
+				NPC.frame.Y += frameHeight;
+				if (NPC.frame.Y >= NPC.frame.Height * frameHeight) {
+					NPC.frame.Y = 0;
 				}
-				NPC.frame.Y = y * frameHeight;
+				NPC.frameCounter = 0;
 			}
 		}
 
