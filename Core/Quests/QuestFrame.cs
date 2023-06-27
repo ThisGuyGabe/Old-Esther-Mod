@@ -10,13 +10,17 @@ public sealed record class QuestFrame(in Asset<Texture2D> Texture) : ILoadable {
 	public const string IconFrameBounty = "EstherMod/Assets/Quests/IconFrameBounty";
 	public const string IconFrameMain = "EstherMod/Assets/Quests/IconFrameMain";
 
+	public Mod Mod { get; private set; }
 	public int Type { get; private set; }
 
 	public void Load(Mod mod) {
+		Mod = mod;
+
 		Type = QuestFrames.questFrames.Count;
 		QuestFrames.questFrames.Add(this);
 	}
 
 	public void Unload() {
+		Mod = null;
 	}
 }

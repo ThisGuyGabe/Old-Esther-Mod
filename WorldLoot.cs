@@ -9,7 +9,7 @@ namespace EstherMod
         int itemstoPlaceInChestChoice = 0;
         public override void PostWorldGen()
         {
-            for (int chestIndex = 0; chestIndex < 800; chestIndex++)
+            for (int chestIndex = 0; chestIndex < Main.chest.Length; chestIndex++)
             {
                 Chest chest = Main.chest[chestIndex];
                 int[] ItemChestLoot = { Mod.Find<ModItem>("Needle").Type };
@@ -22,7 +22,7 @@ namespace EstherMod
                     {
                         for (int inventoryIndex = 0; inventoryIndex < 40; inventoryIndex++)
                         {
-                            if (chest.item[inventoryIndex].type == 0)
+                            if (chest.item[inventoryIndex].type == ItemID.None)
                             {
                                 chest.item[inventoryIndex].SetDefaults(ItemChestLoot[itemstoPlaceInChestChoice]); // fills slot with item
                                 chest.item[inventoryIndex].stack = NeedleNum;

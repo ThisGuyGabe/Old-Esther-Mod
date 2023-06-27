@@ -1,5 +1,5 @@
 ﻿using Terraria;
-using Terraria.Localization;
+using Terraria.ID;
 
 namespace EstherMod.Core.Quests;
 
@@ -12,6 +12,10 @@ public abstract class QuestGoal : IQuestProperty {
 			return;
 
 		questPlayer.GoalsCompletedByQuest[Quest.FullName][Ordinal] = true;
+
+		if (Main.netMode == NetmodeID.MultiplayerClient) {
+			Esther.Instance.Packet_GoalCompletion(player.whoAmI, Ordinal, Quest.FullName);
+		}
 	}
 
 	/// <summary>

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Reflection;
 using EstherMod.Content.NPCs;
-using EstherMod.Content.Quests.Rewards;
 using EstherMod.Core.Fusions;
 using EstherMod.Core.Quests;
 using EstherMod.Core.UI;
@@ -13,7 +12,6 @@ using MonoMod.Cil;
 using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
-using Terraria.GameContent.UI.Chat;
 using Terraria.GameContent.UI.Elements;
 using Terraria.ID;
 using Terraria.Localization;
@@ -226,11 +224,18 @@ public sealed class BloodCultistUI : ILoadable {
 							reward.Grant(Main.LocalPlayer);
 						}
 						questPlayer.CompletedQuests2.Add(currentQuestChosen.quest.FullName);
+
+						if (Main.netMode == NetmodeID.MultiplayerClient) {
+							Esther.Instance.Packet_ClaimQuestRewards(Main.myPlayer, currentQuestChosen.quest.FullName);
+						}
 					}
 					else {
 						bool value = currentQuestChosen.quest.TryAssign(Main.LocalPlayer);
 						if (value) {
 							Main.NewText($"Took '{currentQuestChosen.quest.DisplayName.Value}' quest!", 255, 255, 200);
+						}
+						else if (currentQuestChosen.locked) {
+							Main.NewText("This quest is locked!", 255, 255, 200);
 						}
 						else {
 							Main.NewText("You can't take any more quests!", 255, 255, 200);

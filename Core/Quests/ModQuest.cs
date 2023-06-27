@@ -2,6 +2,7 @@
 using System.Collections.Immutable;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
@@ -65,7 +66,7 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 		if (IsUnlocked() && player.TryGetModPlayer(out QuestPlayer questPlayer)) {
 			int i = 0;
 			foreach (ref var quest in questPlayer.ActiveQuests.AsSpan()) {
-				if (quest != null) {
+				if (!string.IsNullOrEmpty(quest)) {
 					i++;
 					continue;
 				}
@@ -74,6 +75,10 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 				Ordinal = i;
 
 				questPlayer.GoalsCompletedByQuest[quest] = new bool[Goals.Count];
+
+				if (Main.netMode == NetmodeID.MultiplayerClient) {
+					Esther.Instance.Packet_AssignQuest(Main.myPlayer, quest, Goals.Count);
+				}
 				return true;
 			}
 		}
@@ -98,12 +103,15 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 		if (!player.TryGetModPlayer(out QuestPlayer questPlayer))
 			return;
 
-		Main.NewText($"Quest '{DisplayName.Format()}' has been completed!", 255, 255, 200);
+		Main.NewText($"Quest '{DisplayName.Value}' has been completed!", 255, 255, 200);
 
+		questPlayer.ActiveQuests[Ordinal] = string.Empty;
 		questPlayer.CompletedQuests.Add(FullName);
-
-		questPlayer.ActiveQuests[Ordinal] = null;
 		questPlayer.GoalsCompletedByQuest.Remove(FullName);
+
+		if (Main.netMode == NetmodeID.MultiplayerClient) {
+			Esther.Instance.Packet_CompleteQuest(player.whoAmI, FullName);
+		}
 
 		Ordinal = -1;
 	}
