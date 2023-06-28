@@ -345,6 +345,11 @@ Mods: {
 				DisplayName: Poo Spider
 				Tooltip: ""
 			}
+
+			SludgeSlider: {
+				DisplayName: Sludge Slider
+				Tooltip: "'Slime those bastards!'"
+			}
 		}
 
 		Projectiles: {
@@ -380,6 +385,7 @@ Mods: {
 			PhoenixFlameProjectile.DisplayName: Phoenix arrow
 			ForgedFuryProjectile.DisplayName: Fury arrow
 			VulcanoProjectile.DisplayName: Vulcano Lava
+			SludgeSliderProjectile.DisplayName: Sludge Slider Yoyo
 		}
 
 		NPCs: {
