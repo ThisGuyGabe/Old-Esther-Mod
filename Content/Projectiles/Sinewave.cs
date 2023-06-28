@@ -19,7 +19,7 @@ namespace EstherMod.Content.Projectiles
 
 		public override void SetStaticDefaults() 
 		{
-			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 15;
+			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 25;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}
 		public override void SetDefaults() {
@@ -97,7 +97,7 @@ namespace EstherMod.Content.Projectiles
 			for (int k = 0; k < Projectile.oldPos.Length; k++) {
 				float scale = Projectile.scale * (Projectile.oldPos.Length - k) / Projectile.oldPos.Length * .45f;
 				Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
-				Color color = Projectile.GetAlpha(Color.Aquamarine) * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+				Color color = Projectile.GetAlpha(Color.SkyBlue) * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
 				Main.spriteBatch.Draw(texture2D, drawPos, null, color, Projectile.rotation, TextureAssets.Projectile[Projectile.type].Value.Size(), scale, SpriteEffects.None, 0f);
 			}
 			return true;
