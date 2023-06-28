@@ -41,22 +41,11 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.useAmmo = AmmoID.Bullet;
         }
 
-        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
-            const int NumProjectiles = 1; // Amount of projectiles fired
 
-            // Creates a cone angle that comes from the float variable where the player is looking.
-            for (int i = 0; i < NumProjectiles; i++) {
-                Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(2.5f));
-
-                Projectile.NewProjectileDirect(source, position, newVelocity, type, damage, knockback, player.whoAmI); // Spawns the projectiles.
-            }
-
-            return false;  // Prevents the game from firing the bullet from the SetDefaults hook.
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
+            velocity = velocity.RotatedByRandom(MathHelper.ToRadians(7.5f));
         }
 
-        public override Vector2? HoldoutOffset() { // So you are holding the gun properly.
-            return new Vector2(2f, 0f);
-        }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
