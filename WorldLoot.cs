@@ -1,6 +1,7 @@
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.ID;
+using EstherMod.Content.Items.Weapons.Melee;
 
 namespace EstherMod
 {
