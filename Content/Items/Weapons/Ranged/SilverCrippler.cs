@@ -1,25 +1,14 @@
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class SilverCrippler : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Silver Crippler");
-            // Tooltip.SetDefault("");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Srebrny Okaleczacz");
-        }
         public override void SetDefaults()
         {
-
             Item.damage = 10;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 54;
@@ -31,8 +20,8 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.noMelee = true;
             Item.knockBack = 1;
             Item.value = Item.sellPrice(gold: 1, silver: 21, copper: 60);
-            Item.rare = 1; // ok this is a test
-            Item.UseSound = SoundID.Item31;
+			Item.rare = ItemRarityID.Green;
+			Item.UseSound = SoundID.Item31;
             Item.autoReuse = true;
             Item.shoot = 10;
             Item.shootSpeed = 8f;

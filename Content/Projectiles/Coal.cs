@@ -5,13 +5,10 @@ using Terraria.ModLoader;
 
 namespace EstherMod.Content.Projectiles
 {
-
 	public class Coal : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Coal");
-
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 
@@ -33,7 +30,6 @@ namespace EstherMod.Content.Projectiles
 
 		int bounce = 0;
 		int maxBounces = 2;
-
 
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{

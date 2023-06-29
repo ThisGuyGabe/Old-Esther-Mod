@@ -1,15 +1,11 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+
 namespace EstherMod.Content.Projectiles
 {
     public class Frostpike : ModProjectile
     {
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Frostpike");
-		}
-
 		public override void SetDefaults()
 		{
 			Projectile.penetrate = 2;

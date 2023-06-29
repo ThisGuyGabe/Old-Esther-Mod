@@ -6,13 +6,10 @@ using System;
 
 namespace EstherMod.Content.Projectiles
 {
-
     public class BonestromSigil : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Bonestrom Sigil");
-
             ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
         }
 

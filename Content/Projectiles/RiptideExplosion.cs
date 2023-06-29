@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -17,9 +16,7 @@ namespace EstherMod.Content.Projectiles
 			Projectile.scale = 5f;
 			Projectile.friendly = true;
 			Projectile.penetrate = -1;
-
 			Projectile.timeLeft = 1;
-
 			DrawOffsetX = -2;
 			DrawOriginOffsetY = -5;
 			Projectile.damage = 45;

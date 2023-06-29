@@ -1,10 +1,7 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.Audio;
-using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
@@ -13,12 +10,6 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 	public class CopperPopper : ModItem
 	{
 		public float bulletSpread = 25f; // The spread the bullets has when fired(adds the number affects both degrees up and down).
-
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Copper Popper");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
 		public override void SetDefaults()
 		{
 			Item.width = 52;

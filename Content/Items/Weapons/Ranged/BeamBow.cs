@@ -1,24 +1,13 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using Terraria.Audio;
 using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class BeamBow : ModItem
     {
         int amountshot = 2;
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Beam Bow");
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Laserowy Łuk");
-            // Tooltip.SetDefault("Converts ALL arrows to lazers, and it seems its bugged.");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-        }
         public override void SetDefaults()
         {
             Item.width = 22;

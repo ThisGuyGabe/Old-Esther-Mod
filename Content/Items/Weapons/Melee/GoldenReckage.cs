@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
 using EstherMod.Content.Projectiles;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,10 +10,6 @@ namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class GoldenReckage : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            Item.ResearchUnlockCount = 1;
-        }
         public override void SetDefaults()
         {
             Item.damage = 29;
@@ -26,7 +21,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 2;
             Item.value = Item.sellPrice(gold: 1, silver: 30);
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.noUseGraphic = true;

@@ -11,12 +11,8 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 {
 	public class Tinuzi : ModItem
     {
-    	public override void SetStaticDefaults() {
-        
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-        }
-
-        public override void SetDefaults() {
+        public override void SetDefaults() 
+		{
         	Item.width = 48;
             Item.height = 36;
             Item.scale = 0.70f;
@@ -42,7 +38,8 @@ namespace EstherMod.Content.Items.Weapons.Ranged
         }
 
 
-        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) 
+		{
             velocity = velocity.RotatedByRandom(MathHelper.ToRadians(7.5f));
         }
 

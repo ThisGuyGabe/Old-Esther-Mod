@@ -6,16 +6,12 @@ using Terraria.Audio;
 
 namespace EstherMod.Content.Projectiles
 {
-
     public class BonestromBolt : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Bonestrom Bolt");
-
             ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
         }
-
         public override void SetDefaults()
         {
             Projectile.width = 20;

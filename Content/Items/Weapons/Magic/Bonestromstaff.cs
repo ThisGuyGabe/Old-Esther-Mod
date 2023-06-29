@@ -1,10 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 
@@ -12,14 +9,6 @@ namespace EstherMod.Content.Items.Weapons.Magic
 {
 	public class BonestromStaff : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Bonestrom Staff");
-			// Tooltip.SetDefault("Shoots a sigil that summons necromantidc shards that home in on your cursor.");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			//DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Laska Kościoburzy");
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 65;
@@ -30,8 +19,8 @@ namespace EstherMod.Content.Items.Weapons.Magic
             Item.useAnimation = 20;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.knockBack = 6;
-            Item.value = 100000;
-            Item.rare = 2;
+            Item.value = Item.sellPrice(gold: 3);
+            Item.rare = ItemRarityID.Orange;
             Item.UseSound = SoundID.Item20;
             Item.autoReuse = true;
             Item.shoot = Mod.Find<ModProjectile>("BonestromSigil").Type;

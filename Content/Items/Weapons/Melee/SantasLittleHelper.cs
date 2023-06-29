@@ -2,22 +2,12 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 using Terraria.DataStructures;
-
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class SantasLittleHelper : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // Tooltip.SetDefault("Festive! \nShoots three random colored presents that bounce and release coal on death.");
-            // DisplayName.SetDefault("Santa's Little Helper");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Mały Pomocnik Mikołaja");
-        }
         public override void SetDefaults()
         {
             Item.width = 48;
@@ -32,7 +22,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
             Item.knockBack = 2;
             Item.crit = 5;
             Item.value = Item.sellPrice(silver: 30);
-            Item.rare = 2;
+            Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item1;
             Item.shoot = Mod.Find<ModProjectile>("YellowPresent").Type;
             Item.shootSpeed = 12f;
@@ -50,14 +40,6 @@ namespace EstherMod.Content.Items.Weapons.Melee
 
             }
             return false;
-        }
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.Wood, 12);
-            recipe.AddIngredient(ItemID.Present, 5);
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.Register();
         }
 
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)

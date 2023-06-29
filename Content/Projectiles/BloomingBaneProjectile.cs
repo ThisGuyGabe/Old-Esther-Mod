@@ -12,15 +12,9 @@ namespace EstherMod.Content.Projectiles
 			AIType = 595;
 			Main.projFrames[Projectile.type] = 28;
 		}
-
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("BloomingBaneProjectile");
-
-		}
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			if (Main.rand.Next(2) == 0)
+			if (Main.rand.NextBool(2))
 			{
 				target.AddBuff(BuffID.Poisoned, 60, false);
 			}

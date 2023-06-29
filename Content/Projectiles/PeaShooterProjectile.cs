@@ -9,8 +9,6 @@ namespace EstherMod.Content.Projectiles
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Peashooter Projectile");
-
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 

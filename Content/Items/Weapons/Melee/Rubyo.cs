@@ -1,9 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
@@ -11,17 +8,13 @@ namespace EstherMod.Content.Items.Weapons.Melee
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Rub-yo");
-            // Tooltip.SetDefault("");
             ItemID.Sets.Yoyo[Item.type] = true;
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
-
         public override void SetDefaults()
         {
             Item.damage = 16;
             Item.crit = 5;
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Blue;
             Item.width = 30;
             Item.height = 32;
             Item.useAnimation = 25;

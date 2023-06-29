@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -20,11 +17,6 @@ namespace EstherMod.Content.Projectiles
 			Projectile.timeLeft = 180;
             Projectile.penetrate = 2;
 			AIType = ProjectileID.QuarterNote;
-		}
-		
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Trumpet Projectile");
 		}
     }
 }

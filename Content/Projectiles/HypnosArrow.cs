@@ -13,7 +13,6 @@ namespace EstherMod.Content.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            //DisplayName.SetDefault("Hypno's Arrow");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5; // trail length
             ProjectileID.Sets.TrailingMode[Projectile.type] = 1;
             ProjectileID.Sets.TrailingMode[Type] = 0;

@@ -38,7 +38,6 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 
 				Sinewave modProjectile = projectile.ModProjectile as Sinewave;
 				modProjectile.waveOffset = waveOffset * (1f - 1f / 2);
-
 			}
 			return false;
 		}

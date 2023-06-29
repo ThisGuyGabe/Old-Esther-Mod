@@ -2,25 +2,18 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class ForgedFury : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Forged Fury");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Wykuta Furia");
-        }
         public override void SetDefaults()
         {
             Item.damage = 36;
             Item.crit = 4;
-            Item.rare = 2;
-            Item.width = 20;
+			Item.rare = ItemRarityID.Green;
+
+			Item.width = 20;
             Item.height = 52;
             Item.useAnimation = 24;
             Item.useTime = 24;

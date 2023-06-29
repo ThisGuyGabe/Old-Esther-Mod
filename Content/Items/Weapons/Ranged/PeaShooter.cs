@@ -1,21 +1,11 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
-
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
 	public class PeaShooter : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Peashooter");
-			// Tooltip.SetDefault("Kill those zombies!");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			//DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Groszkostrzelec");
-		}
 
 		public override void SetDefaults()
 		{
@@ -28,7 +18,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.knockBack = 3.5f;
 			Item.value = Item.sellPrice(silver: 80, copper: 32);
-			Item.rare = 2;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item61;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("PeaShooterProjectile").Type;

@@ -3,21 +3,12 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class SolarRecurve : ModItem
     {
         int amountshot = 2;
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Solar Recurve");
-            // Tooltip.SetDefault("Shoots more arrows every time.");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Słoneczne Zakrzywienie");
-        }
         public override void SetDefaults()
         {
             Item.width = 22;

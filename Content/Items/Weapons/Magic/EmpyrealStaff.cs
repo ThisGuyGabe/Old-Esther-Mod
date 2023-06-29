@@ -1,20 +1,12 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
+
 namespace EstherMod.Content.Items.Weapons.Magic
 {
 
     public class EmpyrealStaff : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // Tooltip.SetDefault("Use this during night for a mana discount, faster speed, but less damage.");
-            // DisplayName.SetDefault("Empyreal Staff");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Różdżka Empirejska");
-        }
         public override void SetDefaults()
         {
             Item.width = 40;
@@ -32,7 +24,7 @@ namespace EstherMod.Content.Items.Weapons.Magic
             Item.knockBack = 7;
             Item.crit = 7;
             Item.value = Item.sellPrice(silver: 60, copper: 20);
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item72;
 
         }
@@ -70,5 +62,4 @@ namespace EstherMod.Content.Items.Weapons.Magic
             .Register();
         }
     }
-
 }

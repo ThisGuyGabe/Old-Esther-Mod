@@ -1,24 +1,16 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class PhoenixFlame : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Ogień Feniksa");
-        }
         public override void SetDefaults()
         {
             Item.damage = 70;
-            Item.rare = ItemRarityID.Yellow;
+            Item.rare = ItemRarityID.Red;
             Item.width = 28;
             Item.height = 80;
             Item.useAnimation = 20;

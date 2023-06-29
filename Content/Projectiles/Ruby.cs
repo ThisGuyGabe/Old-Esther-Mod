@@ -1,12 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
 
 namespace EstherMod.Content.Projectiles
 {
@@ -15,7 +10,6 @@ namespace EstherMod.Content.Projectiles
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Ruby");
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 

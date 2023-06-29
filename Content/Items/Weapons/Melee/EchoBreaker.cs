@@ -6,19 +6,11 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
-using System.IO;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class EchoBreaker : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("EthericalBow"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-            // Tooltip.SetDefault("");
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 30;
@@ -31,7 +23,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 6;
             Item.value = Item.sellPrice(gold: 1, silver: 33, copper: 28);
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.channel = true;

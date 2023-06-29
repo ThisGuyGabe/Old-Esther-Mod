@@ -9,11 +9,6 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class HypnosStorm : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //Tooltip.SetDefault("");
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 15;
@@ -25,7 +20,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.knockBack = 5;
             Item.value = Item.sellPrice(gold: 1);
-            Item.rare = ItemRarityID.Orange;
+            Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item5;
             Item.autoReuse = true;
 

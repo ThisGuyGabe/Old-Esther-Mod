@@ -3,21 +3,11 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
-
     public class FireStormSlasher : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Firestorm Slasher");
-            // Tooltip.SetDefault("Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Rzeźnik Ognistej Burzy");
-        }
         public override void SetDefaults()
         {
             Item.width = 50;

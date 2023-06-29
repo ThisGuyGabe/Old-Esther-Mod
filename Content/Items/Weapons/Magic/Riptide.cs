@@ -1,21 +1,12 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.Audio;
-using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Magic
 {
 	public class Riptide : ModItem
 	{
-		public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Riptide");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
-
 		public override Vector2? HoldoutOffset() {
 			return new Vector2(-2.5f, -5f);
 		}

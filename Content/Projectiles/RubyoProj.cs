@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -20,7 +19,6 @@ namespace EstherMod.Content.Projectiles
         int TimeToShoot = ShootRate;
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Rubyo Proj");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4; // how long trail is
             ProjectileID.Sets.TrailingMode[Projectile.type] = 1;
             ProjectileID.Sets.YoyosLifeTimeMultiplier[Projectile.type] = 100;

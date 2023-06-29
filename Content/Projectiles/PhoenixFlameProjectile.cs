@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
@@ -11,9 +10,6 @@ namespace EstherMod.Content.Projectiles
 {
 	public class PhoenixFlameProjectile : ModProjectile
 	{
-		public override void SetStaticDefaults() {
-		}
-
 		public override void SetDefaults() {
 			Projectile.aiStyle = 1;
 			Projectile.width = 7;
@@ -26,7 +22,6 @@ namespace EstherMod.Content.Projectiles
 			Projectile.light = 0.25f;
 			Projectile.ignoreWater = true; 
 			Projectile.tileCollide = true; 
-
 			AIType = ProjectileID.WoodenArrowFriendly; 
 		}
 		
@@ -62,6 +57,5 @@ namespace EstherMod.Content.Projectiles
 			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 			SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
 		}
-
 	}
 }

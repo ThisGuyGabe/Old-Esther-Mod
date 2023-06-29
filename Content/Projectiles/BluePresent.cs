@@ -6,16 +6,8 @@ using Terraria.Audio;
 
 namespace EstherMod.Content.Projectiles
 {
-
 	public class BluePresent : ModProjectile
 	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Blue Present");
-
-			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
-		}
-
 		public override void SetDefaults()
 		{
 			Projectile.width = 16;

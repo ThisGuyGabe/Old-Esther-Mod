@@ -2,19 +2,11 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
+
 namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class PermaFrost : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // Tooltip.SetDefault("When you hit an enemy it shoots an icicle that deals damage.");
-            // DisplayName.SetDefault("Perma Frost");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Stałomróz");
-        }
         public override void SetDefaults()
         {
             Item.width = 60;
@@ -29,7 +21,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
             Item.knockBack = 5;
             Item.crit = 0;
             Item.value = Item.sellPrice(gold: 5, silver: 41);
-            Item.rare = 5;
+			Item.rare = ItemRarityID.LightRed;
             Item.UseSound = SoundID.Item1;
         }
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)

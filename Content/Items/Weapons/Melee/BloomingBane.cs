@@ -1,28 +1,16 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
-using Terraria.DataStructures;
-using Microsoft.Xna.Framework;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class BloomingBane : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Blooming Bane");
-            // Tooltip.SetDefault("Wielded by the purest of warriors \nHas a chance to inflict poison for a short duration when hitting an enemy");
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Kwitnący Pogromca");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 26;
             Item.crit = 24;
-            Item.rare = 3;
+            Item.rare = ItemRarityID.Green;
             Item.width = 40;
             Item.height = 40;
             Item.useAnimation = 25;

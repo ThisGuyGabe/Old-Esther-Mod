@@ -13,11 +13,6 @@ namespace EstherMod.Content.Items.Weapons.Melee
 {
 	public class Needle : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			// Tooltip.SetDefault("Throws out a needle that goes in a line and retreats. \nIf it's used in the air it lets the player hover.");
-		}
-
         public override void SetDefaults()
         {
             Item.damage = 25;

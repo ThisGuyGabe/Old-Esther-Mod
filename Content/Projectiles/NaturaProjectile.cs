@@ -11,7 +11,6 @@ namespace EstherMod.Content.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Natura Projectile");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 6; // how long trail is
             ProjectileID.Sets.TrailingMode[Projectile.type] = 1;
             ProjectileID.Sets.YoyosLifeTimeMultiplier[Projectile.type] = -1;

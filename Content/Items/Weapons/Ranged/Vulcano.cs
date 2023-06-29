@@ -3,25 +3,16 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
     public class Vulcano : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Vulcano");
-            // Tooltip.SetDefault("");
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Polish), "Wulkan");
-        }
         public override void SetDefaults()
         {
             Item.damage = 71;
             Item.crit = 10;
-            Item.rare = ItemRarityID.LightRed;
+            Item.rare = ItemRarityID.Pink;
             Item.width = 32;
             Item.height = 72;
             Item.useAnimation = 27;

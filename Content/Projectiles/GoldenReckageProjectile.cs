@@ -1,12 +1,9 @@
-using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
-using System;
 
 namespace EstherMod.Content.Projectiles
 {

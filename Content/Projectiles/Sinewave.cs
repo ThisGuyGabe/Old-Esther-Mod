@@ -32,7 +32,7 @@ namespace EstherMod.Content.Projectiles
 			Projectile.light = 1f;
 			Projectile.tileCollide = true;
 			Projectile.timeLeft = 600;
-   			Projectile.penetrate = -1;
+			Projectile.penetrate = -1;
 		}
 		public override bool ShouldUpdatePosition() {
 			return false;

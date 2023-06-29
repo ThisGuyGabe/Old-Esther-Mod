@@ -1,7 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
@@ -9,17 +8,14 @@ namespace EstherMod.Content.Items.Weapons.Melee
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Natura Evolutionis");
-            // Tooltip.SetDefault("");
             ItemID.Sets.Yoyo[Item.type] = true;
-            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
             Item.damage = 9;
             Item.crit = 5;
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Green;
             Item.width = 32;
             Item.height = 46;
             Item.useAnimation = 35;

@@ -2,18 +2,12 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
 	public class StellarRain : ModItem
 	{
-		public override void SetStaticDefaults() {
-
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
-
 		public override void SetDefaults() {
 			Item.width = 36;
 			Item.height = 36;
@@ -29,8 +23,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
 			Item.value = Item.sellPrice(gold: 1);
 			Item.rare = ItemRarityID.Green;
 			Item.shoot = Mod.Find<ModProjectile>("StellarRainProjectile").Type;
-			Item.shootSpeed = 7.5f; 
-
+			Item.shootSpeed = 7.5f;
 		}
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			Vector2 target = Main.screenPosition + new Vector2(Main.mouseX, Main.mouseY);
@@ -57,9 +50,7 @@ namespace EstherMod.Content.Items.Weapons.Melee
 				heading.Y += Main.rand.Next(-40, 41) * 0.02f;
 				Projectile.NewProjectile(source, position, heading, type, damage, knockback, player.whoAmI, 0f, ceilingLimit);
 			}
-
 			return false;
-
 		}
 	}
 }

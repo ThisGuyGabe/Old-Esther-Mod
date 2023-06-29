@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
@@ -11,9 +10,6 @@ namespace EstherMod.Content.Projectiles
 {
 	public class ForgedFuryProjectile : ModProjectile
 	{
-		public override void SetStaticDefaults() {
-		}
-
 		public override void SetDefaults() {
 			Projectile.aiStyle = 1;
 			Projectile.width = 7;

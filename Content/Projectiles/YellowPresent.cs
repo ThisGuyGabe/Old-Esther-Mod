@@ -6,13 +6,10 @@ using Terraria.Audio;
 
 namespace EstherMod.Content.Projectiles
 {
-
 	public class YellowPresent : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Yellow Present");
-
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 
