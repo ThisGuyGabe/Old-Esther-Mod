@@ -14,6 +14,6 @@ public static class EstherAssets {
 		if (Main.dedServ) return;
 
 		BonestromsStaff_Glowmask = Request<Texture2D>("EstherMod/Content/GlowMasks/BonestromStaff_Glow");
-		Request<Texture2D>("EstherMod/Content/GlowMasks/GoldenReckage_Glow");
+		GoldenReckage_Glowmask = Request<Texture2D>("EstherMod/Content/GlowMasks/GoldenReckage_Glow");
 	}
 }
