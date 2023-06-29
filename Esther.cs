@@ -3,6 +3,7 @@ using EstherMod.Content;
 using System.IO;
 using Terraria;
 using EstherMod.Core.Quests;
+using EstherMod.Common;
 
 namespace EstherMod;
 
@@ -14,6 +15,7 @@ public sealed class Esther : Mod {
 	}
 
     public sealed override void Load() {
+		EstherAssets.Load();
 		EstherEffects.Load();
     }
 
