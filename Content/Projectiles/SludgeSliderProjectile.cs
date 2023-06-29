@@ -12,7 +12,6 @@ namespace EstherMod.Content.Projectiles
 
 			ProjectileID.Sets.YoyosMaximumRange[Projectile.type] = 250f;
 
-
 			ProjectileID.Sets.YoyosTopSpeed[Projectile.type] = 13.5f;
 		}
 
@@ -33,7 +32,7 @@ namespace EstherMod.Content.Projectiles
 		}
 
 		public override void PostAI() {
- 		int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 56, 0f, 0f, 5);// the 56 means slimy saddle dusts.
+ 		int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.BlueFairy, 0f, 0f, 5);// the 56 means slimy saddle dusts.
  		Main.dust[dust].noGravity = false; 
 			
 		}

@@ -3,20 +3,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using EstherMod.Content.Tiles;
 using Terraria.ID;
-using Terraria.DataStructures;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
-using Terraria.Audio;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.GameContent;
-using Terraria.DataStructures;
-using Terraria.ModLoader.Utilities;
-using Terraria.GameContent.Creative;
-using Terraria.Localization;
-using System.Collections.Generic;
 
 namespace EstherMod.Content.Items.Placeable
 {
@@ -24,8 +11,6 @@ namespace EstherMod.Content.Items.Placeable
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Retro Wood");
-            // Tooltip.SetDefault("");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
         }
 

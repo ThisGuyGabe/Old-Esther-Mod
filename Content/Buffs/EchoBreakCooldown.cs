@@ -8,10 +8,8 @@ namespace EstherMod.Content.Buffs
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Echo Break Cooldown");
-            // Description.SetDefault("You can't use Echo Break now!");
             Main.buffNoTimeDisplay[Type] = false;
-            Main.debuff[Type] = true; //Add this so the nurse doesn't remove the buff when healing
+            Main.debuff[Type] = true;
             BuffID.Sets.NurseCannotRemoveDebuff[Type] = true;
         }
     }

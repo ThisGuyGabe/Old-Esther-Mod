@@ -1,9 +1,7 @@
-using EstherMod.Content.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {

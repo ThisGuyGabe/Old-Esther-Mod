@@ -1,24 +1,13 @@
-using System;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent;
-using Terraria.DataStructures;
-using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.Creative;
-using Terraria.Localization;
-using System.Collections.Generic;
-using Terraria.ID;
-using Terraria.GameContent.Creative;
-using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Placeable
 {
 	public class RetroWoodWall : ModItem
 	{
 		public override void SetStaticDefaults() {
-			// Tooltip.SetDefault("");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 400;
 		}
 
@@ -33,7 +22,6 @@ namespace EstherMod.Content.Items.Placeable
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 			Item.createWall = ModContent.WallType<Walls.RetroWoodWallTile>();
-
 		}
 
 		public override void AddRecipes()

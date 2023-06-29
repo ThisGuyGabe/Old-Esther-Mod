@@ -35,7 +35,7 @@ public sealed class TheSoul : ModItem {
 			.AddIngredient(ItemID.SoulofMight, 5)
 			.AddIngredient(ItemID.SoulofFright, 5)
 			.AddIngredient(ItemID.SoulofFlight, 5)
-			.AddTile(TileID.MythrilAnvil)
+			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 	}
 

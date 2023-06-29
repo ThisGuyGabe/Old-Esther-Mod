@@ -1,4 +1,3 @@
-
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
@@ -9,7 +8,6 @@ namespace EstherMod.Content.Items.Placeable
 	public class PixilWoodWall : ModItem
 	{
 		public override void SetStaticDefaults() {
-			// Tooltip.SetDefault("");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 400;
 		}
 
@@ -23,8 +21,7 @@ namespace EstherMod.Content.Items.Placeable
 			Item.useTime = 7;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
-			Item.createWall = ModContent.WallType<Walls.PixilWoodWallTile>(); // The ID of the wall that this item should place when used. ModContent.WallType<T>() method returns an integer ID of the wall provided to it through its generic type argument (the type in angle brackets).
-
+			Item.createWall = ModContent.WallType<Walls.PixilWoodWallTile>();
 		}
 
 		public override void AddRecipes()
