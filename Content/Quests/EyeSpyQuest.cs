@@ -10,8 +10,8 @@ using Terraria.ModLoader;
 
 namespace EstherMod.Content.Quests;
 
-public sealed class RoyalSlimeVanquishQuest : ModQuest {
-	public override string Texture => "EstherMod/Assets/Quests/RoyalSlimeVanquishQuest";
+public sealed class EyeSpyQuest : ModQuest {
+	public override string Texture => "EstherMod/Assets/Quests/EyeSpyQuest";
 	public override QuestFrame QuestFrame => QuestFrames.Bounty;
 	public override float Order => 1f;
 

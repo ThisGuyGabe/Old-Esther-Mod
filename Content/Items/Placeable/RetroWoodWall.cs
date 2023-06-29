@@ -1,35 +1,23 @@
+using EstherMod.Content.Walls;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
 
-namespace EstherMod.Content.Items.Placeable
-{
-	public class RetroWoodWall : ModItem
-	{
-		public override void SetStaticDefaults() {
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 400;
-		}
+namespace EstherMod.Content.Items.Placeable;
 
-		public override void SetDefaults() {
-			Item.width = 32;
-			Item.height = 32;
-			Item.maxStack = 999;
-			Item.useTurn = true;
-			Item.autoReuse = true;
-			Item.useAnimation = 15;
-			Item.useTime = 7;
-			Item.useStyle = ItemUseStyleID.Swing;
-			Item.consumable = true;
-			Item.createWall = ModContent.WallType<Walls.RetroWoodWallTile>();
-		}
+public sealed class RetroWoodWall : ModItem {
+	public override void SetStaticDefaults() {
+		Item.ResearchUnlockCount = 400;
+	}
 
-		public override void AddRecipes()
-		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(Mod.Find<ModItem>("PixilWoodWall").Type, 1);
-			recipe.AddTile(TileID.DemonAltar);
-			recipe.Register();
-		}
+	public override void SetDefaults() {
+		Item.DefaultToPlaceableWall(ModContent.WallType<RetroWoodWallTile>());
+	}
+
+	public override void AddRecipes() {
+		CreateRecipe()
+			.AddIngredient<PixilWoodWall>()
+			.AddTile(TileID.DemonAltar)
+			.Register();
 	}
 }

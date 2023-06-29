@@ -16,8 +16,7 @@ public sealed class TheSoul : ModItem {
 		Item.ResearchUnlockCount = 1;
 	}
 
-	public override void SetDefaults()
-	{
+	public override void SetDefaults() {
 		Item.width = 40;
 		Item.height = 46;
 		Item.rare = ItemRarityID.Pink;
@@ -26,8 +25,7 @@ public sealed class TheSoul : ModItem {
 		Item.value = Item.sellPrice(gold: 9, silver: 48);
 	}
 
-	public override void AddRecipes()
-	{
+	public override void AddRecipes() {
 		CreateRecipe()
 			.AddIngredient(ItemID.SoulofNight, 5)
 			.AddIngredient(ItemID.SoulofLight, 5)
@@ -39,8 +37,7 @@ public sealed class TheSoul : ModItem {
 			.Register();
 	}
 
-	public override void UpdateAccessory(Player player, bool hideVisual)
-	{
+	public override void UpdateAccessory(Player player, bool hideVisual) {
 		player.GetDamage(DamageClass.Generic) -= 0.04f; // this is the percentage
 		player.GetAttackSpeed(DamageClass.Generic) += 0.05f;
 		player.statLifeMax2 += 50;

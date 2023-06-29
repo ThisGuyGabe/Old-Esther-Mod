@@ -47,7 +47,7 @@ namespace EstherMod.Content.Projectiles
             {
                 TimeToShoot = ShootRate;
                 if (ShootType == -1)
-                    ShootType = Mod.Find<ModProjectile>("Ruby").Type;
+                    ShootType = ModContent.ProjectileType<Ruby>();
 
                 float NearestNPCDist = ShootDistance;
                 int NearestNPC = -1;

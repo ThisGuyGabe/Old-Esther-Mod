@@ -1,45 +1,42 @@
-﻿using Terraria;
+﻿using EstherMod.Content.Projectiles;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Melee
-{
-    public class BloomingBane : ModItem
-    {
-        public override void SetDefaults()
-        {
-            Item.damage = 26;
-            Item.crit = 24;
-            Item.rare = ItemRarityID.Green;
-            Item.width = 40;
-            Item.height = 40;
-            Item.useAnimation = 25;
-            Item.noUseGraphic = true;
-            Item.channel = true;
-            Item.useTime = 25;
-            Item.useStyle = 5;
-            Item.knockBack = 5f;
-            Item.shootSpeed = 25f;
-            Item.DamageType = DamageClass.Melee;
-            Item.autoReuse = true;
-            Item.useTurn = true;
-            Item.value = Item.sellPrice(gold: 1, silver: 40, copper: 60);
-            Item.UseSound = SoundID.Item1;
-            Item.shoot = Mod.Find<ModProjectile>("BloomingBaneProjectile").Type;
-            Item.shootSpeed = 15f;
-        }
+namespace EstherMod.Content.Items.Weapons.Melee;
 
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.JungleSpores, 5);
-            recipe.AddIngredient(ItemID.Stinger, 3);
-            recipe.AddIngredient(ItemID.Vine, 1);
-            recipe.AddIngredient(ItemID.Terragrim, 1);
-            recipe.AddTile(TileID.Anvils);
-            recipe.Register();
-        }
-    }
+public sealed class BloomingBane : ModItem {
+	public override void SetDefaults() {
+		Item.width = 40;
+		Item.height = 40;
+		Item.rare = ItemRarityID.Green;
+		Item.UseSound = SoundID.Item1;
+		Item.value = Item.sellPrice(gold: 1, silver: 40, copper: 60);
+
+		Item.damage = 26;
+		Item.crit = 24;
+		Item.knockBack = 5f;
+		Item.DamageType = DamageClass.Melee;
+		Item.useAnimation = 25;
+		Item.useTime = 25;
+		Item.noUseGraphic = true;
+		Item.channel = true;
+		Item.useStyle = ItemUseStyleID.Shoot;
+		Item.autoReuse = true;
+		Item.useTurn = true;
+		Item.shootSpeed = 15f;
+		Item.shoot = ModContent.ProjectileType<BloomingBaneProjectile>();
+	}
+
+	public override void AddRecipes() {
+		CreateRecipe()
+			.AddIngredient(ItemID.JungleSpores, 5)
+			.AddIngredient(ItemID.Stinger, 3)
+			.AddIngredient(ItemID.Vine)
+			.AddIngredient(ItemID.Terragrim)
+			.AddTile(TileID.Anvils)
+			.Register();
+	}
 }
 
 

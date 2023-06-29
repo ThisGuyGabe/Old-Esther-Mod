@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
+using EstherMod.Content.Items.Weapons.Melee;
 
 namespace EstherMod
 {
@@ -15,13 +16,9 @@ namespace EstherMod
 		{
 			if (item.type == ItemID.Present)
 			{
-				if (Main.rand.NextBool(3)) // the chance!!!
-				{
-					int[] items = {
-                        Mod.Find<ModItem>("SantasLittleHelper").Type
-                    };
-					itemLoot.Add(ItemDropRule.OneFromOptions(3, items));
-				}
+				itemLoot.Add(ItemDropRule.OneFromOptions(3, new int[] {
+					ModContent.ItemType<SantasLittleHelper>()
+				}));
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 using System.Linq;
 using Terraria.ModLoader.IO;
 
-namespace EstherMod.Common;
+namespace EstherMod.Common.Extensions;
 
 public static class IOExtensions {
 	public static void AddDictionary<TKey, TValue>(this TagCompound tagCompound, string key, IReadOnlyDictionary<TKey, TValue> value) {

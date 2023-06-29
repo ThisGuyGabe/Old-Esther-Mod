@@ -9,8 +9,7 @@ public sealed class ManaNecklace : ModItem {
 		Item.ResearchUnlockCount = 1;
 	}
 
-	public override void SetDefaults()
-	{
+	public override void SetDefaults() {
 		Item.width = 34;
 		Item.height = 38;
 		Item.rare = ItemRarityID.Green;

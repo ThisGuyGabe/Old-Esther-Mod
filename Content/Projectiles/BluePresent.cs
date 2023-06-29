@@ -33,7 +33,7 @@ namespace EstherMod.Content.Projectiles
 			for (int i = 0; i < 1; i++)
             {
 				Vector2 newVelocity = Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(180));
-				Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.position, newVelocity, Mod.Find<ModProjectile>("Coal").Type, 8, 4, Projectile.owner);
+				Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.position, newVelocity, ModContent.ProjectileType<Coal>(), 8, 4, Projectile.owner);
             }
         }
 

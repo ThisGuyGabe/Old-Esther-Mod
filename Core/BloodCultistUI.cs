@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using EstherMod.Common;
+using EstherMod.Common.Extensions;
 using EstherMod.Content;
 using EstherMod.Content.NPCs;
 using EstherMod.Core.Fusions;
@@ -219,7 +219,8 @@ public sealed class BloodCultistUI : ILoadable {
 			rewardsText = new UITextWScrollbar(string.Empty, 0.75f) {
 				Width = StyleDimension.Fill,
 				Height = StyleDimension.Fill,
-				Left = StyleDimension.FromPixels(-2.5f),
+				VAlign = 0f,
+				HAlign = 0f,
 				WrappedTextBottomPadding = 7.5f,
 				IsWrapped = true
 			};

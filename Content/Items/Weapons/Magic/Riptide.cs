@@ -34,7 +34,7 @@ namespace EstherMod.Content.Items.Weapons.Magic
 			Item.rare = ItemRarityID.LightRed;
 			Item.value = Item.sellPrice(gold: 2, silver: 67);
 
-			Item.shoot = Item.shoot = Mod.Find<ModProjectile>("RiptideExplosion").Type; // TODO Projectile Sprite is a placeholder until artist makes one.
+			Item.shoot = Item.shoot = ModContent.ProjectileType<RiptideExplosion>(); // TODO Projectile Sprite is a placeholder until artist makes one.
 			Item.shootSpeed = 0f; 
 		}
 

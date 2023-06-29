@@ -12,7 +12,7 @@ namespace EstherMod
             for (int chestIndex = 0; chestIndex < Main.chest.Length; chestIndex++)
             {
                 Chest chest = Main.chest[chestIndex];
-                int[] ItemChestLoot = { Mod.Find<ModItem>("Needle").Type };
+                int[] ItemChestLoot = { ModContent.ItemType<Needle>() };
                 int NeedleNum = 1;
 
                 // Spider chest btw

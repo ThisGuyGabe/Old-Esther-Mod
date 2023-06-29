@@ -23,7 +23,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
-			Item.shoot = Mod.Find<ModProjectile>("Sinewave").Type;
+			Item.shoot = ModContent.ProjectileType<Sinewave>();
 			Item.useAmmo = AmmoID.Arrow;
 			Item.shootSpeed = 6f;
         }
@@ -41,10 +41,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 			}
 			return false;
 		}
-		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) 
-		{
-			type = Mod.Find<ModProjectile>("Sinewave").Type;
-		}
+
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();

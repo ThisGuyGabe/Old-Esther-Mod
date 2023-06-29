@@ -1,3 +1,4 @@
+using EstherMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -28,25 +29,25 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.noMelee = true;
             Item.value = Item.sellPrice(gold: 18, silver: 42);
             Item.UseSound = SoundID.Item5;
-            Item.shoot = 1;
+            Item.shoot = ProjectileID.WoodenArrowFriendly;
             Item.useAmmo = AmmoID.Arrow;
             Item.crit = 4;
         }
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.HellwingBow, 1);
-            recipe.AddIngredient(ItemID.FragmentSolar, 25);
-            recipe.AddIngredient(ItemID.SoulofFright, 15);
-            recipe.AddIngredient(ItemID.HellstoneBar, 30);
-            recipe.AddTile(TileID.MythrilAnvil);
-            recipe.Register();
+            CreateRecipe()
+				.AddIngredient(ItemID.HellwingBow)
+				.AddIngredient(ItemID.FragmentSolar, 25)
+				.AddIngredient(ItemID.SoulofFright, 15)
+				.AddIngredient(ItemID.HellstoneBar, 30)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
             if (type == ProjectileID.WoodenArrowFriendly) {
-                type = Mod.Find<ModProjectile>("PhoenixFlameProjectile").Type; // Turns Wooden Arrows into Phoenix arrows
+                type = ModContent.ProjectileType<PhoenixFlameProjectile>(); // Turns Wooden Arrows into Phoenix arrows
             }
 
             if (type == ProjectileID.FireArrow) {

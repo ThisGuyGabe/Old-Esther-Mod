@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EstherMod.Common;
+using EstherMod.Common.Extensions;
 using EstherMod.Content.NPCs;
 using MonoMod.Utils;
 using Terraria;
