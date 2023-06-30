@@ -12,10 +12,10 @@ public sealed class EthericalBow : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 24;
 		Item.height = 50;
-		Item.damage = 9;
+		Item.damage = 14;
 		Item.DamageType = DamageClass.Ranged;
-		Item.useTime = 20;
-		Item.useAnimation = 20;
+		Item.useTime = 30;
+		Item.useAnimation = 30;
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.knockBack = 5;
 		Item.value = Item.sellPrice(silver: 30, copper: 10);
@@ -40,7 +40,13 @@ public sealed class EthericalBow : BaseItem {
 		return false;
 	}
 
-	public override void AddRecipes() {
+	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+	{
+		type = ModContent.ProjectileType<Sinewave>();
+	}
+
+	public override void AddRecipes() 
+	{
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<EthericScrap>(), 5)
 			.AddTile(TileID.WorkBenches)
