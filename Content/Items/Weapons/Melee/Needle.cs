@@ -94,7 +94,7 @@ public sealed class NeedleProj : ModProjectile {
 	}
 
 	public override bool PreDraw(ref Color lightColor) {
-		Texture2D texture = TextureAssets.Item[Type].Value;
+		Texture2D texture = TextureAssets.Projectile[Type].Value;
 		Texture2D chainTexture = ModContent.Request<Texture2D>(Texture + "_Chain").Value;
 
 		Vector2 pointToDrawFrom = Projectile.Center + new Vector2(-texture.Width, texture.Height).RotatedBy(Projectile.rotation);

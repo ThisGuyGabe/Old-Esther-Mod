@@ -33,7 +33,9 @@ public sealed class EthericalBow : BaseItem {
 
 			Projectile projectile = Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, player.whoAmI);
 
-			(projectile.ModProjectile as Sinewave).waveOffset = waveOffset * (1f - 1f / 2);
+			var sinewaveProj = projectile.ModProjectile as Sinewave;
+			if (sinewaveProj != null)
+				sinewaveProj.waveOffset = waveOffset * (1f - 1f / 2);
 		}
 		return false;
 	}
