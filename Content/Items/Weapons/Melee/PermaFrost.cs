@@ -1,11 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EstherMod.Core;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class PermaFrost : ModItem {
+public sealed class PermaFrost : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 60;
 		Item.height = 60;

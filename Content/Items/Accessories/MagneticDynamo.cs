@@ -1,10 +1,11 @@
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Accessories;
 
-public class MagneticDynamo : ModItem {
+public sealed class MagneticDynamo : BaseItem {
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 1;
 	}

@@ -1,5 +1,6 @@
 ﻿using EstherMod.Content.Buffs;
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +10,7 @@ using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class EchoBreaker : ModItem {
+public sealed class EchoBreaker : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 30;
 		Item.DamageType = DamageClass.Melee;

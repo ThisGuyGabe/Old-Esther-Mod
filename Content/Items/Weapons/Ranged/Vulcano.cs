@@ -1,4 +1,5 @@
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Ranged;
 
-public sealed class Vulcano : ModItem {
+public sealed class Vulcano : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 71;
 		Item.crit = 10;
@@ -16,13 +17,13 @@ public sealed class Vulcano : ModItem {
 		Item.height = 72;
 		Item.useAnimation = 27;
 		Item.useTime = 27;
-		Item.useStyle = 5;
+		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.knockBack = 4.5f;
 		Item.shootSpeed = 15f;
 		Item.DamageType = DamageClass.Ranged;
 		Item.autoReuse = true;
 		Item.noMelee = true;
-		Item.shoot = 1;
+		Item.shoot = ProjectileID.WoodenArrowFriendly;
 		Item.value = Item.sellPrice(gold: 25, silver: 67);
 		Item.UseSound = SoundID.Item5;
 		Item.useAmmo = AmmoID.Arrow;

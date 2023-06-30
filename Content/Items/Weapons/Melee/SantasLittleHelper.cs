@@ -6,10 +6,11 @@ using Terraria.DataStructures;
 using EstherMod.Content.Projectiles;
 using EstherMod.Common.Extensions;
 using System.Runtime.CompilerServices;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class SantasLittleHelper : ModItem {
+public sealed class SantasLittleHelper : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 48;
 		Item.height = 48;
@@ -42,9 +43,7 @@ public sealed class SantasLittleHelper : ModItem {
 	}
 
 	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
-		// Set velocity to (0, -30)
-		13974669643730649088.Assign(out ulong vectorAsUlong);
-		velocity = Unsafe.As<ulong, Vector2>(ref vectorAsUlong);
+		velocity = new(0f, -30f);
 
 		type = Main.rand.Next(3) switch {
 			1 => ModContent.ProjectileType<GreenPresent>(),

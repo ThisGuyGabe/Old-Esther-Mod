@@ -1,12 +1,12 @@
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System.Runtime.CompilerServices;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items;
 
-public sealed class DayBreakStar : ModItem {
+public sealed class DayBreakStar : BaseItem {
 	public sealed override void SetDefaults() {
 		Item.width = 40;
 		Item.height = 36;

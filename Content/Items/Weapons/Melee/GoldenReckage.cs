@@ -3,13 +3,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using EstherMod.Content.Projectiles;
 using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 using Microsoft.Xna.Framework;
 using EstherMod.Common;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class GoldenReckage : ModItem {
+public sealed class GoldenReckage : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 29;
 		Item.DamageType = DamageClass.Melee;

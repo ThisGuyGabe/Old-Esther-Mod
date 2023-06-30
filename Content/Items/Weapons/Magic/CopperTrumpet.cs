@@ -3,10 +3,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using EstherMod.Content.Projectiles;
 using EstherMod.Common;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 
-public sealed class CopperTrumpet : ModItem {
+public sealed class CopperTrumpet : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 36;
 		Item.height = 18;

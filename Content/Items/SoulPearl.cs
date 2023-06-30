@@ -1,10 +1,10 @@
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items;
 
-public sealed class SoulPearl : ModItem {
+public sealed class SoulPearl : BaseItem {
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 25;
 	}

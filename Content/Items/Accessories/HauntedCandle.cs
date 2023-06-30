@@ -1,11 +1,12 @@
-﻿using Terraria;
+﻿using EstherMod.Core;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Accessories;
 
-public class HauntedCandle : ModItem {
+public sealed class HauntedCandle : BaseItem {
 	public override void SetStaticDefaults() {
 		Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, 4));
 		ItemID.Sets.AnimatesAsSoul[Item.type] = true;

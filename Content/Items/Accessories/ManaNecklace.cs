@@ -1,10 +1,11 @@
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Accessories;
 
-public sealed class ManaNecklace : ModItem {
+public sealed class ManaNecklace : BaseItem {
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 1;
 	}
@@ -19,17 +20,18 @@ public sealed class ManaNecklace : ModItem {
 	}
 
 	public override void UpdateAccessory(Player player, bool hideVisual) {
-		player.manaCost -= 0.08f;
-		player.statManaMax2 += 20;
 		player.manaFlower = true;
-		player.manaRegen += 5;
+		player.manaCost -= 0.08f;
+
+		player.statManaMax2 += 20;
+		player.manaRegenDelayBonus += 1f;
+		player.manaRegenBonus += 25;
 	}
 
-	public override void AddRecipes()
-	{
+	public override void AddRecipes() {
 		CreateRecipe()
-			.AddIngredient(ItemID.ManaFlower, 1)
-			.AddIngredient(ItemID.ManaRegenerationBand, 1)
+			.AddIngredient(ItemID.ManaFlower)
+			.AddIngredient(ItemID.ManaRegenerationBand)
 			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 	}

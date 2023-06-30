@@ -1,11 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EstherMod.Core;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 
-public sealed class EmpyrealStaff : ModItem {
+public sealed class EmpyrealStaff : BaseItem {
 	public override void SetStaticDefaults() {
 		Item.staff[Item.type] = true;
 	}

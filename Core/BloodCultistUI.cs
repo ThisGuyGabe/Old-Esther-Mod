@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using EstherMod.Common.Extensions;
 using EstherMod.Content;
@@ -148,8 +149,7 @@ public sealed class BloodCultistUI : ILoadable {
 			foreach (var quest in QuestSystem.quests) {
 				var questElement = new QuestElement(quest) {
 					Width = StyleDimension.Fill,
-					Height = StyleDimension.FromPixels(100f),
-					Left = StyleDimension.FromPixels(-2f)
+					Height = StyleDimension.FromPixels(100f)
 				};
 				questElement.OnLeftClick += (UIMouseEvent evt, UIElement listeningElement) => {
 					var questElement = listeningElement as QuestElement;
@@ -216,36 +216,32 @@ public sealed class BloodCultistUI : ILoadable {
 				HAlign = 1f,
 				VAlign = 0.75f,
 			};
-			rewardsText = new UITextWScrollbar(string.Empty, 0.75f) {
-				Width = StyleDimension.Fill,
-				Height = StyleDimension.Fill,
-				VAlign = 0f,
-				HAlign = 0f,
+			rewardsText = new UITextWScrollbar(string.Empty, 0.75f, origin: Vector2.Zero) {
+				Width = { Percent = 1f },
+				Height = { Percent = 1f },
 				WrappedTextBottomPadding = 7.5f,
-				IsWrapped = true
+				IsWrapped = false,
 			};
 			rewardsText.OnUpdate += (UIElement affectedElement) => {
 				if (!currentQuestChosen.locked) {
-					string[] rewardTexts = new string[currentQuestChosen.quest.Rewards.Count];
-					for (int i = 0; i < currentQuestChosen.quest.Rewards.Count; i++) {
-						rewardTexts[i] = Language.GetTextValue("Mods.EstherMod.EstherMod.Quests.RewardPrefix", currentQuestChosen.quest.Rewards[i].Text);
-					}
-					rewardsText.SetText(string.Join('\n', rewardTexts));
+					rewardsText.SetText(string.Join('\n', QuestSystem.RewardsTextById[currentQuestChosen.quest.Type].Select(x => {
+						return Language.GetTextValue("Mods.EstherMod.EstherMod.Quests.RewardPrefix", x.Value());
+					})));
 				}
 				else {
 					rewardsText.SetText("???");
 				}
 			};
 			var rewardsScrollbar = new UIScrollbar {
-				Width = StyleDimension.FromPixels(20f),
-				Height = StyleDimension.Fill,
-				Left = StyleDimension.FromPixels(15f),
+				Width = { Pixels = 20f },
+				Height = { Percent = 1f },
+				Left = { Pixels = 15f },
 				HAlign = 1f,
 				VAlign = 1f
 			};
 			rewardsText.SetScrollbar(rewardsScrollbar);
-			rewardsPanel.Append(rewardsScrollbar);
 			rewardsPanel.Append(rewardsText);
+			rewardsPanel.Append(rewardsScrollbar);
 		}
 
 		private void InitTakeQuestPanel() {

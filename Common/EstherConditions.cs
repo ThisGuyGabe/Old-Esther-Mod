@@ -7,6 +7,10 @@ using Terraria.ModLoader;
 namespace EstherMod.Common.Conditions;
 
 public static class EstherConditions {
+	public static Condition AtLeastMaxHealth(Func<Player> playerGetter, int value) {
+		return new Condition(Language.GetText("Mods.EstherMod.Conditions.AtLeastMaxHealth").Format(value), () => playerGetter().statLifeMax >= value);
+	}
+
 	public static Condition QuestCompleted<T>(Func<Player> playerGetter) where T : ModQuest {
 		return new Condition(Language.GetText("Mods.EstherMod.Conditions.QuestCompletion").Format(ModContent.GetInstance<T>().DisplayName), () => ModContent.GetInstance<T>().IsCompleted(playerGetter()));
 	}

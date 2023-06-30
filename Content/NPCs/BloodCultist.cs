@@ -8,7 +8,7 @@ using EstherMod.Core;
 namespace EstherMod.Content.NPCs;
 
 [AutoloadHead]
-public sealed class BloodCultist : ModNPC {
+public sealed class BloodCultist : BaseNPC {
 	public enum Menu {
 		None,
 		Quest,

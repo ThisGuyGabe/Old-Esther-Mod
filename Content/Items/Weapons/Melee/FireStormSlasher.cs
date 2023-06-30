@@ -1,11 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EstherMod.Core;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class FireStormSlasher : ModItem {
+public sealed class FireStormSlasher : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 50;
 		Item.height = 50;

@@ -1,0 +1,45 @@
+HauntedCandle: {
+	// DisplayName: Haunted Candle
+	/* Tooltip:
+		'''
+		{$CommonItemTooltip.PercentIncreasedMagicDamage@5}
+		{$CommonItemTooltip.PercentIncreasedMagicCritChance@6}
+		{$CommonItemTooltip.IncreasesMaxManaBy@20}
+		The lower your health is the more damage you do works with all classes.
+		Wearing this accessory increases spawn rates.
+		''' */
+}
+
+MagneticDynamo: {
+	// DisplayName: Magnetic Dynamo
+	/* Tooltip:
+		'''
+		Makes you attack faster but at the cost of some damage
+		Increases attack speed by 12% and decreases damage by 6%
+		''' */
+}
+
+ManaNecklace: {
+	// DisplayName: Mana Necklace
+	/* Tooltip:
+		'''
+		{$ItemTooltip.ManaRegenerationBand}
+		{$ItemTooltip.ManaFlower}
+		''' */
+}
+
+TheSoul: {
+	// DisplayName: The Soul
+	/* Tooltip:
+		'''
+		{$CommonItemTooltip.PercentIncreasedDamage@4}
+		{$CommonItemTooltip.IncreasesDamageTakenByPercent@5}
+		{$CommonItemTooltip.IncreasesMaxLifeBy@50}
+		{$CommonItemTooltip.DecreasesDefenseBy@4}
+		{$CommonItemTooltip.PercentIncreasedAttackSpeed@5}
+		Gives a jump boost
+		''' */
+}
+
+// DisplayName: Haunted Candle
+// Tooltip: ""

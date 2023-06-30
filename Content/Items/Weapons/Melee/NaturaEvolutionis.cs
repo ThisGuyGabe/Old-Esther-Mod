@@ -1,11 +1,12 @@
 ﻿using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public class NaturaEvolutionis : ModItem {
+public sealed class NaturaEvolutionis : BaseItem {
 	public override void SetStaticDefaults() {
 		ItemID.Sets.Yoyo[Item.type] = true;
 	}

@@ -4,10 +4,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class SoulSlaughter : ModItem {
+public sealed class SoulSlaughter : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 32;
 		Item.height = 22;

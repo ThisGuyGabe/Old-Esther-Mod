@@ -1,0 +1,14 @@
+DayBreakStar: {
+	// DisplayName: Daybreak Star
+	/* Tooltip:
+		'''
+		Turns day to night and vice-versa.
+		Blue means it's night and yellow means day.
+		''' */
+}
+
+// EthericScrap.DisplayName: Etheric Scrap
+// SoulPearl.DisplayName: Soul Pearl
+// SoulPebble.DisplayName: Soul Pebble
+// DisplayName: Day Break Star
+// Tooltip: ""

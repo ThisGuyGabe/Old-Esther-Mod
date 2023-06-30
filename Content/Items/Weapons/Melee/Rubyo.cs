@@ -1,11 +1,12 @@
 ﻿using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class Rubyo : ModItem {
+public sealed class Rubyo : BaseItem {
     public override void SetStaticDefaults() {
 		ItemID.Sets.Yoyo[Item.type] = true;
     }

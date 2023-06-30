@@ -1,0 +1,48 @@
+// QuestCompleted: Quest is completed!
+// TakeQuest: Take Quest
+// TakeReward: Take Reward
+// InProgress: Quest in Progress
+// RewardPrefix: * Reward: {0}
+// Rewards.ItemQuestReward: "{ItemTag}"
+
+SlimyPurgeQuest: {
+	// DisplayName: Slimy Purge
+	/* Description:
+		'''
+		Welcome {PlayerName}! I require your aid.
+		Our lands have been tainted by an abundance of slimy creatures, and we require your ruthless expertise to eradicate them.
+		Your mission: eliminate ten slimes, regardless of their loathsome colors.
+		And I will reward you with a staff able to summon one of their kind to serve you.
+		''' */
+}
+
+DeepseaTroublesQuest: {
+	// DisplayName: Deepsea Troubles
+	/* Description:
+		'''
+		I found myself hating water related life recently...
+		Most specifically jellyfish, and I need you to kill a bunch of these water creatures to clean up the lakes and oceans of {WorldName}.
+		I even stole an artifact from some ruins I found down in the ocean!
+		And I can give it to you if you kill 6 of these filthy beasts.
+		''' */
+}
+
+RoyalSlimeVanquishQuest: {
+	// DisplayName: Royal Slime Vanquish
+	/* Description:
+		'''
+		It looks like our past endeavours angered the lord of slimes.
+		And since that interferes with my plans, I want you to end his petty reign!
+		''' */
+}
+
+EyeSpyQuest: {
+	// DisplayName: Eye Spy
+	/* Description:
+		'''
+		I feel like an evil presence is watching me sometimes...
+		It's probably related to these annoying eyes flying all around at night.
+		So I would be really thankful if you would kill the big one because it appears it's what causes them to appear.
+		You can get its attention by using a fake eye, but you might need few lens to make it.
+		''' */
+}

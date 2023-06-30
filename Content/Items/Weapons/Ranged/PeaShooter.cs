@@ -1,11 +1,12 @@
 ﻿using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Ranged;
 
-public sealed class PeaShooter : ModItem {
+public sealed class PeaShooter : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 15;
 		Item.DamageType = DamageClass.Ranged;

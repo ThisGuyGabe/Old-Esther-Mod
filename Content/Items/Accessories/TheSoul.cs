@@ -2,10 +2,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Accessories;
 
-public sealed class TheSoul : ModItem {
+public sealed class TheSoul : BaseItem {
 	public override void SetStaticDefaults() {
 		Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(4, 16)); // 16 frames
 		ItemID.Sets.AnimatesAsSoul[Item.type] = true;
@@ -41,7 +42,7 @@ public sealed class TheSoul : ModItem {
 		player.GetDamage(DamageClass.Generic) -= 0.04f; // this is the percentage
 		player.GetAttackSpeed(DamageClass.Generic) += 0.05f;
 		player.statLifeMax2 += 50;
-		player.endurance -= 0.5f;
+		player.endurance -= 0.05f;
 		player.jumpBoost = true;
 		player.statDefense -= 6;
 	}

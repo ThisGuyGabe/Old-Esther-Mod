@@ -21,7 +21,7 @@ public sealed class UITextWScrollbar : UIElement {
 
 		public override void Draw(SpriteBatch spriteBatch) {
 			var parentPos = Parent.GetDimensions().Position();
-			var parentDim = new Vector2(GetDimensions().Width, GetDimensions().Height);
+			var parentDim = new Vector2(Parent.GetDimensions().Width, Parent.GetDimensions().Height);
 
 			var thisPos = GetDimensions().Position();
 			var thisDim = new Vector2(GetDimensions().Width, GetDimensions().Height);
@@ -53,26 +53,35 @@ public sealed class UITextWScrollbar : UIElement {
 		set => _scrollbar.ViewPosition = value;
 	}
 
-	public UITextWScrollbar(string text, float textScale = 1, bool large = false) {
-		_innerText = new(text, textScale, large) {
-			Width = StyleDimension.Fill,
-			Height = StyleDimension.Fill,
-			OverflowHidden = false
-		};
+	public UITextWScrollbar(string text, float textScale = 1, bool large = false, Vector2? origin = null) {
+		_innerText = new(text, textScale, large);
+		InnerSet(origin);
+	}
+
+	public UITextWScrollbar(LocalizedText text, float textScale = 1, bool large = false, Vector2? origin = null) {
+		_innerText = new(text, textScale, large);
+		InnerSet(origin);
+	}
+
+	private void InnerSet(Vector2? origin) {
+		_innerText.Width = StyleDimension.Fill;
+		_innerText.Height = StyleDimension.Fill;
+		_innerText.OverflowHidden = false;
+		_innerText.IsWrapped = true;
+
+		if (origin.HasValue) {
+			_innerText.TextOriginX = origin.Value.X;
+			_innerText.TextOriginY = origin.Value.Y;
+		}
+
 		OverflowHidden = true;
 		Append(_innerText);
 	}
 
-	public UITextWScrollbar(LocalizedText text, float textScale = 1, bool large = false) {
-		_innerText = new(text, textScale, large) {
-			Width = StyleDimension.Fill,
-			Height = StyleDimension.Fill,
-			OverflowHidden = false,
-			IsWrapped = true
-		};
-		OverflowHidden = true;
-		Append(_innerText);
-	}
+	public void SetText(string text) => _innerText.SetText(text);
+	public void SetText(LocalizedText text) => _innerText.SetText(text);
+	public void SetText(string text, float textScale, bool large) => _innerText.SetText(text, textScale, large);
+	public void SetText(LocalizedText text, float textScale, bool large) => _innerText.SetText(text, textScale, large);
 
 	public override void Recalculate() {
 		base.Recalculate();
@@ -92,10 +101,7 @@ public sealed class UITextWScrollbar : UIElement {
 	}
 
 	private void UpdateScrollbar() {
-		if (_scrollbar != null) {
-			float height = GetInnerDimensions().Height;
-			_scrollbar.SetView(height, _textHeight);
-		}
+		_scrollbar?.SetView(GetInnerDimensions().Height, _textHeight);
 	}
 
 	public void SetScrollbar(UIScrollbar scrollbar) {
@@ -111,7 +117,4 @@ public sealed class UITextWScrollbar : UIElement {
 
 		base.DrawSelf(spriteBatch);
 	}
-
-	public void SetText(string text) => _innerText.SetText(text);
-	public void SetText(LocalizedText text) => _innerText.SetText(text);
 }

@@ -1,4 +1,5 @@
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class StellarRain : ModItem {
+public sealed class StellarRain : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 36;
 		Item.height = 36;

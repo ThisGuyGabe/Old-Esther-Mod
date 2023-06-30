@@ -1,4 +1,5 @@
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -6,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Ranged;
 
-public sealed class ForgedFury : ModItem {
+public sealed class ForgedFury : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 36;
 		Item.crit = 4;

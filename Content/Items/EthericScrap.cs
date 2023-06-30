@@ -1,10 +1,10 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items;
 
-public sealed class EthericScrap : ModItem {
+public sealed class EthericScrap : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 22;
 		Item.height = 32;

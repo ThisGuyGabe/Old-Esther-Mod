@@ -5,10 +5,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using EstherMod.Content.Projectiles;
 using EstherMod.Common;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 
-public sealed class BonestromStaff : ModItem {
+public sealed class BonestromStaff : BaseItem {
 	public override void SetStaticDefaults() {
 		Item.staff[Item.type] = true;
 	}

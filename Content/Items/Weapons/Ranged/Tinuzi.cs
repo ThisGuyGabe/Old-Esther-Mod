@@ -1,63 +1,55 @@
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.Audio;
-using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Ranged
-{
-	public class Tinuzi : ModItem
-    {
-        public override void SetDefaults() 
-		{
-        	Item.width = 48;
-            Item.height = 36;
-            Item.scale = 0.70f;
+namespace EstherMod.Content.Items.Weapons.Ranged;
 
-            Item.useTime = 10;
-            Item.useAnimation = 10;
-            Item.useStyle = ItemUseStyleID.Shoot;
+public sealed class Tinuzi : BaseItem {
+	public override void SetDefaults() {
+		Item.width = 48;
+		Item.height = 36;
+		Item.scale = 0.70f;
 
-            Item.rare = ItemRarityID.Green;
-            Item.value = Item.sellPrice(gold: 1, silver: 40);
+		Item.useTime = 10;
+		Item.useAnimation = 10;
+		Item.useStyle = ItemUseStyleID.Shoot;
 
-        	Item.damage = 16;
-            Item.DamageType = DamageClass.Ranged;
-            Item.knockBack = 0.5f;
+		Item.rare = ItemRarityID.Green;
+		Item.value = Item.sellPrice(gold: 1, silver: 40);
 
-            Item.autoReuse = true;
-            Item.noMelee = true;
-            Item.UseSound = SoundID.Item11;
+		Item.damage = 16;
+		Item.DamageType = DamageClass.Ranged;
+		Item.knockBack = 0.5f;
 
-            Item.shoot = 1;
-            Item.shootSpeed = 13.5f;
-            Item.useAmmo = AmmoID.Bullet;
-        }
+		Item.autoReuse = true;
+		Item.noMelee = true;
+		Item.UseSound = SoundID.Item11;
+
+		Item.shoot = ProjectileID.WoodenArrowFriendly;
+		Item.shootSpeed = 13.5f;
+		Item.useAmmo = AmmoID.Bullet;
+	}
 
 
-        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) 
-		{
-            velocity = velocity.RotatedByRandom(MathHelper.ToRadians(7.5f));
-        }
+	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
+		velocity = velocity.RotatedByRandom(MathHelper.ToRadians(7.5f));
+	}
 
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.TinBar, 40);
-            recipe.AddIngredient(ItemID.ShadowScale, 15);
-            recipe.AddIngredient(ItemID.IllegalGunParts, 1);
-            recipe.AddTile(TileID.Anvils);
-            recipe.Register();
+	public override void AddRecipes() {
+		CreateRecipe()
+			.AddIngredient(ItemID.TinBar, 40)
+			.AddIngredient(ItemID.ShadowScale, 15)
+			.AddIngredient(ItemID.IllegalGunParts, 1)
+			.AddTile(TileID.Anvils)
+			.Register();
 
-            recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.TinBar, 40);
-            recipe.AddIngredient(ItemID.TissueSample, 15);
-            recipe.AddIngredient(ItemID.IllegalGunParts, 1);
-            recipe.AddTile(TileID.Anvils);
-            recipe.Register();
-        }
-    }
+		CreateRecipe()
+			.AddIngredient(ItemID.TinBar, 40)
+			.AddIngredient(ItemID.TissueSample, 15)
+			.AddIngredient(ItemID.IllegalGunParts, 1)
+			.AddTile(TileID.Anvils)
+			.Register();
+	}
 }

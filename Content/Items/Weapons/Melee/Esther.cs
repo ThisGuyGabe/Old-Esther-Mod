@@ -1,10 +1,11 @@
-﻿using Terraria;
+﻿using EstherMod.Core;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class Esther : ModItem {
+public sealed class Esther : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 50;
 		Item.height = 50;

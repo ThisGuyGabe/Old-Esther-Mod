@@ -1,12 +1,13 @@
 ﻿using System;
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class SludgeSlider : ModItem {
+public sealed class SludgeSlider : BaseItem {
 	public override void SetStaticDefaults() {
 		ItemID.Sets.Yoyo[Item.type] = true;
 		ItemID.Sets.GamepadExtraRange[Item.type] = 15;

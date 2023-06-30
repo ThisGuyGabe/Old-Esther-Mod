@@ -34,9 +34,10 @@ public sealed class QuestElement : UIPanel {
 		var text = new UIText(quest.DisplayName, textScale: 1f) {
 			Width = StyleDimension.FromPixels(130f),
 			Height = StyleDimension.FromPixels(10f),
-			Left = StyleDimension.FromPixels(50f),
-			HAlign = 0.2f,
+			Left = StyleDimension.FromPixels(80f),
+			HAlign = 0f,
 			VAlign = 0f,
+			TextOriginX = 0f,
 			WrappedTextBottomPadding = 10f,
 			IsWrapped = true,
 			TextColor = Color.White

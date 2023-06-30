@@ -1,11 +1,12 @@
 ﻿using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class BloomingBane : ModItem {
+public sealed class BloomingBane : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 40;
 		Item.height = 40;

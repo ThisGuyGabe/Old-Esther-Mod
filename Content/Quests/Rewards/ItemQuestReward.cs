@@ -11,8 +11,7 @@ public sealed class ItemQuestReward : QuestReward {
 	public int Stack { get; init; }
 
 	public override string Text => Language.GetText("Mods.EstherMod.EstherMod.Quests.Rewards.ItemQuestReward").FormatWith(new {
-		ItemTag = ItemTagHandler.GenerateTag(Item),
-		Stack = Stack
+		ItemTag = ItemTagHandler.GenerateTag(Item), Stack
 	});
 
 	public ItemQuestReward(Item item, int stack = 1) {

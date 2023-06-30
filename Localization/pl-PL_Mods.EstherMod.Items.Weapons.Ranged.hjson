@@ -1,0 +1,56 @@
+BeamBow: {
+	// DisplayName: Beam Bow
+	// Tooltip: Converts all arrows to lazers, and it seems its bugged.
+}
+
+// CopperPopper.DisplayName: Copper Popper
+// EthericalBow.DisplayName: Etherical Bow
+
+ForgedFury: {
+	// DisplayName: Forged Fury
+	/* Tooltip:
+		'''
+		Turns arrows into flaming arrows.
+		Turns flaming arrows into fury arrows.
+		''' */
+}
+
+// HypnosStorm.DisplayName: Hypnos Storm
+
+PeaShooter: {
+	// DisplayName: Peashooter
+	// Tooltip: "'There's A Zombie On Your Lawn'"
+}
+
+PhoenixFlame: {
+	// DisplayName: Phoenix Flame
+	/* Tooltip:
+		'''
+		Shoot in a 3 shot rapid burst.
+		Turns arrows into Phoenix arrows.
+		''' */
+}
+
+// SilverCrippler.DislayName: Silver Crippler
+
+SolarRecurve: {
+	// DisplayName: Solar Recurve
+	// Tooltip: Shoots more arrows every time.
+}
+
+Tinuzi: {
+	// DisplayName: Tinuzi
+	// Tooltip: Shoots out bullets at high speeds!
+}
+
+Vulcano: {
+	// DisplayName: Vulcano
+	/* Tooltip:
+		'''
+		Rain arrows from the sky!
+		Turns most arrows into lava
+		''' */
+}
+
+// DisplayName: Beam Bow
+// Tooltip: ""

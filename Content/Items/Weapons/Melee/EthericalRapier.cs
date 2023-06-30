@@ -3,10 +3,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public sealed class EthericalRapier : ModItem {
+public sealed class EthericalRapier : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 52;
 		Item.height = 52;
