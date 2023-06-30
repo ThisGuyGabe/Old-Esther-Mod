@@ -1,6 +1,19 @@
-// PixilWood.DisplayName: Pixil Wood
-// PixilWoodWall.DisplayName: Pixil Wood Wall
-// RetroWood.DisplayName: Retro Wood
-// RetroWoodWall.DisplayName: Retro Wood Wall
-// DisplayName: Pixil Wood
-// Tooltip: ""
+PixilWood: {
+	// DisplayName: Pixil Wood
+	// Tooltip: ""
+}
+
+PixilWoodWall: {
+	// DisplayName: Pixil Wood Wall
+	// Tooltip: ""
+}
+
+RetroWood: {
+	// DisplayName: Retro Wood
+	// Tooltip: ""
+}
+
+RetroWoodWall: {
+	// DisplayName: Retro Wood Wall
+	// Tooltip: ""
+}

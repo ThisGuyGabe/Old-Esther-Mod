@@ -3,8 +3,15 @@ BeamBow: {
 	// Tooltip: Converts all arrows to lazers, and it seems its bugged.
 }
 
-// CopperPopper.DisplayName: Copper Popper
-// EthericalBow.DisplayName: Etherical Bow
+CopperPopper: {
+	// DisplayName: Copper Popper
+	// Tooltip: ""
+}
+
+EthericalBow: {
+	// DisplayName: Etherical Bow
+	// Tooltip: ""
+}
 
 ForgedFury: {
 	// DisplayName: Forged Fury
@@ -15,7 +22,10 @@ ForgedFury: {
 		''' */
 }
 
-// HypnosStorm.DisplayName: Hypnos Storm
+HypnosStorm: {
+	// DisplayName: Hypnos Storm
+	// Tooltip: ""
+}
 
 PeaShooter: {
 	// DisplayName: Peashooter
@@ -31,7 +41,11 @@ PhoenixFlame: {
 		''' */
 }
 
-// SilverCrippler.DislayName: Silver Crippler
+SilverCrippler: {
+	// DislayName: Silver Crippler
+	// DisplayName: Silver Crippler
+	// Tooltip: ""
+}
 
 SolarRecurve: {
 	// DisplayName: Solar Recurve
@@ -51,6 +65,3 @@ Vulcano: {
 		Turns most arrows into lava
 		''' */
 }
-
-// DisplayName: Beam Bow
-// Tooltip: ""

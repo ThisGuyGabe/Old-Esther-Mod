@@ -2,11 +2,14 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Accessories;
 
 public sealed class HauntedCandle : BaseItem {
+	public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(5, 6, 20);
+
 	public override void SetStaticDefaults() {
 		Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, 4));
 		ItemID.Sets.AnimatesAsSoul[Item.type] = true;

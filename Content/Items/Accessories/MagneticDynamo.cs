@@ -1,11 +1,14 @@
 using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Accessories;
 
 public sealed class MagneticDynamo : BaseItem {
+	public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(12, 6);
+
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 1;
 	}

@@ -2,9 +2,9 @@ HauntedCandle: {
 	DisplayName: Haunted Candle
 	Tooltip:
 		'''
-		{$CommonItemTooltip.PercentIncreasedMagicDamage@5}
-		{$CommonItemTooltip.PercentIncreasedMagicCritChance@6}
-		{$CommonItemTooltip.IncreasesMaxManaBy@20}
+		{$CommonItemTooltip.PercentIncreasedMagicDamage@0}
+		{$CommonItemTooltip.PercentIncreasedMagicCritChance@1}
+		{$CommonItemTooltip.IncreasesMaxManaBy@2}
 		The lower your health is the more damage you do works with all classes.
 		Wearing this accessory increases spawn rates.
 		'''
@@ -14,8 +14,9 @@ MagneticDynamo: {
 	DisplayName: Magnetic Dynamo
 	Tooltip:
 		'''
-		Makes you attack faster but at the cost of some damage
-		Increases attack speed by 12% and decreases damage by 6%
+		Makes you attack faster, but at the cost of some damage
+		{$CommonItemTooltip.PercentIncreasedAttackSpeed@0}
+		{$CommonItemTooltip.PercentDecreasedDamage@1}
 		'''
 }
 
@@ -32,14 +33,11 @@ TheSoul: {
 	DisplayName: The Soul
 	Tooltip:
 		'''
-		{$CommonItemTooltip.PercentIncreasedDamage@4}
-		{$CommonItemTooltip.IncreasesDamageTakenByPercent@5}
-		{$CommonItemTooltip.IncreasesMaxLifeBy@50}
-		{$CommonItemTooltip.DecreasesDefenseBy@4}
-		{$CommonItemTooltip.PercentIncreasedAttackSpeed@5}
+		{$CommonItemTooltip.PercentIncreasedDamage@0}
+		{$CommonItemTooltip.IncreasesDamageTakenByPercent@1}
+		{$CommonItemTooltip.IncreasesMaxLifeBy@2}
+		{$CommonItemTooltip.DecreasesDefenseBy@3}
+		{$CommonItemTooltip.PercentIncreasedAttackSpeed@4}
 		Gives a jump boost
 		'''
 }
-
-DisplayName: Haunted Candle
-Tooltip: ""

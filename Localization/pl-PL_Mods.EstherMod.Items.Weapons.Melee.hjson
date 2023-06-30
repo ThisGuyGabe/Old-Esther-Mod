@@ -12,7 +12,10 @@ EchoBreaker: {
 	// Tooltip: Using right click releases a powerful swing with a 10 second delay.
 }
 
-// Esther.DisplayName: Esther
+Esther: {
+	// DisplayName: Esther
+	// Tooltip: ""
+}
 
 EthericalRapier: {
 	// DisplayName: Etherical Rapier
@@ -24,8 +27,15 @@ FireStormSlasher: {
 	// Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
 }
 
-// GoldenReckage.DisplayName: Golden Wreckage
-// NaturaEvolutionis.DisplayName: Natura Evolutionis
+GoldenReckage: {
+	// DisplayName: Golden Wreckage
+	// Tooltip: ""
+}
+
+NaturaEvolutionis: {
+	// DisplayName: Natura Evolutionis
+	// Tooltip: ""
+}
 
 Needle: {
 	// DisplayName: Needle
@@ -41,7 +51,10 @@ PermaFrost: {
 	// Tooltip: When you hit an enemy it shoots an icicle that deals damage.
 }
 
-// Rubyo.DisplayName: Rub-yo
+Rubyo: {
+	// DisplayName: Rub-yo
+	// Tooltip: ""
+}
 
 SantasLittleHelper: {
 	// DisplayName: Santa's Little Helper
@@ -70,6 +83,3 @@ StellarRain: {
 	// DisplayName: Stellar Rain
 	// Tooltip: Raining knives of the heavens!
 }
-
-// DisplayName: Blooming Bane
-// Tooltip: ""

@@ -14,8 +14,9 @@ MagneticDynamo: {
 	// DisplayName: Magnetic Dynamo
 	/* Tooltip:
 		'''
-		Makes you attack faster but at the cost of some damage
-		Increases attack speed by 12% and decreases damage by 6%
+		Makes you attack faster, but at the cost of some damage
+		{$CommonItemTooltip.PercentIncreasedAttackSpeed@12}
+		{$CommonItemTooltip.PercentDecreasedDamage@6}
 		''' */
 }
 
@@ -40,6 +41,3 @@ TheSoul: {
 		Gives a jump boost
 		''' */
 }
-
-// DisplayName: Haunted Candle
-// Tooltip: ""

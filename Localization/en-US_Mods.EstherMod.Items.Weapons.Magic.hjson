@@ -3,7 +3,10 @@ BonestromStaff: {
 	Tooltip: Shoots a sigil that summons necromantic shards that home in on your cursor.
 }
 
-CopperTrumpet.DisplayName: Copper Trumpet
+CopperTrumpet: {
+	DisplayName: Copper Trumpet
+	Tooltip: ""
+}
 
 EmpyrealStaff: {
 	DisplayName: Empyreal Staff
@@ -19,6 +22,3 @@ Riptide: {
 	DisplayName: Riptide
 	Tooltip: Cast a explosing of water at your enemies feet!
 }
-
-DisplayName: Bonestrom Staff
-Tooltip: ""

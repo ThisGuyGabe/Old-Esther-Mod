@@ -7,8 +7,17 @@ DayBreakStar: {
 		''' */
 }
 
-// EthericScrap.DisplayName: Etheric Scrap
-// SoulPearl.DisplayName: Soul Pearl
-// SoulPebble.DisplayName: Soul Pebble
-// DisplayName: Day Break Star
-// Tooltip: ""
+EthericScrap: {
+	// DisplayName: Etheric Scrap
+	// Tooltip: ""
+}
+
+SoulPearl: {
+	// DisplayName: Soul Pearl
+	// Tooltip: ""
+}
+
+SoulPebble: {
+	// DisplayName: Soul Pebble
+	// Tooltip: ""
+}

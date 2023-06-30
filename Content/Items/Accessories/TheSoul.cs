@@ -3,10 +3,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using EstherMod.Core;
+using Terraria.Localization;
 
 namespace EstherMod.Content.Items.Accessories;
 
 public sealed class TheSoul : BaseItem {
+	public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(4, 5, 50, 4, 5);
+
 	public override void SetStaticDefaults() {
 		Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(4, 16)); // 16 frames
 		ItemID.Sets.AnimatesAsSoul[Item.type] = true;

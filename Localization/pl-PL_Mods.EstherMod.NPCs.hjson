@@ -16,6 +16,8 @@ BloodCultist: {
 // AbyssalAbhorrence.DisplayName: Abyssal Abhorrence
 // SpiritualConstruct.DisplayName: Spiritual Construct
 // PooSpider.DisplayName: Poo Spider
-// PooSpiderItem.DisplayName: Poo Spider
-// DisplayName: Poo Spider Item
-// Tooltip: ""
+
+PooSpiderItem: {
+	// DisplayName: Poo Spider
+	// Tooltip: ""
+}
