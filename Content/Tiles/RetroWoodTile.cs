@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Tiles
@@ -12,7 +11,6 @@ namespace EstherMod.Content.Tiles
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileSpelunker[Type] = false;
-            HitSound = SoundID.Tink;
             AddMapEntry(new Color(182, 205, 177));
         }
 
