@@ -12,10 +12,10 @@ public sealed class EthericalBow : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 24;
 		Item.height = 50;
-		Item.damage = 14;
+		Item.damage = 12;
 		Item.DamageType = DamageClass.Ranged;
-		Item.useTime = 30;
-		Item.useAnimation = 30;
+		Item.useTime = 40;
+		Item.useAnimation = 40;
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.knockBack = 5;
 		Item.value = Item.sellPrice(silver: 30, copper: 10);

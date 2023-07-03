@@ -22,7 +22,6 @@ public sealed class SoulSlaughter : BaseItem {
 		Item.DamageType = DamageClass.Melee;
 		Item.knockBack = 5;
 		Item.noUseGraphic = true;
-		Item.crit = 15;
 		Item.value = Item.sellPrice(gold: 2, silver: 86);
 		Item.rare = ItemRarityID.Green;
 		Item.UseSound = SoundID.Item1;

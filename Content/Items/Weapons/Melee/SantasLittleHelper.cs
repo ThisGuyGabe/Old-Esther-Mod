@@ -4,8 +4,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using EstherMod.Content.Projectiles;
-using EstherMod.Common.Extensions;
-using System.Runtime.CompilerServices;
 using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
@@ -22,7 +20,6 @@ public sealed class SantasLittleHelper : BaseItem {
 		Item.shootSpeed = 3;
 		Item.DamageType = DamageClass.Melee;
 		Item.knockBack = 2;
-		Item.crit = 5;
 		Item.value = Item.sellPrice(silver: 30);
 		Item.rare = ItemRarityID.Green;
 		Item.UseSound = SoundID.Item1;

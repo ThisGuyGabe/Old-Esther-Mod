@@ -15,7 +15,6 @@ public sealed class BloomingBane : BaseItem {
 		Item.value = Item.sellPrice(gold: 1, silver: 40, copper: 60);
 
 		Item.damage = 26;
-		Item.crit = 24;
 		Item.knockBack = 5f;
 		Item.DamageType = DamageClass.Melee;
 		Item.useAnimation = 25;

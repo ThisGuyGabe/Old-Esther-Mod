@@ -65,3 +65,8 @@ Vulcano: {
 		Turns most arrows into lava
 		''' */
 }
+
+FoulLongbow: {
+	// DisplayName: Foul Longbow
+	// Tooltip: ""
+}

@@ -7,3 +7,8 @@ EchoBreakCooldown: {
 	DisplayName: Echo Break Cooldown
 	Description: You can't use Echo Break now.
 }
+
+Cooldown: {
+	DisplayName: Cooldown
+	Description: You have to wait
+}

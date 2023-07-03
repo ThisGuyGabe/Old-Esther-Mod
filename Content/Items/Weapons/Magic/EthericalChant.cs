@@ -16,7 +16,6 @@ public sealed class EthericalChant : BaseItem {
 		Item.value = Item.sellPrice(gold: 1, silver: 30, copper: 10);
 
 		Item.damage = 14;
-		Item.crit = 10;
 		Item.mana = 3;
 		Item.DamageType = DamageClass.Magic;
 		Item.useStyle = ItemUseStyleID.Shoot;

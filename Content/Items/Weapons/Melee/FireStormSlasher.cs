@@ -20,7 +20,6 @@ public sealed class FireStormSlasher : BaseItem {
 
 		Item.DamageType = DamageClass.Melee;
 		Item.knockBack = 5;
-		Item.crit = 33;
 
 		Item.value = Item.sellPrice(gold: 5);
 		Item.rare = ItemRarityID.Orange;

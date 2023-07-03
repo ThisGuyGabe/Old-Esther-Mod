@@ -11,7 +11,6 @@ namespace EstherMod.Content.Items.Weapons.Ranged;
 public sealed class Vulcano : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 71;
-		Item.crit = 10;
 		Item.rare = ItemRarityID.Pink;
 		Item.width = 32;
 		Item.height = 72;

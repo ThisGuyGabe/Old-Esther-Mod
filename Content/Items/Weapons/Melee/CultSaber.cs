@@ -14,7 +14,6 @@ public sealed class CultSaber : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 30;
 		Item.DamageType = DamageClass.Melee;
-		Item.crit = 16;
 		Item.width = 34;
 		Item.height = 54;
 		Item.useTime = 30;
@@ -29,14 +28,12 @@ public sealed class CultSaber : BaseItem {
 	}
 
 	public override bool AltFunctionUse(Player player) {
-		return !player.HasBuff<EchoBreakCooldown>();
+		return !player.HasBuff<Cooldown>();
 	}
 
 	public override void ModifyHitNPC(Player player, NPC target, ref NPC.HitModifiers modifiers) {
 		if (player.altFunctionUse == 2) {
 			modifiers.SourceDamage *= 4;
-
-			target.AddBuff(BuffID.Frostburn, 300);
 		}
 	}
 
@@ -44,7 +41,7 @@ public sealed class CultSaber : BaseItem {
 		if (player.altFunctionUse == 2) {
 			SoundEngine.PlaySound(SoundID.Item107);
 
-			player.AddBuff(ModContent.BuffType<EchoBreakCooldown>(), 600);
+			player.AddBuff(ModContent.BuffType<Cooldown>(), 600);
 			return true;
 		}
 		else {

@@ -10,14 +10,13 @@ namespace EstherMod.Content.Items.Weapons.Ranged;
 public sealed class ForgedFury : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 36;
-		Item.crit = 4;
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Orange;
 
 		Item.width = 20;
 		Item.height = 52;
 		Item.useAnimation = 24;
 		Item.useTime = 24;
-		Item.useStyle = 5;
+		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.knockBack = 2.5f;
 		Item.shootSpeed = 12f;
 		Item.DamageType = DamageClass.Ranged;
