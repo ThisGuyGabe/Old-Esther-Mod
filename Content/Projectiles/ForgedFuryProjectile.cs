@@ -6,26 +6,24 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles
-{
-	public class ForgedFuryProjectile : ModProjectile
-	{
+namespace EstherMod.Content.Projectiles {
+	public class ForgedFuryProjectile : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.aiStyle = 1;
 			Projectile.width = 7;
-			Projectile.height = 16; 
-			Projectile.aiStyle = 1; 
+			Projectile.height = 16;
+			Projectile.aiStyle = 1;
 			Projectile.friendly = true;
-			Projectile.DamageType = DamageClass.Ranged; 
-			Projectile.penetrate = 3; 
-			Projectile.timeLeft = 60 * 20; 
+			Projectile.DamageType = DamageClass.Ranged;
+			Projectile.penetrate = 3;
+			Projectile.timeLeft = 60 * 20;
 			Projectile.light = 0.25f;
-			Projectile.ignoreWater = true; 
-			Projectile.tileCollide = true; 
+			Projectile.ignoreWater = true;
+			Projectile.tileCollide = true;
 
-			AIType = ProjectileID.FireArrow; 
+			AIType = ProjectileID.FireArrow;
 		}
-		
+
 		public override void AI() {
 
 			int dustnumber = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 0.8f);

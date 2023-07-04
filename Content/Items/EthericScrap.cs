@@ -1,6 +1,6 @@
-﻿using Terraria;
+﻿using EstherMod.Core;
+using Terraria;
 using Terraria.ID;
-using EstherMod.Core;
 
 namespace EstherMod.Content.Items;
 

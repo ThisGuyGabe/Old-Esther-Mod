@@ -11,7 +11,8 @@ public sealed class ItemQuestReward : QuestReward {
 	public int Stack { get; init; }
 
 	public override string Text => Language.GetText("Mods.EstherMod.EstherMod.Quests.Rewards.ItemQuestReward").FormatWith(new {
-		ItemTag = ItemTagHandler.GenerateTag(Item), Stack
+		ItemTag = ItemTagHandler.GenerateTag(Item),
+		Stack
 	});
 
 	public ItemQuestReward(Item item, int stack = 1) {
@@ -23,6 +24,6 @@ public sealed class ItemQuestReward : QuestReward {
 	}
 
 	public override void Grant(Player player) {
-		player.QuickSpawnItem(new QuestReward_EntitySource(Quest, player), Item, Stack);
+		player.QuickSpawnItem(new EntitySource_QuestReward(Quest, player), Item, Stack);
 	}
 }

@@ -1,13 +1,13 @@
-﻿using Terraria;
+﻿using EstherMod.Content;
+using Terraria;
 using Terraria.ModLoader;
-using EstherMod.Content;
 
 namespace EstherMod;
 
 public sealed class EstherPlayer : ModPlayer {
-    public bool partyBombActive;
-    public float bombStart;
-    private float bombProgress;
+	public bool partyBombActive;
+	public float bombStart;
+	private float bombProgress;
 
 	public override void PostUpdate() {
 		if (partyBombActive) {

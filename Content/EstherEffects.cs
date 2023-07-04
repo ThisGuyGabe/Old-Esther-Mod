@@ -1,11 +1,11 @@
-﻿using Terraria.ID;
-using Terraria;
-using Terraria.Graphics.Effects;
+﻿using System.Threading;
+using EstherMod.Common;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using Terraria;
+using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
-using System.Threading;
-using EstherMod.Common;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content;
@@ -25,7 +25,8 @@ public static class EstherEffects {
 	public static DynamicShaderData GrayOutItem { get; private set; }
 
 	public static void Load() {
-		if (Main.netMode == NetmodeID.Server) return;
+		if (Main.netMode == NetmodeID.Server)
+			return;
 
 		var screenRef = new Ref<Effect>(Esther.Instance.Assets.Request<Effect>("Effects/CustomScreenShaders", AssetRequestMode.ImmediateLoad).Value);
 

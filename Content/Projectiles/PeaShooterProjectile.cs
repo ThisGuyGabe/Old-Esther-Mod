@@ -2,18 +2,14 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles
-{
+namespace EstherMod.Content.Projectiles {
 
-	public class PeaShooterProjectile : ModProjectile
-	{
-		public override void SetStaticDefaults()
-		{
+	public class PeaShooterProjectile : ModProjectile {
+		public override void SetStaticDefaults() {
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 
-		public override void SetDefaults()
-		{
+		public override void SetDefaults() {
 			Projectile.width = 20;
 			Projectile.height = 20;
 			Projectile.aiStyle = 8;
@@ -27,5 +23,5 @@ namespace EstherMod.Content.Projectiles
 			Projectile.penetrate = 3;
 			AIType = ProjectileID.CursedFlameFriendly;
 		}
-    }
+	}
 }

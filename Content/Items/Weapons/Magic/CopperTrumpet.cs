@@ -1,9 +1,9 @@
-﻿using Terraria;
+﻿using EstherMod.Common;
+using EstherMod.Content.Projectiles;
+using EstherMod.Core;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EstherMod.Content.Projectiles;
-using EstherMod.Common;
-using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 

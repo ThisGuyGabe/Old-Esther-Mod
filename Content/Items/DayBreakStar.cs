@@ -1,8 +1,8 @@
-using Terraria;
-using Terraria.ID;
-using Microsoft.Xna.Framework;
 using System.Runtime.CompilerServices;
 using EstherMod.Core;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
 
 namespace EstherMod.Content.Items;
 

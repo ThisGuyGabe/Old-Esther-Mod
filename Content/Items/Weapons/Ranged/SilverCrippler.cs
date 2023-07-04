@@ -1,8 +1,8 @@
+using EstherMod.Core;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
-using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Ranged;
 

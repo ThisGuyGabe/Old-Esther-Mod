@@ -1,5 +1,4 @@
 ﻿using EstherMod.Core.Quests;
-using Terraria.ModLoader;
 
 namespace EstherMod;
 

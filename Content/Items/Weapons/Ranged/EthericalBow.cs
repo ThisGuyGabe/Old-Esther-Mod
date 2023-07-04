@@ -1,10 +1,10 @@
+using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EstherMod.Content.Projectiles;
-using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Ranged;
 
@@ -40,13 +40,11 @@ public sealed class EthericalBow : BaseItem {
 		return false;
 	}
 
-	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
-	{
+	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
 		type = ModContent.ProjectileType<Sinewave>();
 	}
 
-	public override void AddRecipes() 
-	{
+	public override void AddRecipes() {
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<EthericScrap>(), 5)
 			.AddTile(TileID.WorkBenches)

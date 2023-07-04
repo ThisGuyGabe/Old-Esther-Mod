@@ -1,7 +1,6 @@
 using EstherMod.Core;
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Accessories;
 

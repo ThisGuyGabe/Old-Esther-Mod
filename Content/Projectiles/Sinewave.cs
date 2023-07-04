@@ -1,26 +1,22 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EstherMod.Content.Projectiles;
 
-namespace EstherMod.Content.Projectiles
-{
-	public class Sinewave : ModProjectile
-	{
+namespace EstherMod.Content.Projectiles {
+	public class Sinewave : ModProjectile {
 		public Vector2 initialCenter;
 
 		public int sineTimer;
 
 		public float waveOffset;
 
-		public override void SetStaticDefaults() 
-		{
+		public override void SetStaticDefaults() {
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 25;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 		}
@@ -29,7 +25,7 @@ namespace EstherMod.Content.Projectiles
 			Projectile.height = 8;
 			Projectile.aiStyle = 0;
 			Projectile.DamageType = DamageClass.Ranged;
-			Projectile.friendly = true; 
+			Projectile.friendly = true;
 			Projectile.ignoreWater = true;
 			Projectile.light = 1f;
 			Projectile.tileCollide = true;
@@ -92,8 +88,7 @@ namespace EstherMod.Content.Projectiles
 			}
 			sineTimer++;
 		}
-		public override bool PreDraw(ref Color lightColor)
-		{
+		public override bool PreDraw(ref Color lightColor) {
 			Texture2D texture2D = ModContent.Request<Texture2D>("EstherMod/Assets/Textures/Glow").Value;
 			Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
 			for (int k = 0; k < Projectile.oldPos.Length; k++) {

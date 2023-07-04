@@ -1,11 +1,11 @@
-﻿using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
+﻿using EstherMod.Common;
+using EstherMod.Content.Projectiles;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using EstherMod.Content.Projectiles;
-using EstherMod.Common;
-using EstherMod.Core;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 

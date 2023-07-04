@@ -18,7 +18,8 @@ public sealed class QuestSystem : ModSystem {
 	}
 
 	public override void OnModLoad() {
-		if (Main.dedServ) return;
+		if (Main.dedServ)
+			return;
 
 		IconById = new Asset<Texture2D>[quests.Count];
 		RewardsTextById = new Ref<Func<string>>[quests.Count][];
@@ -29,7 +30,8 @@ public sealed class QuestSystem : ModSystem {
 	}
 
 	public override void PostSetupContent() {
-		if (Main.dedServ) return;
+		if (Main.dedServ)
+			return;
 
 		for (int i = 0; i < quests.Count; i++) {
 			RewardsTextById[i] = new Ref<Func<string>>[quests[i].Rewards.Count];

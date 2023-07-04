@@ -18,22 +18,22 @@ public sealed class SludgeSlider : BaseItem {
 		Item.width = 24;
 		Item.height = 36;
 
-		Item.useStyle = ItemUseStyleID.Shoot; 
-		Item.useTime = 25; 
-		Item.useAnimation = 25; 
-		Item.noMelee = true; 
-		Item.noUseGraphic = true; 
-		Item.UseSound = SoundID.Item1; 
+		Item.useStyle = ItemUseStyleID.Shoot;
+		Item.useTime = 25;
+		Item.useAnimation = 25;
+		Item.noMelee = true;
+		Item.noUseGraphic = true;
+		Item.UseSound = SoundID.Item1;
 
 		Item.damage = 26;
 		Item.DamageType = DamageClass.MeleeNoSpeed;
 		Item.knockBack = 3.5f;
-		Item.channel = true; 
+		Item.channel = true;
 		Item.rare = ItemRarityID.Blue;
-		Item.value = Item.buyPrice(silver: 20, copper: 34); 
+		Item.value = Item.buyPrice(silver: 20, copper: 34);
 
 		Item.shoot = ModContent.ProjectileType<SludgeSliderProjectile>();
-		Item.shootSpeed = 16f; 
+		Item.shootSpeed = 16f;
 	}
 
 	private static readonly int[] unwantedPrefixes = new int[] { PrefixID.Terrible, PrefixID.Dull, PrefixID.Shameful, PrefixID.Annoying, PrefixID.Broken, PrefixID.Damaged, PrefixID.Shoddy };

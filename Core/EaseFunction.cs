@@ -1,11 +1,9 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 
-namespace EstherMod.Core
-{
-	public abstract class EaseFunction
-	{
+namespace EstherMod.Core {
+	public abstract class EaseFunction {
 		public static readonly EaseFunction Linear = new PolynomialEase((float x) => { return x; });
 
 		public static readonly EaseFunction EaseQuadIn = new PolynomialEase((float x) => { return x * x; });
@@ -28,23 +26,19 @@ namespace EstherMod.Core
 		public static readonly EaseFunction EaseCircularOut = new PolynomialEase((float x) => { return (float)Math.Sqrt(1.0 - Math.Pow(x - 1.0, 2)); });
 		public static readonly EaseFunction EaseCircularInOut = new PolynomialEase((float x) => { return (x < 0.5f) ? (1f - (float)Math.Sqrt(1.0 - Math.Pow(x * 2, 2))) * 0.5f : (float)((Math.Sqrt(1.0 - Math.Pow(-2 * x + 2, 2)) + 1) * 0.5); });
 
-		public virtual float Ease(float time)
-		{
+		public virtual float Ease(float time) {
 			throw new NotImplementedException();
 		}
 	}
 
-	public class PolynomialEase : EaseFunction
-	{
+	public class PolynomialEase : EaseFunction {
 		private Func<float, float> _function;
 
-		public PolynomialEase(Func<float, float> func)
-		{
+		public PolynomialEase(Func<float, float> func) {
 			_function = func;
 		}
 
-		public override float Ease(float time)
-		{
+		public override float Ease(float time) {
 			return _function(time);
 		}
 
@@ -54,20 +48,18 @@ namespace EstherMod.Core
 		//}
 	}
 
-	public class EaseBuilder : EaseFunction
-	{
+	public class EaseBuilder : EaseFunction {
 		private List<EasePoint> _points;
 
-		public EaseBuilder()
-		{
+		public EaseBuilder() {
 			_points = new List<EasePoint>();
 		}
 
 		public void AddPoint(float x, float y, EaseFunction function) => AddPoint(new Vector2(x, y), function);
 
-		public void AddPoint(Vector2 vector, EaseFunction function)
-		{
-			if (vector.X < 0f) throw new ArgumentException("X value of point is not in valid range!");
+		public void AddPoint(Vector2 vector, EaseFunction function) {
+			if (vector.X < 0f)
+				throw new ArgumentException("X value of point is not in valid range!");
 
 			EasePoint newPoint = new EasePoint(vector, function);
 			if (_points.Count == 0) {
@@ -76,13 +68,13 @@ namespace EstherMod.Core
 			}
 
 			EasePoint last = _points[_points.Count - 1];
-			if (last.Point.X > vector.X) throw new ArgumentException("New point has an x value less than the previous point when it should be greater or equal");
+			if (last.Point.X > vector.X)
+				throw new ArgumentException("New point has an x value less than the previous point when it should be greater or equal");
 
 			_points.Add(newPoint);
 		}
 
-		public override float Ease(float time)
-		{
+		public override float Ease(float time) {
 			Vector2 prevPoint = Vector2.Zero;
 			EasePoint usePoint = _points[0];
 			for (int i = 0; i < _points.Count; i++) {
@@ -94,17 +86,16 @@ namespace EstherMod.Core
 			}
 			float dist = usePoint.Point.X - prevPoint.X;
 			float progress = (time - prevPoint.X) / dist;
-			if (progress > 1f) progress = 1f;
+			if (progress > 1f)
+				progress = 1f;
 			return MathHelper.Lerp(prevPoint.Y, usePoint.Point.Y, usePoint.Function.Ease(progress));
 		}
 
-		private struct EasePoint
-		{
+		private struct EasePoint {
 			public Vector2 Point;
 			public EaseFunction Function;
 
-			public EasePoint(Vector2 p, EaseFunction func)
-			{
+			public EasePoint(Vector2 p, EaseFunction func) {
 				Point = p;
 				Function = func;
 			}

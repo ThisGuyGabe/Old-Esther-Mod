@@ -1,11 +1,11 @@
-﻿using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
+﻿using EstherMod.Content.Items;
+using EstherMod.Core;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.ID;
+using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-using EstherMod.Content.Items;
-using EstherMod.Core;
 
 namespace EstherMod.Content.NPCs;
 

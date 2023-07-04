@@ -11,7 +11,8 @@ public static class EstherAssets {
 
 	public static void Load() {
 		// Dedicated servers can't load assets
-		if (Main.dedServ) return;
+		if (Main.dedServ)
+			return;
 
 		BonestromsStaff_Glowmask = Request<Texture2D>("EstherMod/Content/GlowMasks/BonestromStaff_Glow");
 		GoldenReckage_Glowmask = Request<Texture2D>("EstherMod/Content/GlowMasks/GoldenReckage_Glow");

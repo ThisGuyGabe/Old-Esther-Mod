@@ -31,12 +31,14 @@ public sealed class QuestPlayer : ModPlayer {
 	public override void PostUpdate() {
 		for (int questIndex = 0; questIndex < ActiveQuestsCap; questIndex++) {
 			var quest = ActiveQuests[questIndex];
-			if (string.IsNullOrEmpty(quest)) continue;
+			if (string.IsNullOrEmpty(quest))
+				continue;
 
 			bool allComplete = true;
 			foreach (ref var goalCompletion in GoalsCompletedByQuest[quest].AsSpan()) {
 				allComplete &= goalCompletion;
-				if (!allComplete) break;
+				if (!allComplete)
+					break;
 			}
 			if (allComplete)
 				QuestSystem.questsByName[quest].Complete(Player);
@@ -58,7 +60,8 @@ public sealed class QuestPlayer : ModPlayer {
 
 	public sealed override void SaveData(TagCompound tag) {
 		for (int i = 0; i < ActiveQuestsCap; i++) {
-			if (string.IsNullOrEmpty(ActiveQuests[i])) continue;
+			if (string.IsNullOrEmpty(ActiveQuests[i]))
+				continue;
 			tag[nameof(ActiveQuests) + i] = ActiveQuests[i];
 		}
 		if (CompletedQuests.Count != 0)
@@ -88,7 +91,8 @@ public sealed class QuestPlayer : ModPlayer {
 	private void OnHitNPCWithAnything(Entity withEntity, NPC target, NPC.HitInfo hit, int damageDone) {
 		for (int questIndex = 0; questIndex < ActiveQuestsCap; questIndex++) {
 			var quest = ActiveQuests[questIndex];
-			if (string.IsNullOrEmpty(quest)) continue;
+			if (string.IsNullOrEmpty(quest))
+				continue;
 
 			int goalIndex = 0;
 			foreach (ref var goalCompletion in GoalsCompletedByQuest[quest].AsSpan()) {

@@ -46,3 +46,12 @@ EyeSpyQuest: {
 		You can get its attention by using a fake eye, but you might need few lens to make it.
 		'''
 }
+
+BloodMoonQuest: {
+	DisplayName: Cleansing Night
+	Description:
+		'''
+		Blood moon must be my favourite phenomenon! I love watching the chaos that happens when these bloody abominations roam around.
+		However, I might need some samples for my future rituals, and I dont think you want me to use your "friends" blood, so kill like 20 of them will you?
+		'''
+}

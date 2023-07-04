@@ -1,15 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
 
-namespace EstherMod.Content.Projectiles
-{
-	public class BluePresent : ModProjectile
-	{
-		public override void SetDefaults()
-		{
+namespace EstherMod.Content.Projectiles {
+	public class BluePresent : ModProjectile {
+		public override void SetDefaults() {
 			Projectile.width = 16;
 			Projectile.height = 20;
 			Projectile.DamageType = DamageClass.Melee;
@@ -27,28 +24,28 @@ namespace EstherMod.Content.Projectiles
 		int bounce = 0;
 		int maxBounces = 2;
 
-		public override void Kill(int timeLeft)
-        {
+		public override void Kill(int timeLeft) {
 			SoundEngine.PlaySound(SoundID.Dig.WithVolumeScale(0.5f).WithPitchOffset(0.8f), Projectile.position);
-			for (int i = 0; i < 1; i++)
-            {
+			for (int i = 0; i < 1; i++) {
 				Vector2 newVelocity = Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(180));
 				Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.position, newVelocity, ModContent.ProjectileType<Coal>(), 8, 4, Projectile.owner);
-            }
-        }
+			}
+		}
 
-		public override bool OnTileCollide(Vector2 oldVelocity)
-		{
+		public override bool OnTileCollide(Vector2 oldVelocity) {
 			bounce++;
-			for (var i = 0; i < 4; i++)
-			{
+			for (var i = 0; i < 4; i++) {
 				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 7, 0f, 0f, 0, default(Color), 1f);
 			}
-			if (Projectile.velocity.X != oldVelocity.X) Projectile.velocity.X = -oldVelocity.X;
-			if (Projectile.velocity.Y != oldVelocity.Y) Projectile.velocity.Y = -oldVelocity.Y;
+			if (Projectile.velocity.X != oldVelocity.X)
+				Projectile.velocity.X = -oldVelocity.X;
+			if (Projectile.velocity.Y != oldVelocity.Y)
+				Projectile.velocity.Y = -oldVelocity.Y;
 
-			if (bounce >= maxBounces) return true;
-			else return false;
+			if (bounce >= maxBounces)
+				return true;
+			else
+				return false;
 		}
 	}
 }

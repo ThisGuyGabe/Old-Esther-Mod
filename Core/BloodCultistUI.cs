@@ -458,9 +458,12 @@ public sealed class BloodCultistUI : ILoadable {
 	}
 
 	public static UserInterface bloodCultistUi;
+	public static FuseUI fuseUI = new();
+	public static QuestUI questUI = new();
 
 	public void Load(Mod mod) {
-		if (Main.dedServ) return;
+		if (Main.dedServ)
+			return;
 
 		IL_Main.GUIChatDrawInner += GUIChatDrawInnerPatch;
 
@@ -468,7 +471,8 @@ public sealed class BloodCultistUI : ILoadable {
 	}
 
 	public void Unload() {
-		if (Main.dedServ) return;
+		if (Main.dedServ)
+			return;
 
 		IL_Main.GUIChatDrawInner -= GUIChatDrawInnerPatch;
 
@@ -806,7 +810,8 @@ public sealed class BloodCultistUI : ILoadable {
 			c.GotoNext(i => i.MatchCallvirt(typeof(Main).GetNestedType("TextDisplayCache", BindingFlags.NonPublic | BindingFlags.Public).GetMethod("get_AmountOfLines", BindingFlags.Instance | BindingFlags.Public)));
 			c.GotoNext(i => i.MatchStloc(out amountOfLinesIndex));
 
-			if (amountOfLinesIndex == -1) throw new InvalidOperationException("Amounts of lines variable index somehow wasn't found!");
+			if (amountOfLinesIndex == -1)
+				throw new InvalidOperationException("Amounts of lines variable index somehow wasn't found!");
 
 			c.GotoNext(i => i.MatchCallOrCallvirt<Main>("DrawWindowsIMEPanel"));
 			c.GotoNext(MoveType.After, i => i.MatchLdsfld<Main>("spriteBatch"));
@@ -875,7 +880,8 @@ public sealed class BloodCultistUI : ILoadable {
 			c.Emit(OpCodes.Br_S, skipVanillaTextDrawingLabel2);
 
 			c.GotoNext(i => i.MatchLdloc(out hoveredSnippetIndex));
-			if (hoveredSnippetIndex == -1) throw new InvalidOperationException("Hovered snipped index variable index somehow wasn't found!");
+			if (hoveredSnippetIndex == -1)
+				throw new InvalidOperationException("Hovered snipped index variable index somehow wasn't found!");
 
 			c.MarkLabel(skipVanillaTextDrawingLabel);
 

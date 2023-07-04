@@ -35,7 +35,7 @@ public sealed class FireStormSlasher : BaseItem {
 	}
 
 	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone) {
-		Projectile.NewProjectile(Item.GetSource_None(), target.Center,Vector2.Zero, ProjectileID.SolarWhipSwordExplosion, hit.SourceDamage * 2, hit.Knockback, player.whoAmI);
+		Projectile.NewProjectile(Item.GetSource_None(), target.Center, Vector2.Zero, ProjectileID.SolarWhipSwordExplosion, hit.SourceDamage * 2, hit.Knockback, player.whoAmI);
 		target.AddBuff(BuffID.OnFire, Main.rand.Next(120, 240));
 	}
 

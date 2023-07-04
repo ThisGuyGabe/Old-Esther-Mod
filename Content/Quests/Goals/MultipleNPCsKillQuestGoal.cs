@@ -1,7 +1,6 @@
 ﻿using System;
 using EstherMod.Core.Quests;
 using Terraria;
-using Terraria.Localization;
 
 namespace EstherMod.Content.Quests.Goals;
 

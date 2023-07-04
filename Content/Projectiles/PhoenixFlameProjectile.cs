@@ -6,29 +6,27 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles
-{
-	public class PhoenixFlameProjectile : ModProjectile
-	{
+namespace EstherMod.Content.Projectiles {
+	public class PhoenixFlameProjectile : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.aiStyle = 1;
 			Projectile.width = 7;
-			Projectile.height = 16; 
-			Projectile.aiStyle = 1; 
+			Projectile.height = 16;
+			Projectile.aiStyle = 1;
 			Projectile.friendly = true;
-			Projectile.DamageType = DamageClass.Ranged; 
-			Projectile.penetrate = -1; 
-			Projectile.timeLeft = 60 * 20; 
+			Projectile.DamageType = DamageClass.Ranged;
+			Projectile.penetrate = -1;
+			Projectile.timeLeft = 60 * 20;
 			Projectile.light = 0.25f;
-			Projectile.ignoreWater = true; 
-			Projectile.tileCollide = true; 
-			AIType = ProjectileID.WoodenArrowFriendly; 
+			Projectile.ignoreWater = true;
+			Projectile.tileCollide = true;
+			AIType = ProjectileID.WoodenArrowFriendly;
 		}
-		
+
 		public override Color? GetAlpha(Color lightColor) {
 			return new Color(255, 243, 64, 150);
 		}
-		
+
 		public override void AI() {
 
 			int dustnumber = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 0.8f);

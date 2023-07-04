@@ -52,7 +52,8 @@ public sealed class QuestElement : UIPanel {
 	}
 
 	public override int CompareTo(object obj) {
-		if (obj is not QuestElement other) return base.CompareTo(obj);
+		if (obj is not QuestElement other)
+			return base.CompareTo(obj);
 		return quest.Order.CompareTo(other.quest.Order);
 	}
 }

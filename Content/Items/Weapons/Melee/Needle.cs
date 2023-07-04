@@ -1,15 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using EstherMod.Core;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using System;
-using System.Linq;
-using Terraria.DataStructures;
-using EstherMod.Core;
-using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
-using Terraria.GameContent;
-using Terraria.Audio;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
@@ -36,7 +36,7 @@ public sealed class Needle : BaseItem {
 	}
 
 	public override bool CanUseItem(Player player) {
-		return !Main.projectile.Any(n => n.active && n.owner == player.whoAmI && n.type == ModContent.ProjectileType<NeedleProj>());
+		return !Main.projectile.SkipLast(1).Any(n => n.active && n.owner == player.whoAmI && n.type == ModContent.ProjectileType<NeedleProj>());
 	}
 
 	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {

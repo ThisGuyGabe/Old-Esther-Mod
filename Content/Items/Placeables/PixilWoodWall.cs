@@ -1,8 +1,8 @@
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria;
 using EstherMod.Content.Walls;
 using EstherMod.Core;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Placeables;
 
