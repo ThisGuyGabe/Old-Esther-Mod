@@ -33,7 +33,7 @@ public sealed class DayBreakStar : BaseItem {
 
 			Main.time = 0.0;
 			Main.dayTime = !Main.dayTime;
-			if (Main.netMode != NetmodeID.MultiplayerClient) {
+			if (Main.netMode == NetmodeID.MultiplayerClient) {
 				NetMessage.SendData(MessageID.WorldData);
 			}
 		}
