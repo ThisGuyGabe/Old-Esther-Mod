@@ -83,3 +83,8 @@ StellarRain: {
 	DisplayName: Stellar Rain
 	Tooltip: Raining knives of the heavens!
 }
+
+CultSaber: {
+	DisplayName: Cult Saber
+	Tooltip: ""
+}

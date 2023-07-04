@@ -11,7 +11,6 @@ public sealed class BeamBow : BaseItem {
 		Item.width = 22;
 		Item.height = 34;
 		Item.rare = ItemRarityID.Green;
-		Item.crit = 10;
 		Item.damage = 5;
 		Item.knockBack = 2f;
 		Item.noMelee = true;

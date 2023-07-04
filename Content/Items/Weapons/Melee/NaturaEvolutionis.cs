@@ -13,7 +13,6 @@ public sealed class NaturaEvolutionis : BaseItem {
 
 	public override void SetDefaults() {
 		Item.damage = 9;
-		Item.crit = 5;
 		Item.rare = ItemRarityID.Green;
 		Item.width = 32;
 		Item.height = 46;

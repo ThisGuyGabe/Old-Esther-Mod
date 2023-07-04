@@ -13,7 +13,6 @@ public sealed class Rubyo : BaseItem {
 
     public override void SetDefaults() {
         Item.damage = 16;
-        Item.crit = 5;
         Item.rare = ItemRarityID.Blue;
         Item.width = 30;
         Item.height = 32;

@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -18,7 +20,7 @@ public sealed class GlowLine : ModDust {
 		dust.frame = new Rectangle(0, 0, 8, 128);
 		dust.customData = dust.scale;
 
-		dust.shader = EstherEffects.GlowingDustArmor;
+		dust.shader = new Terraria.Graphics.Shaders.ArmorShaderData(new Ref<Effect>(ModContent.Request<Effect>("EstherMod/Effects/GlowingDust", AssetRequestMode.ImmediateLoad).Value), "GlowingDustPass");
 	}
 
 	public override bool Update(Dust dust) {

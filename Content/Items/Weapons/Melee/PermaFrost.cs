@@ -18,7 +18,6 @@ public sealed class PermaFrost : BaseItem {
 		Item.shootSpeed = 3;
 		Item.DamageType = DamageClass.Melee;
 		Item.knockBack = 5;
-		Item.crit = 0;
 		Item.value = Item.sellPrice(gold: 5, silver: 41);
 		Item.rare = ItemRarityID.LightRed;
 		Item.UseSound = SoundID.Item1;

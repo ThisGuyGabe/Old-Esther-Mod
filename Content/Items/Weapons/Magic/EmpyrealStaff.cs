@@ -19,7 +19,6 @@ public sealed class EmpyrealStaff : BaseItem {
 		Item.UseSound = SoundID.Item72;
 
 		Item.damage = 23;
-		Item.crit = 7;
 		Item.mana = 10;
 		Item.knockBack = 7;
 		Item.DamageType = DamageClass.Magic;

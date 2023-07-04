@@ -21,7 +21,6 @@ public sealed class PhoenixFlame : BaseItem {
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.knockBack = 5f;
 
-		Item.useStyle = 5;
 		Item.shootSpeed = 10f;
 		Item.DamageType = DamageClass.Ranged;
 		Item.autoReuse = true;
@@ -30,7 +29,6 @@ public sealed class PhoenixFlame : BaseItem {
 		Item.UseSound = SoundID.Item5;
 		Item.shoot = ProjectileID.WoodenArrowFriendly;
 		Item.useAmmo = AmmoID.Arrow;
-		Item.crit = 4;
 	}
 
 	public override void AddRecipes() {

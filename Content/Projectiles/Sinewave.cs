@@ -2,10 +2,12 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using EstherMod.Content.Projectiles;
 
 namespace EstherMod.Content.Projectiles
 {
@@ -92,7 +94,7 @@ namespace EstherMod.Content.Projectiles
 		}
 		public override bool PreDraw(ref Color lightColor)
 		{
-			Texture2D texture2D = ModContent.Request<Texture2D>("EstherMod/Content/Projectiles/GlowBall").Value;
+			Texture2D texture2D = ModContent.Request<Texture2D>("EstherMod/Assets/Textures/Glow").Value;
 			Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
 			for (int k = 0; k < Projectile.oldPos.Length; k++) {
 				float scale = Projectile.scale * (Projectile.oldPos.Length - k) / Projectile.oldPos.Length * .45f;
@@ -100,6 +102,11 @@ namespace EstherMod.Content.Projectiles
 				Color color = Projectile.GetAlpha(Color.SkyBlue) * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
 				Main.spriteBatch.Draw(texture2D, drawPos, null, color, Projectile.rotation, TextureAssets.Projectile[Projectile.type].Value.Size(), scale, SpriteEffects.None, 0f);
 			}
+			return true;
+		}
+
+		public override bool OnTileCollide(Vector2 oldVelocity) {
+			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
 			return true;
 		}
 	}

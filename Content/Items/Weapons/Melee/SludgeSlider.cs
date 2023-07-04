@@ -28,9 +28,8 @@ public sealed class SludgeSlider : BaseItem {
 		Item.damage = 26;
 		Item.DamageType = DamageClass.MeleeNoSpeed;
 		Item.knockBack = 3.5f;
-		Item.crit = 2; 
 		Item.channel = true; 
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Blue;
 		Item.value = Item.buyPrice(silver: 20, copper: 34); 
 
 		Item.shoot = ModContent.ProjectileType<SludgeSliderProjectile>();
