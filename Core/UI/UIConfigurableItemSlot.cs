@@ -59,7 +59,7 @@ public sealed class UIConfigurableItemSlot : UIElement {
 		}
 	}
 
-	protected override void DrawSelf(SpriteBatch spriteBatch) {
+	public override void DrawSelf(SpriteBatch spriteBatch) {
 		var scale = Main.inventoryScale;
 		Main.inventoryScale = Scale;
 

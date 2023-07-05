@@ -32,7 +32,7 @@ public sealed class QuestElement : UIPanel {
 		Append(frame);
 
 		text = new UIText(quest.DisplayName, textScale: 1f) {
-			Width = StyleDimension.FromPixels(130f),
+			Width = StyleDimension.FromPixels(100f),
 			Height = StyleDimension.FromPixels(10f),
 			Left = StyleDimension.FromPixels(80f),
 			HAlign = 0f,

@@ -3,7 +3,7 @@ TakeQuest: Take Quest
 TakeReward: Take Reward
 InProgress: Quest in Progress
 RewardPrefix: * Reward: {0}
-Rewards.ItemQuestReward: "{ItemTag}"
+Rewards.ItemQuestReward: "{Stack} {ItemTag} {ItemName}"
 
 SlimyPurgeQuest: {
 	DisplayName: Slimy Purge

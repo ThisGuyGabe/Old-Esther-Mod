@@ -3,7 +3,7 @@
 // TakeReward: Take Reward
 // InProgress: Quest in Progress
 // RewardPrefix: * Reward: {0}
-// Rewards.ItemQuestReward: "{ItemTag}"
+// Rewards.ItemQuestReward: "{Stack} {ItemTag} {ItemName}"
 
 SlimyPurgeQuest: {
 	// DisplayName: Slimy Purge
@@ -44,5 +44,24 @@ EyeSpyQuest: {
 		It's probably related to these annoying eyes flying all around at night.
 		So I would be really thankful if you would kill the big one because it appears it's what causes them to appear.
 		You can get its attention by using a fake eye, but you might need few lens to make it.
+		''' */
+}
+
+BloodMoonQuest: {
+	// DisplayName: Cleansing Night
+	/* Description:
+		'''
+		Blood moon must be my favourite phenomenon! I love watching the chaos that happens when these bloody abominations roam around.
+		However, I might need some samples for my future rituals, and I dont think you want me to use your "friends" blood, so kill like 20 of them will you?
+		''' */
+}
+
+EaterOfWorldsQuest: {
+	// DisplayName: Worm Hunting
+	/* Description:
+		'''
+		Corruption is a weird place even for my standards, but I think I know how to make it a bit easier to deal with.
+		Underground you can find these weird glowing orbs, if you destroy them with a hammer or some kind of explosive you might wake up the Eater of Worlds, the biggest worm of them all!
+		If you kill it, then I'm going to reward you nicely.
 		''' */
 }

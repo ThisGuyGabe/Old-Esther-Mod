@@ -7,6 +7,7 @@ using Terraria.ID;
 namespace EstherMod.Content.Quests;
 
 public sealed class EaterOfWorldsQuest : ModQuest {
+	public override string Texture => "EstherMod/Assets/Quests/EaterOfWorldsQuest";
 	public override QuestFrame QuestFrame => QuestFrames.Main;
 	public override float Order => 3f;
 

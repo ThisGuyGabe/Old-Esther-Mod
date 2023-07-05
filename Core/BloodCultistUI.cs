@@ -212,7 +212,7 @@ public sealed class BloodCultistUI : ILoadable {
 				Width = { Percent = 1f },
 				Height = { Percent = 1f },
 				WrappedTextBottomPadding = 7.5f,
-				IsWrapped = false,
+				IsWrapped = true,
 			};
 			rewardsText.OnUpdate += (UIElement affectedElement) => {
 				if (!currentQuestChosen.locked) {
