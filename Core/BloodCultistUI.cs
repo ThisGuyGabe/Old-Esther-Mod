@@ -46,8 +46,6 @@ public sealed class BloodCultistUI : ILoadable {
 		}
 	}
 	private sealed class FuseGlobalItem : GlobalItem {
-		private static SpriteBatchSnapshot spriteBatchSnapshot;
-
 		public bool IsFusionDummy { get; set; }
 		public float FusionFade { get; set; }
 
@@ -57,14 +55,10 @@ public sealed class BloodCultistUI : ILoadable {
 
 		public override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale) {
 			if (IsFusionDummy) {
-				spriteBatchSnapshot = spriteBatch.TakeSnapshot();
-				var copy = spriteBatchSnapshot;
-				copy.Effect = EstherEffects.GrayOutItem.Shader;
-				copy.Effect.Parameters["fade"].SetValue(FusionFade);
-
 				spriteBatch.End();
-				spriteBatch.Begin(copy);
+				spriteBatch.BeginWith(EstherEffects.GrayOutItem.Shader);
 
+				EstherEffects.GrayOutItem.Shader.Parameters["fade"].SetValue(FusionFade);
 				EstherEffects.GrayOutItem.Apply(null);
 			}
 			return true;
@@ -73,9 +67,7 @@ public sealed class BloodCultistUI : ILoadable {
 		public override void PostDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale) {
 			if (IsFusionDummy) {
 				spriteBatch.End();
-				spriteBatch.Begin(spriteBatchSnapshot);
-
-				spriteBatchSnapshot = default;
+				spriteBatch.BeginWith((Effect)null);
 			}
 		}
 	}
@@ -899,6 +891,5 @@ public sealed class BloodCultistUI : ILoadable {
 		catch {
 			MonoModHooks.DumpIL(Esther.Instance, il);
 		}
-		MonoModHooks.DumpIL(Esther.Instance, il);
 	}
 }

@@ -7,9 +7,7 @@ namespace EstherMod.Core;
 public static class BaseTypeCommons {
 	public static string GetKeyPath(Type type) {
 		// Ignore EstherMod and Content folders
-		var split = type.Namespace.Split('.');
-		var skip = split[2..];
-		return string.Join('.', skip);
+		return string.Join('.', type.Namespace.Split('.')[2..]);
 	}
 }
 

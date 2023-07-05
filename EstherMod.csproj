@@ -11,6 +11,10 @@
 	
 	<ItemGroup>
 		<PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.1" PrivateAssets="all" />
+		
+		<Publicize Include="FNA" />
+		<Publicize Include="tModLoader" />
 	</ItemGroup>
 
 	<PropertyGroup>
