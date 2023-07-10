@@ -40,8 +40,13 @@ public sealed class QuestPlayer : ModPlayer {
 				if (!allComplete)
 					break;
 			}
-			if (allComplete)
-				QuestSystem.questsByName[quest].Complete(Player);
+			if (allComplete) {
+				try {
+					QuestSystem.questsByName[quest].Complete(Player);
+				}
+				catch {
+				}
+			}
 		}
 
 		if ((Main.LocalPlayer.TalkNPC == null || Main.LocalPlayer.TalkNPC.ModNPC is not BloodCultist) && BloodCultistUI.bloodCultistUi?.CurrentState != null) {

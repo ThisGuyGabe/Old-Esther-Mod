@@ -22,3 +22,8 @@ Riptide: {
 	// DisplayName: Riptide
 	// Tooltip: Cast a explosing of water at your enemies feet!
 }
+
+FloraGaleStaff: {
+	// DisplayName: Flora Gale Staff
+	// Tooltip: ""
+}

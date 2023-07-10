@@ -8,6 +8,12 @@
 		<LangVersion>latest</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
+	<ItemGroup>
+	  <AdditionalFiles Remove="Assets\NewFolder\**" />
+	  <Compile Remove="Assets\NewFolder\**" />
+	  <EmbeddedResource Remove="Assets\NewFolder\**" />
+	  <None Remove="Assets\NewFolder\**" />
+	</ItemGroup>
 	
 	<ItemGroup>
 		<PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />

@@ -65,3 +65,23 @@ EaterOfWorldsQuest: {
 		If you kill it, then I'm going to reward you nicely.
 		'''
 }
+
+PsetControlQuest: {
+	DisplayName: Pest Control
+	Description:
+		'''
+		I remember my days back in the Jungle Temple, you know what annoyed me the most?
+		Bees, I despise bees. Can't walk around the jungle without getting stingers in my scales.
+		And worst of all - their hives are everywhere!
+		Kill 15 of them and I might have something for you. 
+		'''
+}
+
+QueenBeeQuest: {
+	DisplayName: Overthrone
+	Description:
+		'''
+		Thanks for dealing with these annoying pests, but now I got a bigger fish, the Queen Bee!
+		I think that destroying one of her larvas should be enough to get her attention, kill her and bring me her head!
+		'''
+}

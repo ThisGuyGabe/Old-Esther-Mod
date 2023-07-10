@@ -1,0 +1,476 @@
+Mods: {
+	EstherMod: {
+		Items: {
+			HauntedCandle: {
+				DisplayName: Haunted Candle
+				Tooltip:
+					'''
+					increases magic damage by 5%. 
+					Increases critical strike chance for mage weapons by 6.
+					Maximum mana increases by 20 and the lower your health is the more damage you do works with all classes.
+					Also wearing this accessory increases spawn rates like a water candle.
+					'''
+			}
+
+			MagneticDynamo: {
+				DisplayName: Magnetic Dynamo
+				Tooltip:
+					'''
+					Makes you attack faster but at the cost of some damage
+					Increases attack speed by 12% and decreases damage by 6%
+					'''
+			}
+
+			ManaNecklace: {
+				DisplayName: Mana Necklace
+				Tooltip: Effects of the Mana Regeneration Band and Mana Flower
+			}
+
+			ArcaneLens: {
+				DisplayName: Arcane Lens
+				Tooltip: Give this to the blood cultist for a reward.
+			}
+
+			ImpHorn: {
+				DisplayName: Imp Horn
+				Tooltip: Give this to the blood cultist for a reward.
+			}
+
+			PixilWood: {
+				DisplayName: Pixil Wood
+				Tooltip: ""
+			}
+
+			PixilWoodWall: {
+				DisplayName: Pixil Wood Wall
+				Tooltip: ""
+			}
+
+			RetroWood: {
+				DisplayName: Retro Wood
+				Tooltip: ""
+			}
+
+			RetroWoodWall: {
+				DisplayName: Retro Wood Wall
+				Tooltip: ""
+			}
+
+			SoulPearl: {
+				DisplayName: Soul Pearl
+				Tooltip: ""
+			}
+
+			SoulPebble: {
+				DisplayName: Soul Pebble
+				Tooltip: ""
+			}
+
+			BeamBow: {
+				DisplayName: Beam Bow
+				Tooltip: Converts ALL arrows to lazers, and it seems its bugged.
+			}
+
+			BloomingBane: {
+				DisplayName: Blooming Bane
+				Tooltip:
+					'''
+					Wielded by the purest of warriors 
+					Has a chance to inflict poison for a short duration when hitting an enemy
+					'''
+			}
+
+			Bonestromstaff: {
+				DisplayName: Bonestrom Staff
+				Tooltip: Shoots a sigil that summons necromantic shards that home in on your cursor.
+			}
+
+			DragonsKarma: {
+				DisplayName: Dragon's Karma
+				Tooltip: ""
+			}
+
+			EmpyrealStaff: {
+				DisplayName: Empyreal Staff
+				Tooltip: Use this during night for a mana discount, faster speed, but less damage.
+			}
+
+			Esther: {
+				DisplayName: Esther
+				Tooltip: ""
+			}
+
+			FireStormSlasher: {
+				DisplayName: Firestorm Slasher
+				Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
+			}
+
+			ForgedFury: {
+				DisplayName: Forged Fury
+				Tooltip:
+					'''
+					Turns arrows into flaming arrows.
+					Turns flaming arrows into fury arrows.
+					'''
+			}
+
+			GoldenReckage: {
+				DisplayName: Golden Wreckage
+				Tooltip: ""
+			}
+
+			NaturaEvolutionis: {
+				DisplayName: Natura Evolutionis
+				Tooltip: ""
+			}
+
+			Needle: {
+				DisplayName: Needle
+				Tooltip:
+					'''
+					Throws out a needle that goes in a line and retreats. 
+					If it's used in the air it lets the player hover.
+					'''
+			}
+
+			PeaShooter: {
+				DisplayName: Peashooter
+				Tooltip: Kill those zombies!
+			}
+
+			PermaFrost: {
+				DisplayName: Permafrost
+				Tooltip: When you hit an enemy it shoots an icicle that deals damage.
+			}
+
+			Rubyo: {
+				DisplayName: Rub-yo
+				Tooltip: ""
+			}
+
+			SantasLittleHelper: {
+				DisplayName: Santa's Little Helper
+				Tooltip:
+					'''
+					Festive! 
+					Shoots three random colored presents that bounce and release coal on death.
+					'''
+			}
+
+			SilverCrippler: {
+				DisplayName: Silver Crippler
+				Tooltip: ""
+			}
+
+			SolarRecurve: {
+				DisplayName: Solar Recurve
+				Tooltip: Shoots more arrows every time.
+			}
+
+			SoulSlaughter: {
+				DisplayName: Soul Slaughter
+				Tooltip:
+					'''
+					The souls of the dead hold up your blade.
+					Is this a JoJo's reference?
+					'''
+			}
+
+			Tinuzi: {
+				DisplayName: Tinuzi
+				Tooltip: Shoots out bullets at high speeds!
+			}
+
+			CopperPopper: {
+				DisplayName: Copper Popper
+				Tooltip: ""
+			}
+
+			SurgeCannon: {
+				DisplayName: Surge Cannon
+				Tooltip: Turns bullets into a surge of water.
+			}
+
+			Riptide: {
+				DisplayName: Riptide
+				Tooltip: Cast a explosing of water at your enemies feet!
+			}
+
+			PhoenixFlame: {
+				DisplayName: Phoenix Flame
+				Tooltip:
+					'''
+					Shoot in a 3 shot rapid burst.
+					Turns arrows into Phoenix arrows.
+					'''
+			}
+
+			Vulcano: {
+				DisplayName: Vulcano
+				Tooltip:
+					'''
+					Rain arrows from the sky!
+					Turns most arrows into lava
+					'''
+			}
+
+			SpookStoneRelic: {
+				DisplayName: Spookstone Relic
+				Tooltip: ""
+			}
+
+			AquaticBoots: {
+				DisplayName: Aquatic Boots
+				Tooltip: ""
+			}
+
+			AquaticDiverHelmet: {
+				DisplayName: Aquatic Diver Helmet
+				Tooltip: ""
+			}
+
+			AquaticPlating: {
+				DisplayName: Aquatic Plating
+				Tooltip: ""
+			}
+
+			UmbraStone: {
+				DisplayName: Umbrastone
+				Tooltip: ""
+			}
+
+			BonestromStaff: {
+				DisplayName: Bonestrom Staff
+				Tooltip: ""
+			}
+
+			StellarRain: {
+				DisplayName: Stellar Rain
+				Tooltip: Raining knives of the heavens!
+			}
+
+			Froster: {
+				DisplayName: Froster
+				Tooltip: ""
+			}
+
+			EthericScrap: {
+				DisplayName: Etheric Scrap
+				Tooltip: ""
+			}
+
+			HypnoplateItem: {
+				DisplayName: Hypnoplate
+				Tooltip: ""
+			}
+
+			EchoBreaker: {
+				DisplayName: Echo Breaker
+				Tooltip: Using right click releases a powerful swing with a 10 second delay.
+			}
+
+			EthericalChant: {
+				DisplayName: Etherical Chant
+				Tooltip: Shoots 3-6 floating sparks which home into enemies after a short delay.
+			}
+
+			EthericalDagger: {
+				DisplayName: Etherical Dagger
+				Tooltip: ""
+			}
+
+			HypnosStorm: {
+				Tooltip: ""
+				DisplayName: Hypnos Storm
+			}
+
+			EthericalBow: {
+				Tooltip: ""
+				DisplayName: Etherical Bow
+			}
+
+			CosmicTome: {
+				Tooltip: ""
+				DisplayName: Cosmic Tome
+			}
+
+			TheSoul: {
+				Tooltip:
+					'''
+					Increases damage by 4%. 
+					Decreases damage reduction by 5%.
+					Increases max life by 50.
+					Gives a jump boost.
+					Increases attack speed by 5%.
+					And decreases defense by 6.
+					'''
+				DisplayName: The Soul
+			}
+
+			DayBreakStar: {
+				Tooltip:
+					'''
+					Turns day to night and vice-versa.
+					Blue means it's night and yellow means day.
+					'''
+				DisplayName: Daybreak Star
+			}
+
+			CogwheelFirearm: {
+				DisplayName: Cogwheel Firearm
+				Tooltip: ""
+			}
+
+			CopperTrumpet: {
+				DisplayName: Copper Trumpet
+				Tooltip: ""
+			}
+
+			FlaxenMoss: {
+				DisplayName: Flaxen Moss
+				Tooltip: ""
+			}
+
+			FlaxenMossWall: {
+				DisplayName: Flaxen Moss Wall
+				Tooltip: ""
+			}
+
+			Rootstone: {
+				DisplayName: Rootstone
+				Tooltip: ""
+			}
+
+			PooSpiderItem: {
+				DisplayName: Poo Spider
+				Tooltip: ""
+			}
+
+			EthericalRapier: {
+				DisplayName: Etherical Rapier
+				Tooltip: ""
+			}
+		}
+
+		Projectiles: {
+			NeedleProj.DisplayName: Needle Proj
+			BloomingBaneProjectile.DisplayName: Blooming Bane Projectile
+			BluePresent.DisplayName: Blue Present
+			BonestromBolt.DisplayName: Bonestrom Bolt
+			BonestromSigil.DisplayName: Bonestrom Sigil
+			Coal.DisplayName: Coal
+			DragonsKarmaProjectile.DisplayName: Dragons Karma Projectile
+			Frostpike.DisplayName: Frostpike
+			GreenPresent.DisplayName: Green Present
+			SpookStoneMinion.DisplayName: Spooky Stone Boi
+			NaturaProjectile.DisplayName: Natura Projectile
+			PartyBombProjectile.DisplayName: Party Bomb Projectile
+			PeaShooterProjectile.DisplayName: Peashooter Projectile
+			Ruby.DisplayName: Ruby
+			RubyoProj.DisplayName: Rubyo Proj
+			SoulSlaughter_Projectile.DisplayName: Soul Slaughter
+			SoulSlaughterHighlight.DisplayName: Soul Slaughter
+			YellowPresent.DisplayName: Yellow Present
+			GoldenReckageProjectile.DisplayName: Golden Wreckage Projectile
+			RiptideExplosion.DisplayName: Riptide Explosion
+			SurgeCannonProjectile.DisplayName: Surge Cannon Projectile
+			StellarRainProjectile.DisplayName: Stellar Rain Projectile
+			FrosterProj.DisplayName: Froster Proj
+			ChantSpark.DisplayName: Chant Spark
+			EchoBreakerProjectile.DisplayName: Echo Breaker Projectile
+			EthericalDaggerProjectile.DisplayName: Etherical Dagger Projectile
+			HypnosArrow.DisplayName: Hypnos Arrow
+			CogProjectile.DisplayName: Cog Projectile
+			TrumpetThing.DisplayName: Trumpet Thing
+			PhoenixFlameProjectile.DisplayName: Phoenix arrow
+			ForgedFuryProjectile.DisplayName: Fury arrow
+			VulcanoProjectile.DisplayName: Vulcano Lava
+			EthericalRapierProjectile.DisplayName: Etherical Rapier Projectile
+			Sinewave.DisplayName: Sinewave
+		}
+
+		NPCs: {
+			BloodCultist: {
+				DisplayName: Blood Cultist
+
+				TownNPCMood: {
+					Content: I am content.
+					NoHome: I hate not having a home.
+					FarFromHome: I am too far from home.
+					LoveSpace: I love having so much space.
+					DislikeCrowded: I dislike how crowded I am.
+					HateCrowded: I hate how crowded I am.
+					LikeNPC_Princess: I like {NPCName}.
+					Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			AbyssalAbhorrence.DisplayName: Abyssal Abhorrence
+			SpiritualConstruct.DisplayName: Spiritual Construct
+			PooSpider.DisplayName: Poo Spider
+		}
+
+		Buffs: {
+			SpookstoneMinionBuff: {
+				DisplayName: Spookstone Mininon
+				Description: It's Spooky Time.
+			}
+
+			EchoBreakCooldown: {
+				DisplayName: Echo Break Cooldown
+				Description: You can't use Echo Break now.
+			}
+		}
+
+		Tiles: {
+			PixilWoodTile.MapEntry: Pixil Wood
+			RetroWoodTile.MapEntry: Retro Wood
+			UmbraStoneTile.MapEntry: Umbrastone
+			Hypnoplate.MapEntry: Hypnoplate
+		}
+
+		Conditions.QuestCompletion: Requires quest completed: {0}
+
+		EstherMod: {
+			Quests: {
+				QuestCompleted: Quest is completed!
+				TakeQuest: Take Quest
+				TakeReward: Take Reward
+				InProgress: Quest in Progress
+				RewardPrefix: * Reward: {0}
+				Rewards.ItemQuestReward: "{ItemTag}"
+
+				SlimyPurgeQuest: {
+					DisplayName: Slimy Purge
+					Description:
+						'''
+						Welcome {PlayerName}! I require your aid.
+						Our lands have been tainted by an abundance of slimy creatures, and we require your ruthless expertise to eradicate them.
+						Your mission: eliminate ten slimes, regardless of their loathsome colors.
+						And I will reward you with a staff able to summon one of their kind to serve you.
+						'''
+				}
+
+				DeepseaTroublesQuest: {
+					DisplayName: Deepsea Troubles
+					Description:
+						'''
+						I found myself hating water related life recently...
+						Most specifically jellyfish, and I need you to kill a bunch of these water creatures to clean up the lakes and oceans of {WorldName}.
+						I even stole an artifact from some ruins I found down in the ocean!
+						And I can give it to you if you kill 6 of these filthy beasts.
+						'''
+				}
+
+				RoyalSlimeVanquishQuest: {
+					DisplayName: Royal Slime Vanquish
+					Description:
+						'''
+						It looks like our past endeavours angered the lord of slimes.
+						And since that interferes with my plans, I want you to end his petty reign!
+						'''
+				}
+			}
+		}
+	}
+}

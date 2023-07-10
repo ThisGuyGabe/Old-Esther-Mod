@@ -109,8 +109,10 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 	public void Complete(Player player) {
 		if (!player.TryGetModPlayer(out QuestPlayer questPlayer))
 			return;
+		if (!IsAssignedTo(player))
+			return;
 
-		Main.NewText($"Quest '{DisplayName.Value}' has been completed!", 255, 255, 200);
+		/*Main.NewText($"Quest '{DisplayName.Value}' has been completed!", 255, 255, 200);
 
 		questPlayer.ActiveQuests[Ordinal] = string.Empty;
 		questPlayer.CompletedQuests.Add(FullName);
@@ -118,7 +120,7 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 
 		if (Main.netMode == NetmodeID.MultiplayerClient) {
 			Esther.Instance.Packet_CompleteQuest(player.whoAmI, FullName);
-		}
+		}*/
 
 		Ordinal = -1;
 	}
