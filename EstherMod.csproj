@@ -20,7 +20,7 @@
 		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.1" PrivateAssets="all" />
 		
 		<Publicize Include="FNA" />
-		<Publicize Include="tModLoader" />
+		<Publicize Include="tModLoader" PublicizeTarget="Fields, Types" />
 	</ItemGroup>
 
 	<PropertyGroup>

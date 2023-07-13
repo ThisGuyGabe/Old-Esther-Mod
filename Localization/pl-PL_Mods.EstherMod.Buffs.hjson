@@ -1,11 +1,7 @@
 SpookstoneMinionBuff: {
-	// DisplayName: Spookstone Mininon
-	// Description: It's Spooky Time.
 }
 
 EchoBreakCooldown: {
-	// DisplayName: Echo Break Cooldown
-	// Description: You can't use Echo Break now.
 }
 
 Cooldown: {

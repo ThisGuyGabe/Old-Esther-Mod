@@ -109,7 +109,7 @@ public sealed class UITextWScrollbar : UIElement {
 		UpdateScrollbar();
 	}
 
-	public override void DrawSelf(SpriteBatch spriteBatch) {
+	protected override void DrawSelf(SpriteBatch spriteBatch) {
 		if (_scrollbar != null) {
 			_innerText.Top.Set(0f - _scrollbar.GetValue(), 0f);
 		}

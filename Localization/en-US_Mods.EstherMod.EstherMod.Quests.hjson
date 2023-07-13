@@ -1,39 +1,10 @@
-QuestCompleted: Quest is completed!
-TakeQuest: Take Quest
-TakeReward: Take Reward
-InProgress: Quest in Progress
-RewardPrefix: * Reward: {0}
-Rewards.ItemQuestReward: "{Stack} {ItemTag} {ItemName}"
-
 SlimyPurgeQuest: {
-	DisplayName: Slimy Purge
-	Description:
-		'''
-		Welcome {PlayerName}! I require your aid.
-		Our lands have been tainted by an abundance of slimy creatures, and we require your ruthless expertise to eradicate them.
-		Your mission: eliminate ten slimes, regardless of their loathsome colors.
-		And I will reward you with a staff able to summon one of their kind to serve you.
-		'''
 }
 
 DeepseaTroublesQuest: {
-	DisplayName: Deepsea Troubles
-	Description:
-		'''
-		I found myself hating water related life recently...
-		Most specifically jellyfish, and I need you to kill a bunch of these water creatures to clean up the lakes and oceans of {WorldName}.
-		I even stole an artifact from some ruins I found down in the ocean!
-		And I can give it to you if you kill 6 of these filthy beasts.
-		'''
 }
 
 RoyalSlimeVanquishQuest: {
-	DisplayName: Royal Slime Vanquish
-	Description:
-		'''
-		It looks like our past endeavours angered the lord of slimes.
-		And since that interferes with my plans, I want you to end his petty reign!
-		'''
 }
 
 EyeSpyQuest: {
@@ -85,3 +56,5 @@ QueenBeeQuest: {
 		I think that destroying one of her larvas should be enough to get her attention, kill her and bring me her head!
 		'''
 }
+
+PestControlQuest.DisplayName: Pest Control Quest

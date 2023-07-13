@@ -45,7 +45,7 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 		SetStaticDefaults();
 	}
 
-	public sealed override void Register() {
+	protected sealed override void Register() {
 		ModTypeLookup<ModQuest>.Register(this);
 
 		Type = QuestSystem.quests.Count;
