@@ -70,3 +70,8 @@ FoulLongbow: {
 	DisplayName: Foul Longbow
 	Tooltip: ""
 }
+
+EmberFlamethrower: {
+	DisplayName: Ember Flamethrower
+	Tooltip: ""
+}

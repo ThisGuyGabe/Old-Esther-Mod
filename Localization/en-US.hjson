@@ -387,6 +387,7 @@ Mods: {
 			VulcanoProjectile.DisplayName: Vulcano Lava
 			EthericalRapierProjectile.DisplayName: Etherical Rapier Projectile
 			Sinewave.DisplayName: Sinewave
+			EmberFlames.DisplayName: Ember Flames
 		}
 
 		NPCs: {

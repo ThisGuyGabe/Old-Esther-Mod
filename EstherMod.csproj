@@ -8,17 +8,11 @@
 		<LangVersion>latest</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
-	<ItemGroup>
-	  <AdditionalFiles Remove="Assets\NewFolder\**" />
-	  <Compile Remove="Assets\NewFolder\**" />
-	  <EmbeddedResource Remove="Assets\NewFolder\**" />
-	  <None Remove="Assets\NewFolder\**" />
-	</ItemGroup>
-	
+
 	<ItemGroup>
 		<PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
 		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.1" PrivateAssets="all" />
-		
+
 		<Publicize Include="FNA" />
 		<Publicize Include="tModLoader" PublicizeTarget="Fields, Types" />
 	</ItemGroup>
@@ -28,6 +22,7 @@
 		<NoWarn>$(NoWarn);CA2252</NoWarn>
 	</PropertyGroup>
 
+	<!--
 	<Target Name="CompileShader" BeforeTargets="Build">
 		<ItemGroup>
 			<EffectFiles Include="Assets/Shaders/**/*.fx" />
@@ -41,4 +36,5 @@
 		<Delete Files="$(FxbFile)" Condition="Exists('%(EffectFiles.Identity)') And Exists('$(FxbFile)')"></Delete>
 		<Exec Command="fxc /T fx_2_0 /Fo Assets/Shaders/$([System.IO.Path]::GetFileNameWithoutExtension('%(EffectFiles.FullPath)')).fxb /Od %(EffectFiles.Identity)" Condition="Exists('%(EffectFiles.Identity)')" />
 	</Target>
+	-->
 </Project>
