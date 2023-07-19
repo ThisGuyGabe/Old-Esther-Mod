@@ -1,9 +1,11 @@
-﻿using EstherMod.Core;
+using EstherMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static EstherMod.Content.Items.Weapons.Magic.FloraGale;
+using static EstherMod.Content.Items.Weapons.Magic.FloraLeaf;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 
@@ -15,8 +17,8 @@ public sealed class FloraGaleStaff : BaseItem {
 	}
 
 	public override void SetDefaults() {
-		Item.damage = 4;
-		Item.DefaultToStaff(ModContent.ProjectileType<FloraLeaf>(), 3.5f, 25, 8);
+		Item.damage = 7;
+		Item.DefaultToStaff(ModContent.ProjectileType<FloraGale>(), 5f, 25, 8);
 	}
 
 	public override void AddRecipes() {
@@ -27,75 +29,110 @@ public sealed class FloraGaleStaff : BaseItem {
 			.Register();
 	}
 	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
-		for (int i = 0; i < 3; i++) {
-			Projectile.NewProjectile(
-				source,
-				position,
-				velocity.RotatedByRandom(MathHelper.ToRadians(45)),
-				type,
-				damage,
-				knockback,
-				player.whoAmI,
-				-1
-			);
-		}
+		Projectile.NewProjectile(
+			source,
+			position,
+			velocity.RotatedByRandom(MathHelper.ToRadians(20)),
+			type,
+			damage,
+			knockback,
+			player.whoAmI,
+			-1
+		);
 		return false;
 	}
 }
 public sealed class FloraLeaf : ModProjectile {
 	public sealed override string Texture => "EstherMod/Assets/Weapons/Magic/FloraLeaf";
-
-	public int TargetIndex {
-		get => (int)Projectile.ai[0];
-		set => Projectile.ai[0] = value;
-	}
-
-	public NPC Target {
-		get {
-			if (TargetIndex == -1)
-				return null;
-			return Main.npc[TargetIndex];
-		}
-	}
-
 	public override void SetDefaults() {
 		Projectile.width = 14;
 		Projectile.height = 14;
 
 		Projectile.hostile = false;
 		Projectile.friendly = true;
-
-		Projectile.timeLeft = 6400;
+		Projectile.ArmorPenetration = 10;
+		Projectile.timeLeft = 210;
+		Projectile.CountsAsClass(DamageClass.Magic);
 	}
 
 	public override void AI() {
 		Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 		Projectile.ai[1]++;
+		Player owner = Main.player[Projectile.owner];
+		SearchForTargets(owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter, out NPC target);
 
-		if (TargetIndex == -1 || !Target.active) {
-			NPC closestNpc = null;
+		if (foundTarget) {
+			float moveSpeed = 7f;
+			float velMultiplier = 1f;
+			var dist = targetCenter - Projectile.Center;
+			float length = dist == Vector2.Zero ? 0f : dist.Length();
+			if (length < moveSpeed) {
+				velMultiplier = MathHelper.Lerp(0f, 1f, length / moveSpeed);
+			}
+			Vector2 changevelocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
+			changevelocity *= moveSpeed;
+			changevelocity *= velMultiplier;
+			Projectile.velocity = (changevelocity + (Projectile.velocity * 14)) / 15;
+		}
+		else {
+			Projectile.velocity.Y += 0.25f;
+		}
+	}
+
+	private void SearchForTargets(Player owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter, out NPC target) {
+		distanceFromTarget = 100f;
+		targetCenter = Projectile.position;
+		foundTarget = false;
+		if (!foundTarget) {
 			for (int i = 0; i < Main.maxNPCs; i++) {
-				var npc = Main.npc[i];
-				if (npc.active && !npc.friendly && !npc.townNPC && !npc.immortal && npc.defense >= (closestNpc?.defense ?? -1) && Projectile.Center.DistanceSQ(closestNpc?.Center ?? npc.Center) <= 350f * 350f && Collision.CanHit(Projectile, npc)) {
-					closestNpc = npc;
+				target = Main.npc[i];
+
+				if (target.CanBeChasedBy()) {
+					float between = Vector2.Distance(target.Center, Projectile.Center);
+					bool closest = Vector2.Distance(Projectile.Center, targetCenter) > between;
+					bool inRange = between < distanceFromTarget;
+					bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, target.position, target.width, target.height);
+					bool closeThroughWall = between < 100f;
+
+					if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall)) {
+						distanceFromTarget = between;
+						targetCenter = target.Center;
+						foundTarget = true;
+					}
 				}
 			}
-			TargetIndex = closestNpc?.whoAmI ?? -1;
 		}
+		target = null;
 
-		if (Projectile.ai[1] < 30f || Target == null)
-			return;
+	}
+}
+public sealed class FloraGale : ModProjectile {
+	public sealed override string Texture => "EstherMod/Assets/Weapons/Magic/FloraGale";
+	public override void SetDefaults() {
+		Projectile.width = 30;
+		Projectile.height = 30;
 
-		float moveSpeed = 3.5f;
-		float velMultiplier = 1f;
-
-		var dist = Target.Center - Projectile.Center;
-		float length = dist == Vector2.Zero ? 0f : dist.Length();
-		if (length < moveSpeed) {
-			velMultiplier = MathHelper.Lerp(0f, 1f, length / moveSpeed);
+		Projectile.hostile = false;
+		Projectile.friendly = false;
+		Projectile.timeLeft = 100;
+	}
+	public override void AI() {
+		Player player = Main.player[Projectile.owner];
+		Projectile.velocity = Projectile.velocity * 0.99f;
+		Projectile.ai[1]++;
+		if (Projectile.ai[1] % 25 == 12){
+			Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, Projectile.velocity + new Vector2(Main.rand.Next(-5, 5), Main.rand.Next(-5, 5)), ModContent.ProjectileType<FloraLeaf>(), Projectile.damage, 1, player.whoAmI);
 		}
-		Projectile.velocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
-		Projectile.velocity *= moveSpeed;
-		Projectile.velocity *= velMultiplier;
+	}
+	int i = 0;
+	int icount = Main.rand.Next(3,5);
+	public override void Kill(int timeLeft) {
+		Player player = Main.player[Projectile.owner];
+		if (Projectile.owner == Main.myPlayer) {
+			while (i < icount) {
+				i++;
+				Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.Center, new Vector2(Main.rand.Next(-10, 10), Main.rand.Next(-10, 10)), ModContent.ProjectileType<FloraLeaf>(), (int)(Projectile.damage * 1.25f), 1, player.whoAmI);
+			}
+		}
 	}
 }
