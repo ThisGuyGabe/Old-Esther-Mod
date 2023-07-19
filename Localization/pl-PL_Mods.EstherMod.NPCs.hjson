@@ -1,7 +1,8 @@
-BloodCultist: {
-	TownNPCMood: {
-	}
+TownNPCMood: {
 }
+
+// Census_SpawnCondition: Rescue her in space
+// Census.SpawnCondition: "{$Mods.EstherMod.Content.NPCs.Census_SpawnCondition}"
 
 PooSpiderItem: {
 	// DisplayName: Poo Spider

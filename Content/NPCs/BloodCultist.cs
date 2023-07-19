@@ -41,7 +41,17 @@ public sealed class BloodCultist : BaseNPC {
 		AnimationType = 22;
 	}
 
-	public override bool CanTownNPCSpawn(int numTownNPCs) => NPC.downedBoss1;
+	public override bool CanTownNPCSpawn(int numTownNPCs) 
+	{
+		for(int i = 0; i < 255; i++) 
+		{
+			Player player = Main.player[i];
+			if (player.active && player.statLifeMax >= 200) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public override List<string> SetNPCNameList() {
 		return new List<string>() {
