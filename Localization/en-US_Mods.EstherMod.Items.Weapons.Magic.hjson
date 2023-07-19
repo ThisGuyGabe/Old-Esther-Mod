@@ -25,5 +25,5 @@ Riptide: {
 
 FloraGaleStaff: {
 	DisplayName: Flora Gale Staff
-	Tooltip: ""
+	Tooltip: "Creates a burst of wind that spews armor-piercing leaves."
 }
