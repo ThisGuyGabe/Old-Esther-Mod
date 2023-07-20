@@ -6,11 +6,11 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
-using CascadeMod.Content.Items.Weapons.Magic;
+using EstherMod.Content.Items.Weapons.Magic;
 using System;
 using Terraria.Graphics.Renderers;
 
-namespace CascadeMod.Content.Projectiles
+namespace EstherMod.Content.Projectiles
 {
     public class Starlight : ModProjectile
     {
