@@ -21,8 +21,8 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.DamageType = DamageClass.Ranged;
             Item.width = 20;
             Item.height = 38;
-            Item.useTime = 25;
-            Item.useAnimation = 25;
+            Item.useTime = 21;
+            Item.useAnimation = 21;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.knockBack = 2;
@@ -30,7 +30,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
             Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item61;
             Item.shoot = ModContent.ProjectileType<FishProjectile>();
-            Item.shootSpeed = 8f;
+            Item.shootSpeed = 9.5f;
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
