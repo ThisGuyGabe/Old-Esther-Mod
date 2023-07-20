@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CascadeMod.Content.Items.Weapons.Ranged
+namespace EstherMod.Content.Items.Weapons.Ranged
 {
 	public class CactusBow : ModItem
 	{
