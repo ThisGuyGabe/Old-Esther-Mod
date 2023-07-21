@@ -7,9 +7,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
 using System;
-using CascadeMod.Content.Dusts;
 
-namespace CascadeMod.Content.Projectiles
+namespace EstherMod.Content.Projectiles
 {
     public class StellarSlash : ModProjectile
     {
@@ -59,7 +58,7 @@ namespace CascadeMod.Content.Projectiles
         {
             if (Projectile.ai[0] % 5 == 2 && Math.Abs(Projectile.velocity.X) + Math.Abs(Projectile.velocity.Y) > 6)
             {
-                Dust.NewDust(Projectile.position, 80, 154, ModContent.DustType<GlowLine>(), Projectile.velocity.X * -0.5f, Projectile.velocity.Y * -0.5f, 125, Color.DarkSlateGray);
+                Dust.NewDust(Projectile.position, 80, 154, DustID.MagicMirror, Projectile.velocity.X * -0.5f, Projectile.velocity.Y * -0.5f, 125, Color.DarkSlateGray);
             }
             float lightLevel = -Projectile.timeLeft / 100 + 1;
             Lighting.AddLight(Projectile.Center, 0.34f * lightLevel, 0.78f * lightLevel, 0.99f * lightLevel);
