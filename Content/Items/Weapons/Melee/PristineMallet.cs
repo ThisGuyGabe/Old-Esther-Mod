@@ -3,11 +3,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
-using CascadeMod.Content.Projectiles;
+using EstherMod.Content.Projectiles;
 using System.Collections.Generic;
 using System;
 
-namespace CascadeMod.Content.Items.Weapons.Melee
+namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class PristineMallet : ModItem
     {
@@ -36,7 +36,7 @@ namespace CascadeMod.Content.Items.Weapons.Melee
         }
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            SoundEngine.PlaySound(new SoundStyle("CascadeMod/Assets/SoundEffects/Bonk"));
+            SoundEngine.PlaySound(new SoundStyle("EstherMod/Assets/Sounds/Items/Weapons/Bonk"));
             Projectile.NewProjectile(player.GetSource_FromThis(), target.Center, new Vector2(0, -7.5f), ModContent.ProjectileType<Onomatopoeia>(), 0, 0);
         }
         public override void AddRecipes()
