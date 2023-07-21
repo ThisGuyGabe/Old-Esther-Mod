@@ -1,12 +1,12 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CascadeMod.Content.Projectiles;
+using EstherMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.Linq;
 
-namespace CascadeMod.Content.Items.Weapons.Magic
+namespace EstherMod.Content.Items.Weapons.Magic
 {
     public class StarStaff : ModItem
     {
