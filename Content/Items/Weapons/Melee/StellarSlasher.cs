@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
-using CascadeMod.Content.Projectiles;
+using EstherMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
-using CascadeMod.Content.Dusts;
+using EstherMod.Content.Dusts;
 using Microsoft.CodeAnalysis;
 using System;
 using static Terraria.NPC;
@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using Terraria.GameContent;
 using Terraria.GameInput;
 
-namespace CascadeMod.Content.Items.Weapons.Melee
+namespace EstherMod.Content.Items.Weapons.Melee
 {
     public class StellarSlasher : ModItem
     {
@@ -77,8 +77,8 @@ namespace CascadeMod.Content.Items.Weapons.Melee
         {
             CreateRecipe()
                 .AddIngredient(ItemID.WoodenSword)
-                .AddIngredient(ItemID.Cloud, 25)
                 .AddIngredient(ItemID.FallenStar, 5)
+                .AddIngredient(ItemID.ManaCrystal, 1)
                 .Register();
         }
     }
