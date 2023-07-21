@@ -2,23 +2,16 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
-using System;
 using Terraria.Audio;
 using System.Linq;
 using Terraria.DataStructures;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
 using Terraria.GameContent.Drawing;
-using System.Security.Policy;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee;
 
-public class Calcium : ModItem
+public class Calcium : BaseItem
 {
-    public override void SetStaticDefaults()
-    {
-        Item.ResearchUnlockCount = 1;
-    }
     public override void SetDefaults()
     {
         Item.width = 38;
@@ -32,7 +25,6 @@ public class Calcium : ModItem
         Item.useStyle = ItemUseStyleID.HiddenAnimation;
         Item.value = Item.sellPrice(0, 3, 30);
         Item.UseSound = null;
-        Item.autoReuse = true;
         Item.noMelee = true;
         Item.noUseGraphic = true;
         Item.shoot = ModContent.ProjectileType<CalciumP>();

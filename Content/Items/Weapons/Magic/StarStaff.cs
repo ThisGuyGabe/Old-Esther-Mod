@@ -5,14 +5,14 @@ using EstherMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.Linq;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Magic
 {
-    public class StarStaff : ModItem
+    public class StarStaff : BaseItem
     {
         public override void SetStaticDefaults()
         {
-            Item.ResearchUnlockCount = 1;
             Item.staff[Item.type] = true;
         }
 
@@ -32,7 +32,6 @@ namespace EstherMod.Content.Items.Weapons.Magic
             Item.crit = 16;
             Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.DD2_BetsysWrathShot;
-            Item.autoReuse = true;
             Item.channel = true;
             Item.shoot = ModContent.ProjectileType<Starlight>();
             Item.shootSpeed = 0.0001f;

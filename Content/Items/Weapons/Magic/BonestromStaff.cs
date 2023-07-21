@@ -27,7 +27,6 @@ public sealed class BonestromStaff : BaseItem {
 		Item.DamageType = DamageClass.Magic;
 		Item.mana = 4;
 		Item.knockBack = 6;
-		Item.autoReuse = true;
 		Item.UseSound = SoundID.Item20;
 		Item.noMelee = true;
 		Item.channel = true;

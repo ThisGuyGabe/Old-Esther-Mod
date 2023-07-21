@@ -16,7 +16,6 @@ public sealed class SantasLittleHelper : BaseItem {
 		Item.useTime = 20;
 		Item.useAnimation = 20;
 		Item.damage = 14;
-		Item.autoReuse = true;
 		Item.shootSpeed = 3;
 		Item.DamageType = DamageClass.Melee;
 		Item.knockBack = 2;

@@ -350,6 +350,41 @@ Mods: {
 				DisplayName: Etherical Rapier
 				Tooltip: ""
 			}
+
+			StarStaff: {
+				DisplayName: Star Staff
+				Tooltip: ""
+			}
+
+			Calcium: {
+				DisplayName: Calcium
+				Tooltip: ""
+			}
+
+			PristineMallet: {
+				DisplayName: Pristine Mallet
+				Tooltip: ""
+			}
+
+			StellarSlasher: {
+				DisplayName: Stellar Slasher
+				Tooltip: ""
+			}
+
+			CactusBow: {
+				DisplayName: Cactus Bow
+				Tooltip: ""
+			}
+
+			Fishtol: {
+				DisplayName: Fishtol
+				Tooltip: ""
+			}
+
+			Glockinator: {
+				DisplayName: Glockinator
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -388,6 +423,15 @@ Mods: {
 			EthericalRapierProjectile.DisplayName: Etherical Rapier Projectile
 			Sinewave.DisplayName: Sinewave
 			EmberFlames.DisplayName: Ember Flames
+			FloraGale.DisplayName: Flora Gale
+			CalciumP.DisplayName: Calcium P
+			FishProjectile.DisplayName: Fish Projectile
+			VulcanoArrow.DisplayName: Vulcano Arrow
+			VulcanoBowProj.DisplayName: Vulcano Bow Proj
+			Onomatopoeia.DisplayName: Onomatopoeia
+			Starlight.DisplayName: Starlight
+			StellarSlash.DisplayName: Stellar Slash
+			GlockinatorSummon.DisplayName: Glockinator Summon
 		}
 
 		NPCs: {
@@ -423,6 +467,11 @@ Mods: {
 			EchoBreakCooldown: {
 				DisplayName: Echo Break Cooldown
 				Description: You can't use Echo Break now.
+			}
+
+			GlockinatorBuff: {
+				DisplayName: Glockinator Buff
+				Description: Mods.EstherMod.Buffs.GlockinatorBuff.Description
 			}
 		}
 

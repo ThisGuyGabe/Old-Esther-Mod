@@ -1,16 +1,12 @@
-﻿using Terraria;
+﻿using EstherMod.Core;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
-	public class CactusBow : ModItem
+	public class CactusBow : BaseItem
 	{
-		public override void SetStaticDefaults()
-		{
-            Item.ResearchUnlockCount = 1;
-        }
-
 		public override void SetDefaults()
 		{
 			Item.damage = 8;

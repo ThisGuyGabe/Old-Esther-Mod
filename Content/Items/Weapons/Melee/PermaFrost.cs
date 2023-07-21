@@ -14,7 +14,6 @@ public sealed class PermaFrost : BaseItem {
 		Item.useTime = 22;
 		Item.useAnimation = 22;
 		Item.damage = 64;
-		Item.autoReuse = true;
 		Item.shootSpeed = 3;
 		Item.DamageType = DamageClass.Melee;
 		Item.knockBack = 5;

@@ -22,7 +22,6 @@ public sealed class BloomingBane : BaseItem {
 		Item.noUseGraphic = true;
 		Item.channel = true;
 		Item.useStyle = ItemUseStyleID.Shoot;
-		Item.autoReuse = true;
 		Item.useTurn = true;
 		Item.shootSpeed = 15f;
 		Item.shoot = ModContent.ProjectileType<BloomingBaneProjectile>();

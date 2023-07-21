@@ -20,7 +20,6 @@ public sealed class CopperTrumpet : BaseItem {
 		Item.knockBack = 1.5f;
 		Item.useTime = 16;
 		Item.useAnimation = 16;
-		Item.autoReuse = true;
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.UseSound = EstherSounds.Trumpet;
 		Item.shoot = ModContent.ProjectileType<TrumpetThing>();

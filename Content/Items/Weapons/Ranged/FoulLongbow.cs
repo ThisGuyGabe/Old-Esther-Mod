@@ -21,7 +21,6 @@ public sealed class FoulLongbow : BaseItem {
 		Item.value = Item.sellPrice(gold: 1);
 		Item.rare = ItemRarityID.Green;
 		Item.UseSound = SoundID.Item5;
-		Item.autoReuse = true;
 
 		Item.shoot = ProjectileID.WoodenArrowFriendly;
 		Item.useAmmo = AmmoID.Arrow;

@@ -16,7 +16,6 @@ public sealed class SoulSlaughter : BaseItem {
 		Item.useTime = 3;
 		Item.useAnimation = 3;
 		Item.damage = 17;
-		Item.autoReuse = true;
 		Item.shoot = ModContent.ProjectileType<SoulSlaughter_Projectile>();
 		Item.shootSpeed = 0f;
 		Item.DamageType = DamageClass.Melee;

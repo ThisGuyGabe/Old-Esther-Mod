@@ -15,7 +15,6 @@ public sealed class FireStormSlasher : BaseItem {
 		Item.useTime = 25;
 		Item.useAnimation = 25;
 		Item.damage = 42;
-		Item.autoReuse = true;
 		Item.scale = 1.5f;
 
 		Item.DamageType = DamageClass.Melee;

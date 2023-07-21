@@ -20,7 +20,6 @@ public sealed class SolarRecurve : BaseItem {
 		Item.useTime = 22;
 		Item.useAnimation = 22;
 		Item.useStyle = ItemUseStyleID.Shoot;
-		Item.autoReuse = true;
 		Item.UseSound = SoundID.Item5;
 		Item.DamageType = DamageClass.Ranged;
 		Item.value = Item.sellPrice(silver: 90, copper: 52);

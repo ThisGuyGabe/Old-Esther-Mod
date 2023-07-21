@@ -22,7 +22,6 @@ public sealed class GoldenReckage : BaseItem {
 		Item.value = Item.sellPrice(gold: 1, silver: 30);
 		Item.rare = ItemRarityID.Green;
 		Item.UseSound = SoundID.Item1;
-		Item.autoReuse = true;
 		Item.noUseGraphic = true;
 		Item.shoot = ModContent.ProjectileType<GoldenReckageProjectile>();
 		Item.scale = 1.25f;

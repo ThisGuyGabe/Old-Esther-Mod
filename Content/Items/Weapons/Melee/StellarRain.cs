@@ -15,7 +15,6 @@ public sealed class StellarRain : BaseItem {
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.useTime = 32;
 		Item.useAnimation = 32;
-		Item.autoReuse = true;
 		Item.noMelee = true;
 		Item.noUseGraphic = true;
 		Item.DamageType = DamageClass.Melee;

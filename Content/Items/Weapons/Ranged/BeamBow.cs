@@ -17,7 +17,6 @@ public sealed class BeamBow : BaseItem {
 		Item.useTime = 10;
 		Item.useAnimation = 10;
 		Item.useStyle = ItemUseStyleID.Shoot;
-		Item.autoReuse = true;
 		Item.UseSound = SoundID.Item5;
 		Item.DamageType = DamageClass.Ranged;
 		Item.value = Item.sellPrice(silver: 80, copper: 40);

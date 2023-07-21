@@ -4,8 +4,6 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static EstherMod.Content.Items.Weapons.Magic.FloraGale;
-using static EstherMod.Content.Items.Weapons.Magic.FloraLeaf;
 
 namespace EstherMod.Content.Items.Weapons.Magic;
 

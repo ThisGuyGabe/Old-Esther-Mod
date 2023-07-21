@@ -23,7 +23,6 @@ public sealed class PhoenixFlame : BaseItem {
 
 		Item.shootSpeed = 10f;
 		Item.DamageType = DamageClass.Ranged;
-		Item.autoReuse = true;
 		Item.noMelee = true;
 		Item.value = Item.sellPrice(gold: 18, silver: 42);
 		Item.UseSound = SoundID.Item5;

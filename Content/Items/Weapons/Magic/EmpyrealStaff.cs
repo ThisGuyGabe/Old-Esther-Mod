@@ -23,7 +23,6 @@ public sealed class EmpyrealStaff : BaseItem {
 		Item.knockBack = 7;
 		Item.DamageType = DamageClass.Magic;
 		Item.useStyle = ItemUseStyleID.Shoot;
-		Item.autoReuse = true;
 		Item.useTime = 23;
 		Item.useAnimation = 23;
 		Item.shoot = ProjectileID.HallowStar;

@@ -21,7 +21,6 @@ public sealed class EthericalBow : BaseItem {
 		Item.value = Item.sellPrice(silver: 30, copper: 10);
 		Item.rare = ItemRarityID.Blue;
 		Item.UseSound = SoundID.Item5;
-		Item.autoReuse = true;
 		Item.shoot = ModContent.ProjectileType<Sinewave>();
 		Item.useAmmo = AmmoID.Arrow;
 		Item.shootSpeed = 6f;

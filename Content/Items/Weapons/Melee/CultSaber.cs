@@ -23,7 +23,6 @@ public sealed class CultSaber : BaseItem {
 		Item.value = Item.sellPrice(gold: 1, silver: 33, copper: 28);
 		Item.rare = ItemRarityID.Green;
 		Item.UseSound = SoundID.Item1;
-		Item.autoReuse = true;
 		Item.channel = true;
 	}
 

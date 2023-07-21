@@ -5,16 +5,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Ranged
 {
-    public class Fishtol : ModItem
+    public class Fishtol : BaseItem
     {
-        public override void SetStaticDefaults()
-        {
-            Item.ResearchUnlockCount = 1;
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 18;

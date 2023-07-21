@@ -48,7 +48,6 @@ public sealed class PooSpiderItem : BaseItem {
 
 	public override void SetDefaults() {
 		Item.useStyle = ItemUseStyleID.Swing;
-		Item.autoReuse = true;
 		Item.useTurn = true;
 		Item.useAnimation = 15;
 		Item.useTime = 10;

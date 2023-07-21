@@ -21,7 +21,6 @@ public sealed class SilverCrippler : BaseItem {
 		Item.value = Item.sellPrice(gold: 1, silver: 21, copper: 60);
 		Item.rare = ItemRarityID.Green;
 		Item.UseSound = SoundID.Item31;
-		Item.autoReuse = true;
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 8f;
 		Item.useAmmo = AmmoID.Bullet;

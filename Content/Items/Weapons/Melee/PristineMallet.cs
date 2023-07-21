@@ -4,17 +4,12 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
 using EstherMod.Content.Projectiles;
-using System.Collections.Generic;
-using System;
+using EstherMod.Core;
 
 namespace EstherMod.Content.Items.Weapons.Melee
 {
-    public class PristineMallet : ModItem
+    public class PristineMallet : BaseItem
     {
-        public override void SetStaticDefaults()
-        {
-            Item.ResearchUnlockCount = 1;
-        }
         public override void SetDefaults()
         {
             Item.damage = 54;
@@ -29,7 +24,6 @@ namespace EstherMod.Content.Items.Weapons.Melee
             Item.value = 51250;
             Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item1;
-            Item.autoReuse = true;
             Item.shootSpeed = 15f;
             Item.channel = true;
             Item.scale = 1.25f;
