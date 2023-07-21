@@ -8,11 +8,10 @@ using System.Linq;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
-using CascadeMod.Content.Dusts;
 using Terraria.GameContent.Drawing;
 using System.Security.Policy;
 
-namespace CascadeMod.Content.Items.Weapons.Melee;
+namespace EstherMod.Content.Items.Weapons.Melee;
 
 public class Calcium : ModItem
 {
@@ -57,7 +56,7 @@ public class Calcium : ModItem
 }
 public class CalciumP : ModProjectile
 {
-    public override string Texture => "CascadeMod/Content/Items/Weapons/Melee/Calcium2";
+    public override string Texture => "EstherMod/Assets/Weapons/Melee/Calcium2";
     float STATE = 1;
     public override void SetStaticDefaults()
     {
