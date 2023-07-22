@@ -385,6 +385,15 @@ Mods: {
 				// DisplayName: Glockinator
 				// Tooltip: ""
 			}
+
+			Weapons: {
+				Summon: {
+					Glockinator: {
+						// DisplayName: Glockinator
+						// Tooltip: ""
+					}
+				}
+			}
 		}
 
 		Projectiles: {
@@ -432,6 +441,7 @@ Mods: {
 			// Starlight.DisplayName: Starlight
 			// StellarSlash.DisplayName: Stellar Slash
 			// GlockinatorSummon.DisplayName: Glockinator Summon
+			// VulcanoHomingArrow.DisplayName: Vulcano Homing Arrow
 		}
 
 		NPCs: {

@@ -25,7 +25,7 @@ public sealed class QueenBeeQuest : ModQuest {
 	}
 
 	public override void AddRewards(ImmutableList<QuestReward>.Builder rewards) {
-		rewards.Add(new ItemQuestReward(ModContent.ItemType<NaturaEvolutionis>(), 1));
+		rewards.Add(new ItemQuestReward(ItemID.HiveFive, 1));
 		rewards.Add(new ItemQuestReward(ItemID.AnkletoftheWind, 1));
 		rewards.Add(new ItemQuestReward(ItemID.GoldCoin, 15));
 	}

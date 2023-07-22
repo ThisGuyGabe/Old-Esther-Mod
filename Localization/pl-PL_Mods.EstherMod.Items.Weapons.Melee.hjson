@@ -88,3 +88,18 @@ CultSaber: {
 	// DisplayName: Cult Saber
 	// Tooltip: ""
 }
+
+Calcium: {
+	// DisplayName: Calcium
+	// Tooltip: ""
+}
+
+PristineMallet: {
+	// DisplayName: Pristine Mallet
+	// Tooltip: ""
+}
+
+StellarSlasher: {
+	// DisplayName: Stellar Slasher
+	// Tooltip: ""
+}

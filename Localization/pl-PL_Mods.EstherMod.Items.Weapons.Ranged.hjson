@@ -75,3 +75,13 @@ EmberFlamethrower: {
 	// DisplayName: Ember Flamethrower
 	// Tooltip: ""
 }
+
+CactusBow: {
+	// DisplayName: Cactus Bow
+	// Tooltip: ""
+}
+
+Fishtol: {
+	// DisplayName: Fishtol
+	// Tooltip: ""
+}

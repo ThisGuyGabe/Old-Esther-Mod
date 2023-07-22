@@ -27,3 +27,8 @@ FloraGaleStaff: {
 	// DisplayName: Flora Gale Staff
 	// Tooltip: Creates a burst of wind that spews armor-piercing leaves.
 }
+
+StarStaff: {
+	// DisplayName: Star Staff
+	// Tooltip: ""
+}
