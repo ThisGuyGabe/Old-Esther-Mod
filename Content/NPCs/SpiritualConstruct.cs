@@ -6,23 +6,39 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
+using Microsoft.Xna.Framework;
+using System;
 
 namespace EstherMod.Content.NPCs;
 
-public class SpiritualConstruct : BaseNPC {
+public class SpiritualConstruct : BaseNPC 
+{
+	public int frame = 0;
+	public double counting;
+
+	public int velMax = 0;
+	public int velAccel = 0;
+	
+	public float targetVel = 0;
+	private float velMagnitude = 0;
+
+	public float targetX = 0;
+	public float targetY = 0;
 	public override void SetStaticDefaults() {
 		//DisplayName.SetDefault("Spiritual Construct");
 
-		Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.DemonEye];
+		Main.npcFrameCount[NPC.type] = 6;
 
-		NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0) { // Influences how the NPC looks in the Bestiary
+		NPCID.Sets.NPCBestiaryDrawModifiers value = new(0) { // Influences how the NPC looks in the Bestiary
 			Velocity = 1f // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
 		};
 		NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
 	}
 
 	public override void SetDefaults() {
-		NPC.width = 28;
+		velMax = 6;
+		velAccel = (int).2f;
+		NPC.width = 68;
 		NPC.height = 30;
 		NPC.damage = 14;
 		NPC.defense = 0;
@@ -31,15 +47,27 @@ public class SpiritualConstruct : BaseNPC {
 		NPC.DeathSound = SoundID.NPCDeath1;
 		NPC.value = 60f;
 		NPC.knockBackResist = 0.5f;
-		NPC.aiStyle = NPCAIStyleID.DemonEye;
+		NPC.aiStyle = 0;
 		AnimationType = NPCID.DemonEye;
-		AIType = NPCID.DemonEye;
 		Banner = Item.NPCtoBanner(NPCID.DemonEye);
-		BannerItem = Item.BannerToItem(Banner);
+		BannerItem = Item.BannerToItem(Banner); // custom banner later on
+		NPC.noTileCollide = true;
+		NPC.noGravity = true;
+		NPC.lavaImmune = false;
 	}
 
-	public override void AI() {
-		base.AI();
+	public override void AI() 
+	{
+		NPC.TargetClosest(true);
+		Player target = Main.player[NPC.target];
+		Vector2 ToPlayer = NPC.DirectionTo(target.Center) * 3;
+		NPC.velocity = ToPlayer;
+
+		NPC.ai[0] += 1f;
+		if (NPC.ai[0] >= 30f) 
+		{
+			Projectile.NewProjectile(NPC.GetSource_FromAI(), target.Center, target.Center, ProjectileID.TerraBeam, 0, 0f, Main.myPlayer);
+		}
 	}
 
 	public override void ModifyNPCLoot(NPCLoot npcLoot) {
@@ -58,8 +86,42 @@ public class SpiritualConstruct : BaseNPC {
 			BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
 
 			// Sets the description of this NPC that is listed in the bestiary.
-			new FlavorTextBestiaryInfoElement("This type of zombie for some reason really likes to spread confetti around. Otherwise, it behaves just like a normal zombie.")
+			new FlavorTextBestiaryInfoElement("Yeah someone else can put a description :3")
 
 		});
+	}
+	public override void FindFrame(int frameHeight) 
+	{
+		if (frame == 0) 
+		{
+			counting += 1.0;
+			if (counting < 8.0) 
+			{
+				NPC.frame.Y = 0;
+			}
+			else if (counting < 16.0) 
+			{
+				NPC.frame.Y = frameHeight;
+			}
+			else if (counting < 24.0) 
+			{
+				NPC.frame.Y = frameHeight * 2;
+			}
+			else if (counting < 32.0) 
+			{
+				NPC.frame.Y = frameHeight * 3;
+			}
+			else 
+			{
+				counting = 0.0;
+			}
+		}
+		else if(frame == 1) 
+		{
+			NPC.frame.Y = frameHeight * 4;
+		} else
+		{
+			NPC.frame.Y = frameHeight * 5;
+		}
 	}
 }
