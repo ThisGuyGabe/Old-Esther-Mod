@@ -7,7 +7,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Microsoft.Xna.Framework;
-using System;
 
 namespace EstherMod.Content.NPCs;
 
@@ -15,15 +14,6 @@ public class SpiritualConstruct : BaseNPC
 {
 	public int frame = 0;
 	public double counting;
-
-	public int velMax = 0;
-	public int velAccel = 0;
-	
-	public float targetVel = 0;
-	private float velMagnitude = 0;
-
-	public float targetX = 0;
-	public float targetY = 0;
 	public override void SetStaticDefaults() {
 		//DisplayName.SetDefault("Spiritual Construct");
 
@@ -36,8 +26,6 @@ public class SpiritualConstruct : BaseNPC
 	}
 
 	public override void SetDefaults() {
-		velMax = 6;
-		velAccel = (int).2f;
 		NPC.width = 68;
 		NPC.height = 30;
 		NPC.damage = 14;
