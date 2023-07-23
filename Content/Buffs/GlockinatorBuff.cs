@@ -1,8 +1,6 @@
 using Terraria.ModLoader;
 using Terraria;
 using EstherMod.Content.Projectiles.Summon;
-using Terraria.ID;
-using EstherMod.Content.Items.Weapons.Summon;
 
 namespace EstherMod.Content.Buffs;
 

@@ -8,3 +8,6 @@ Cooldown: {
 	DisplayName: Cooldown
 	Description: You have to wait
 }
+
+GlockinatorBuff: {
+}

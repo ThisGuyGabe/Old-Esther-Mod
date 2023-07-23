@@ -1,66 +1,53 @@
-﻿using EstherMod.Core;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using EstherMod.Content.Projectiles;
+using Microsoft.Xna.Framework;
+using Terraria.DataStructures;
+using System.Linq;
+using EstherMod.Core;
 
-namespace EstherMod.Content.Items.Weapons.Magic;
+namespace EstherMod.Content.Items.Weapons.Magic
+{
+    public class EmpyrealStaff : BaseItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Item.staff[Item.type] = true;
+        }
 
-public sealed class EmpyrealStaff : BaseItem {
-	public override void SetStaticDefaults() {
-		Item.staff[Item.type] = true;
-	}
-
-	public override void SetDefaults() {
-		Item.width = 40;
-		Item.height = 40;
-		Item.rare = ItemRarityID.Green;
-		Item.value = Item.sellPrice(silver: 60, copper: 20);
-		Item.UseSound = SoundID.Item72;
-
-		Item.damage = 23;
-		Item.mana = 10;
-		Item.knockBack = 7;
-		Item.DamageType = DamageClass.Magic;
-		Item.useStyle = ItemUseStyleID.Shoot;
-		Item.useTime = 23;
-		Item.useAnimation = 23;
-		Item.shoot = ProjectileID.HallowStar;
-		Item.shootSpeed = 12;
-	}
-
-	public override float UseAnimationMultiplier(Player player) {
-		if (Main.dayTime) {
-			return 0.5f;
-		}
-		return 1f;
-	}
-
-	public override void ModifyManaCost(Player player, ref float reduce, ref float mult) {
-		if (Main.dayTime) {
-			mult -= 0.5f;
-		}
-	}
-
-	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
-		if (Main.dayTime) {
-			damage = (int)(damage / 1.5);
-		}
-	}
-
-	public override void AddRecipes() {
-		CreateRecipe()
-			.AddIngredient(ItemID.Cloud, 25)
-			.AddIngredient(ItemID.DemoniteBar, 5)
-			.AddIngredient(ItemID.FallenStar, 5)
-			.AddTile(TileID.Anvils)
-			.Register();
-
-		CreateRecipe()
-			.AddIngredient(ItemID.Cloud, 25)
-			.AddIngredient(ItemID.CrimtaneBar, 5)
-			.AddIngredient(ItemID.FallenStar, 5)
-			.AddTile(TileID.Anvils)
-			.Register();
-	}
+        public override void SetDefaults()
+        {
+            Item.damage = 15;
+            Item.DamageType = DamageClass.Magic;
+            Item.width = 20;
+            Item.height = 38;
+            Item.useTime = 25;
+            Item.useAnimation = 25;
+            Item.mana = 4;
+            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.noMelee = true;
+            Item.knockBack = 2;
+            Item.value = 7800;
+            Item.crit = 16;
+            Item.rare = ItemRarityID.Green;
+            Item.UseSound = SoundID.DD2_BetsysWrathShot;
+            Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<Starlight>();
+            Item.shootSpeed = 0.0001f;
+        }
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            return !Main.projectile.Any(n => n.active && n.owner == player.whoAmI && n.type == ModContent.ProjectileType<Starlight>());
+        }
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 12);
+            recipe.AddIngredient(ItemID.FallenStar, 8);
+            recipe.AddIngredient(ItemID.Daybloom, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+        }
+    }
 }

@@ -352,28 +352,32 @@ Mods: {
 			}
 
 			StarStaff: {
-				DisplayName: Star Staff
-				Tooltip: ""
+				DisplayName: Empyreal Staff
+				Tooltip: Creates starlight at your cursor.
 			}
 
 			Calcium: {
 				DisplayName: Calcium
-				Tooltip: ""
+				Tooltip:
+					'''
+					Makes your enemies bleed.
+					Isn't effected by melee speed bonus.
+					'''
 			}
 
 			PristineMallet: {
 				DisplayName: Pristine Mallet
-				Tooltip: ""
+				Tooltip: This is quite the comical item.
 			}
 
 			StellarSlasher: {
 				DisplayName: Stellar Slasher
-				Tooltip: ""
+				Tooltip: Send your foes to space, amd your fruits.
 			}
 
 			CactusBow: {
 				DisplayName: Cactus Bow
-				Tooltip: ""
+				Tooltip: Is this a Joost Mod Reference
 			}
 
 			Fishtol: {
@@ -382,15 +386,19 @@ Mods: {
 			}
 
 			Glockinator: {
-				DisplayName: Glockinator
+				DisplayName: The Glockinator
 				Tooltip: ""
 			}
 
 			Weapons: {
 				Summon: {
 					Glockinator: {
-						DisplayName: Glockinator
-						Tooltip: ""
+						DisplayName: The Glockinator
+						Tooltip:
+							'''
+							What is this tomfoolery, I wanted a ranged weapon!
+							You can only summon one.
+							'''
 					}
 				}
 			}
@@ -481,7 +489,7 @@ Mods: {
 
 			GlockinatorBuff: {
 				DisplayName: Glockinator Buff
-				Description: Mods.EstherMod.Buffs.GlockinatorBuff.Description
+				Description: Gun?
 			}
 		}
 
