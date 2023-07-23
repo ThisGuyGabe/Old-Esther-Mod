@@ -38,7 +38,7 @@ namespace EstherMod.Content.Projectiles
         public override void AI()
         {
             Player owner = Main.player[Projectile.owner];
-            if (owner.channel && owner.HeldItem.type == ModContent.ItemType<StarStaff>())
+            if (owner.channel && owner.HeldItem.type == ModContent.ItemType<EmpyrealStaff>())
             {
 
                 Projectile.ai[0]++;

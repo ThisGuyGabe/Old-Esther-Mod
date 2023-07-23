@@ -78,7 +78,7 @@ EmberFlamethrower: {
 
 CactusBow: {
 	DisplayName: Cactus Bow
-	Tooltip: ""
+	Tooltip: "Is this a Joost Mod Reference."
 }
 
 Fishtol: {

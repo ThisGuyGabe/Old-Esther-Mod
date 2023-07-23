@@ -91,15 +91,19 @@ CultSaber: {
 
 Calcium: {
 	DisplayName: Calcium
-	Tooltip: ""
+	Tooltip:
+	'''
+	Makes your enemies bleed.
+	Isn't effected by melee speed bonus.
+	'''
 }
 
 PristineMallet: {
 	DisplayName: Pristine Mallet
-	Tooltip: ""
+	Tooltip: "This is quite the comical item."
 }
 
 StellarSlasher: {
 	DisplayName: Stellar Slasher
-	Tooltip: ""
+	Tooltip: "Send your foes to space, and your fruits."
 }

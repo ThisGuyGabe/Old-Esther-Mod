@@ -92,7 +92,7 @@ Mods: {
 
 			EmpyrealStaff: {
 				DisplayName: Empyreal Staff
-				Tooltip: Use this during night for a mana discount, faster speed, but less damage.
+				Tooltip: Creates starlight at your cursor
 			}
 
 			Esther: {

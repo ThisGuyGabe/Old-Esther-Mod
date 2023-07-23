@@ -10,7 +10,7 @@ CopperTrumpet: {
 
 EmpyrealStaff: {
 	DisplayName: Empyreal Staff
-	Tooltip: Use this during night for a mana discount, faster speed, but less damage.
+	Tooltip: Creates starlight at your cursor.
 }
 
 EthericalChant: {
@@ -26,9 +26,4 @@ Riptide: {
 FloraGaleStaff: {
 	DisplayName: Flora Gale Staff
 	Tooltip: Creates a burst of wind that spews armor-piercing leaves.
-}
-
-StarStaff: {
-	DisplayName: Star Staff
-	Tooltip: ""
 }
