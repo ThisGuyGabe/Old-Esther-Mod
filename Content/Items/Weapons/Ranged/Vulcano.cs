@@ -292,7 +292,7 @@ public sealed class Vulcano : BaseItem {
 				SearchForTargets(owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter, out NPC target);
 				// code from flora gale :)
 				if (foundTarget) {
-					float moveSpeed = 7f;
+					float moveSpeed = 11f;
 					float velMultiplier = 1f;
 					var dist = targetCenter - Projectile.Center;
 					float length = dist == Vector2.Zero ? 0f : dist.Length();
@@ -302,7 +302,7 @@ public sealed class Vulcano : BaseItem {
 					Vector2 changevelocity = length == 0f ? Vector2.Zero : Vector2.Normalize(dist);
 					changevelocity *= moveSpeed;
 					changevelocity *= velMultiplier;
-					Projectile.velocity = (changevelocity + (Projectile.velocity * 14)) / 15;
+					Projectile.velocity = (changevelocity + (Projectile.velocity * 9)) / 10;
 				}
 			}
 
@@ -373,7 +373,7 @@ public sealed class Vulcano : BaseItem {
 
 				for (int k = 0; k < Projectile.oldPos.Length; k++) {
 					Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition;
-					Color color = new Color(1, 0.85f / (k / 4.5f), 0.15f) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+					Color color = new Color(1, 0.85f / (k / 3.7f), 0.15f) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
 					Main.EntitySpriteDraw(TextureAssets.Projectile[Projectile.type].Value, drawPos, null, color, 0, Vector2.Zero, Projectile.scale, SpriteEffects.None, 0);
 
 				}
