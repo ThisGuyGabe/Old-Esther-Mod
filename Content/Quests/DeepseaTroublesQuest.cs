@@ -1,15 +1,15 @@
 ﻿using System.Collections.Immutable;
-using EstherMod.Content.Items;
-using EstherMod.Content.Quests.Goals;
-using EstherMod.Content.Quests.Rewards;
-using EstherMod.Core.Quests;
+using CascadeMod.Content.Items;
+using CascadeMod.Content.Quests.Goals;
+using CascadeMod.Content.Quests.Rewards;
+using CascadeMod.Core.Quests;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Quests;
+namespace CascadeMod.Content.Quests;
 
 public sealed class DeepseaTroublesQuest : ModQuest {
-	public override string Texture => "EstherMod/Assets/Quests/DeepseaTroublesQuest";
+	public override string Texture => "CascadeMod/Assets/Quests/DeepseaTroublesQuest";
 	public override QuestFrame QuestFrame => QuestFrames.Hunter;
 	public override float Order => 0.1f;
 

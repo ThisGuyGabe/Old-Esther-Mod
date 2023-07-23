@@ -1,14 +1,14 @@
-using EstherMod.Core;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Magic;
+namespace CascadeMod.Content.Items.Weapons.Magic;
 
 public sealed class FloraGaleStaff : BaseItem {
-	public sealed override string Texture => "EstherMod/Assets/Weapons/Magic/FloraGaleStaff";
+	public sealed override string Texture => "CascadeMod/Assets/Weapons/Magic/FloraGaleStaff";
 
 	public override void SetStaticDefaults() {
 		Item.staff[Type] = true;
@@ -41,7 +41,7 @@ public sealed class FloraGaleStaff : BaseItem {
 	}
 }
 public sealed class FloraLeaf : ModProjectile {
-	public sealed override string Texture => "EstherMod/Assets/Weapons/Magic/FloraLeaf";
+	public sealed override string Texture => "CascadeMod/Assets/Weapons/Magic/FloraLeaf";
 	public override void SetDefaults() {
 		Projectile.width = 14;
 		Projectile.height = 14;
@@ -105,7 +105,7 @@ public sealed class FloraLeaf : ModProjectile {
 	}
 }
 public sealed class FloraGale : ModProjectile {
-	public sealed override string Texture => "EstherMod/Assets/Weapons/Magic/FloraGale";
+	public sealed override string Texture => "CascadeMod/Assets/Weapons/Magic/FloraGale";
 	public override void SetDefaults() {
 		Projectile.width = 30;
 		Projectile.height = 30;

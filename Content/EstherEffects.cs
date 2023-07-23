@@ -1,5 +1,5 @@
 ﻿using System.Threading;
-using EstherMod.Common;
+using CascadeMod.Common;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
@@ -8,13 +8,13 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content;
+namespace CascadeMod.Content;
 
 public static class EstherEffects {
-	public const string HydraShockwaveID = "EstherMod/HydraShockwave";
-	public const string ConfettiID = "EstherMod/Confetti";
-	public const string UnderworldFilterID = "EstherMod/UnderworldFilter";
-	public const string ShockwaveID = "EstherMod/Shockwave";
+	public const string HydraShockwaveID = "CascadeMod/HydraShockwave";
+	public const string ConfettiID = "CascadeMod/Confetti";
+	public const string UnderworldFilterID = "CascadeMod/UnderworldFilter";
+	public const string ShockwaveID = "CascadeMod/Shockwave";
 
 	public static Filter HydraShockwave => Filters.Scene[HydraShockwaveID];
 	public static Filter Confetti => Filters.Scene[ConfettiID];
@@ -35,7 +35,7 @@ public static class EstherEffects {
 		Filters.Scene[UnderworldFilterID] = CreateAndGetFilter(new(screenRef, "UnderworldFilter"), EffectPriority.VeryHigh);
 		Filters.Scene[ShockwaveID] = CreateAndGetFilter(new(screenRef, "Shockwave"), EffectPriority.VeryHigh);
 
-		GlowingDustArmor = new ArmorShaderData(new Ref<Effect>(ModContent.Request<Effect>("EstherMod/Effects/GlowingDust", AssetRequestMode.ImmediateLoad).Value), "GlowingDustPass");
+		GlowingDustArmor = new ArmorShaderData(new Ref<Effect>(ModContent.Request<Effect>("CascadeMod/Effects/GlowingDust", AssetRequestMode.ImmediateLoad).Value), "GlowingDustPass");
 
 		GrayOutItem = new DynamicShaderData((shaderData, dataDraw) => { }, CreateSensitiveEffect("Assets/Shaders/GrayOutItem"), "FilterMyShader");
 

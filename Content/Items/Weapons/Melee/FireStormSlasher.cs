@@ -1,10 +1,10 @@
-﻿using EstherMod.Core;
+﻿using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Melee;
+namespace CascadeMod.Content.Items.Weapons.Melee;
 
 public sealed class FireStormSlasher : BaseItem {
 	public override void SetDefaults() {

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using EstherMod.Content.Projectiles;
-using EstherMod.Core;
+using CascadeMod.Content.Projectiles;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.NPCs;
+namespace CascadeMod.Content.NPCs;
 
 [AutoloadHead]
 public sealed class BloodCultist : BaseNPC {

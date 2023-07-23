@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EstherMod.Common.Extensions;
-using EstherMod.Content.NPCs;
+using CascadeMod.Common.Extensions;
+using CascadeMod.Content.NPCs;
 using MonoMod.Utils;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace EstherMod.Core.Quests;
+namespace CascadeMod.Core.Quests;
 
 public sealed class QuestPlayer : ModPlayer {
 	public const int ActiveQuestsCap = 3;

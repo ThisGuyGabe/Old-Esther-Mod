@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.UI;
 
-namespace EstherMod.Core.UI;
+namespace CascadeMod.Core.UI;
 
 public sealed class UIConfigurableItemSlot : UIElement {
 	public sealed class Options {

@@ -1,11 +1,11 @@
-using EstherMod.Core;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Accessories;
+namespace CascadeMod.Content.Items.Accessories;
 
 public sealed class TheSoul : BaseItem {
 	public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(4, 5, 50, 4, 5);

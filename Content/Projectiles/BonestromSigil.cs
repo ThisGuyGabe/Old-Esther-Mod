@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class BonestromSigil : ModProjectile {
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;

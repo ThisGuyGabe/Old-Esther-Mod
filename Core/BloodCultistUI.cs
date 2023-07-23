@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EstherMod.Common.Extensions;
-using EstherMod.Content;
-using EstherMod.Content.NPCs;
-using EstherMod.Core.Fusions;
-using EstherMod.Core.Quests;
-using EstherMod.Core.UI;
+using CascadeMod.Common.Extensions;
+using CascadeMod.Content;
+using CascadeMod.Content.NPCs;
+using CascadeMod.Core.Fusions;
+using CascadeMod.Core.Quests;
+using CascadeMod.Core.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil.Cil;
@@ -22,7 +22,7 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.UI.Chat;
 
-namespace EstherMod.Core;
+namespace CascadeMod.Core;
 
 public sealed class BloodCultistUI : ILoadable {
 	private sealed class UpdateUIsSystem : ModSystem {
@@ -34,7 +34,7 @@ public sealed class BloodCultistUI : ILoadable {
 			var npcSignsDialogIndex = layers.FindIndex(layer => layer.Name == "Vanilla: NPC / Sign Dialog");
 			if (npcSignsDialogIndex != -1) {
 				layers.Insert(npcSignsDialogIndex, new LegacyGameInterfaceLayer(
-					"EstherMod/Blood Cultist UI",
+					"CascadeMod/Blood Cultist UI",
 					delegate {
 						if (Main.LocalPlayer.TalkNPC is NPC { ModNPC: BloodCultist } && bloodCultistUi?.CurrentState != null) {
 							bloodCultistUi.Draw(Main.spriteBatch, new GameTime());
@@ -217,7 +217,7 @@ public sealed class BloodCultistUI : ILoadable {
 			rewardsText.OnUpdate += (UIElement affectedElement) => {
 				if (!currentQuestChosen.locked) {
 					rewardsText.SetText(string.Join('\n', QuestSystem.RewardsTextById[currentQuestChosen.quest.Type].Select(x => {
-						return Language.GetTextValue("Mods.EstherMod.EstherMod.Quests.RewardPrefix", x.Value());
+						return Language.GetTextValue("Mods.CascadeMod.CascadeMod.Quests.RewardPrefix", x.Value());
 					})));
 				}
 				else {
@@ -287,18 +287,18 @@ public sealed class BloodCultistUI : ILoadable {
 					}
 					if (currentQuestChosen.quest.IsCompleted(Main.LocalPlayer) && Main.LocalPlayer.TryGetModPlayer(out QuestPlayer questPlayer)) {
 						if (!questPlayer.CompletedQuests2.Contains(currentQuestChosen.quest.FullName)) {
-							takeQuestText.SetText(Language.GetText("Mods.EstherMod.EstherMod.Quests.TakeReward"));
+							takeQuestText.SetText(Language.GetText("Mods.CascadeMod.CascadeMod.Quests.TakeReward"));
 						}
 						else {
-							takeQuestText.SetText(Language.GetText("Mods.EstherMod.EstherMod.Quests.QuestCompleted"));
+							takeQuestText.SetText(Language.GetText("Mods.CascadeMod.CascadeMod.Quests.QuestCompleted"));
 							takeQuestText.TextColor = Color.Yellow;
 						}
 					}
 					else if (currentQuestChosen.quest.Ordinal != -1) {
-						takeQuestText.SetText(Language.GetText("Mods.EstherMod.EstherMod.Quests.InProgress"));
+						takeQuestText.SetText(Language.GetText("Mods.CascadeMod.CascadeMod.Quests.InProgress"));
 					}
 					else {
-						takeQuestText.SetText(Language.GetText("Mods.EstherMod.EstherMod.Quests.TakeQuest"));
+						takeQuestText.SetText(Language.GetText("Mods.CascadeMod.CascadeMod.Quests.TakeQuest"));
 					}
 				}
 			};
@@ -355,7 +355,7 @@ public sealed class BloodCultistUI : ILoadable {
 			};
 			panel.Append(resultSlot);
 
-			var fusionIcon = new UIImage(ModContent.Request<Texture2D>("EstherMod/Assets/FusionIcon", AssetRequestMode.ImmediateLoad)) {
+			var fusionIcon = new UIImage(ModContent.Request<Texture2D>("CascadeMod/Assets/FusionIcon", AssetRequestMode.ImmediateLoad)) {
 				HAlign = 0.5f,
 				VAlign = 0.5f
 			};

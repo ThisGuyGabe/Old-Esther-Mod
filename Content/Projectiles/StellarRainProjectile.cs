@@ -4,7 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class StellarRainProjectile : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.CloneDefaults(ProjectileID.StarWrath);

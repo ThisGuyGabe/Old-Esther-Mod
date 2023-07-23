@@ -1,11 +1,11 @@
-﻿using EstherMod.Core;
+﻿using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Ranged;
+namespace CascadeMod.Content.Items.Weapons.Ranged;
 
 public sealed class SolarRecurve : BaseItem {
 	private int amountshot = 2;

@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class VulcanoProjectile : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.aiStyle = 1;

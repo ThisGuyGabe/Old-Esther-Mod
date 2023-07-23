@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class Frostpike : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.penetrate = 2;

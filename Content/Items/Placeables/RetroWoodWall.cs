@@ -1,10 +1,10 @@
-using EstherMod.Content.Walls;
-using EstherMod.Core;
+using CascadeMod.Content.Walls;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Placeables;
+namespace CascadeMod.Content.Items.Placeables;
 
 public sealed class RetroWoodWall : BaseItem {
 	public override void SetStaticDefaults() {

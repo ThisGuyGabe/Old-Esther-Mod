@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 
-namespace EstherMod.Core.Quests;
+namespace CascadeMod.Core.Quests;
 
 public abstract class QuestGoal : IQuestProperty {
 	public ModQuest Quest { get; set; }

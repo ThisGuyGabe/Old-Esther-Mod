@@ -1,7 +1,7 @@
 ﻿using Terraria.Audio;
 
-namespace EstherMod.Common;
+namespace CascadeMod.Common;
 
 public sealed class EstherSounds {
-	public static readonly SoundStyle Trumpet = new($"{nameof(EstherMod)}/Assets/Sounds/Items/Weapons/Trumpet");
+	public static readonly SoundStyle Trumpet = new($"{nameof(CascadeMod)}/Assets/Sounds/Items/Weapons/Trumpet");
 }

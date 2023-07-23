@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using System;
 using Microsoft.Xna.Framework.Graphics.PackedVector;
 
-namespace EstherMod.Content.Projectiles
+namespace CascadeMod.Content.Projectiles
 {
     public class Onomatopoeia : ModProjectile
     {

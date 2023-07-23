@@ -1,6 +1,6 @@
-﻿using EstherMod.Content.Buffs;
-using EstherMod.Content.Projectiles;
-using EstherMod.Core;
+﻿using CascadeMod.Content.Buffs;
+using CascadeMod.Content.Projectiles;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Melee;
+namespace CascadeMod.Content.Items.Weapons.Melee;
 
 public sealed class CultSaber : BaseItem {
 	public override void SetDefaults() {

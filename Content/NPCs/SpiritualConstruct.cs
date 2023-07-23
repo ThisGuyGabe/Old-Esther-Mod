@@ -1,5 +1,5 @@
-﻿using EstherMod.Content.Items;
-using EstherMod.Core;
+﻿using CascadeMod.Content.Items;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using Microsoft.Xna.Framework;
 
-namespace EstherMod.Content.NPCs;
+namespace CascadeMod.Content.NPCs;
 
 public class SpiritualConstruct : BaseNPC 
 {

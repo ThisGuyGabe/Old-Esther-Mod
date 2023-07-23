@@ -1,13 +1,13 @@
-using EstherMod.Common;
-using EstherMod.Content.Projectiles;
-using EstherMod.Core;
+using CascadeMod.Common;
+using CascadeMod.Content.Projectiles;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Melee;
+namespace CascadeMod.Content.Items.Weapons.Melee;
 
 public sealed class GoldenReckage : BaseItem {
 	public override void SetDefaults() {

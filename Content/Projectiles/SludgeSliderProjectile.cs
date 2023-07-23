@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class SludgeSliderProjectile : ModProjectile {
 		public override void SetStaticDefaults() {
 

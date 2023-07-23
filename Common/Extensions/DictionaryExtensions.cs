@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace EstherMod.Common.Extensions;
+namespace CascadeMod.Common.Extensions;
 
 public static class DictionaryExtensions {
 	/// <inheritdoc cref="GetValueOrDefault{TKey, TValue}(Dictionary{TKey, TValue}, TKey, Func{TValue})"/>

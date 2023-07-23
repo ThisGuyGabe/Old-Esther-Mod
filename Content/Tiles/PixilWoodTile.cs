@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Tiles {
+namespace CascadeMod.Content.Tiles {
 	public class PixilWoodTile : ModTile {
 		public override void SetStaticDefaults() {
 			Main.tileSolid[Type] = true;

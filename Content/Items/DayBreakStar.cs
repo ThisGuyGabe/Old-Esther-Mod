@@ -1,10 +1,10 @@
 using System.Runtime.CompilerServices;
-using EstherMod.Core;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace EstherMod.Content.Items;
+namespace CascadeMod.Content.Items;
 
 public sealed class DayBreakStar : BaseItem {
 	public sealed override void SetDefaults() {

@@ -1,4 +1,4 @@
-﻿namespace EstherMod.Core.Quests;
+﻿namespace CascadeMod.Core.Quests;
 
 public interface IQuestProperty {
 	ModQuest Quest { get; set; }

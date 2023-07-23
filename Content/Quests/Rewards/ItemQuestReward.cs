@@ -1,16 +1,16 @@
-﻿using EstherMod.Common.EntitySources;
-using EstherMod.Core.Quests;
+﻿using CascadeMod.Common.EntitySources;
+using CascadeMod.Core.Quests;
 using Terraria;
 using Terraria.GameContent.UI.Chat;
 using Terraria.Localization;
 
-namespace EstherMod.Content.Quests.Rewards;
+namespace CascadeMod.Content.Quests.Rewards;
 
 public sealed class ItemQuestReward : QuestReward {
 	public Item Item { get; init; }
 	public int Stack { get; init; }
 
-	public override string Text => Language.GetText("Mods.EstherMod.EstherMod.Quests.Rewards.ItemQuestReward").FormatWith(new {
+	public override string Text => Language.GetText("Mods.CascadeMod.CascadeMod.Quests.Rewards.ItemQuestReward").FormatWith(new {
 		ItemTag = ItemTagHandler.GenerateTag(Item),
 		ItemName = Item.Name,
 		Stack

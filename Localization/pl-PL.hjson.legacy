@@ -1,5 +1,5 @@
 Mods: {
-	EstherMod: {
+	CascadeMod: {
 		Items: {
 			HauntedCandle: {
 				DisplayName: Nawiedzona Świeczka
@@ -437,7 +437,7 @@ Mods: {
 
 		// Conditions.QuestCompletion: Requires quest completed: {0}
 
-		EstherMod: {
+		CascadeMod: {
 			Quests: {
 				// QuestCompleted: Quest is completed!
 				// TakeQuest: Take Quest

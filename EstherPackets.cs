@@ -1,6 +1,6 @@
-﻿using EstherMod.Core.Quests;
+﻿using CascadeMod.Core.Quests;
 
-namespace EstherMod;
+namespace CascadeMod;
 
 public static class EstherPackets {
 	public enum MessageID {

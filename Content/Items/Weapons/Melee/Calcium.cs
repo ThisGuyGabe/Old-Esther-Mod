@@ -6,9 +6,9 @@ using Terraria.Audio;
 using System.Linq;
 using Terraria.DataStructures;
 using Terraria.GameContent.Drawing;
-using EstherMod.Core;
+using CascadeMod.Core;
 
-namespace EstherMod.Content.Items.Weapons.Melee;
+namespace CascadeMod.Content.Items.Weapons.Melee;
 
 public class Calcium : BaseItem
 {
@@ -48,7 +48,7 @@ public class Calcium : BaseItem
 }
 public class CalciumP : ModProjectile
 {
-    public override string Texture => "EstherMod/Assets/Weapons/Melee/Calcium2";
+    public override string Texture => "CascadeMod/Assets/Weapons/Melee/Calcium2";
     float STATE = 1;
     public override void SetStaticDefaults()
     {

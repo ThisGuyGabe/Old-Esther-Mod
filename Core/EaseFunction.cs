@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace EstherMod.Core {
+namespace CascadeMod.Core {
 	public abstract class EaseFunction {
 		public static readonly EaseFunction Linear = new PolynomialEase((float x) => { return x; });
 

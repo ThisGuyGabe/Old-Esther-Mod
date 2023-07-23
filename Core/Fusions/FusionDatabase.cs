@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Core.Fusions;
+namespace CascadeMod.Core.Fusions;
 
 public sealed class FusionDatabase : ModSystem {
 	private static List<Fusion> fusions = new();

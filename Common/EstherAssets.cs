@@ -3,7 +3,7 @@ using ReLogic.Content;
 using Terraria;
 using static Terraria.ModLoader.ModContent;
 
-namespace EstherMod.Common;
+namespace CascadeMod.Common;
 
 public static class EstherAssets {
 	public static Asset<Texture2D> BonestromsStaff_Glowmask { get; private set; }
@@ -14,7 +14,7 @@ public static class EstherAssets {
 		if (Main.dedServ)
 			return;
 
-		BonestromsStaff_Glowmask = Request<Texture2D>("EstherMod/Content/GlowMasks/BonestromStaff_Glow");
-		GoldenReckage_Glowmask = Request<Texture2D>("EstherMod/Content/GlowMasks/GoldenReckage_Glow");
+		BonestromsStaff_Glowmask = Request<Texture2D>("CascadeMod/Content/GlowMasks/BonestromStaff_Glow");
+		GoldenReckage_Glowmask = Request<Texture2D>("CascadeMod/Content/GlowMasks/GoldenReckage_Glow");
 	}
 }

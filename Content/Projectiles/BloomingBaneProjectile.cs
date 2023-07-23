@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class BloomingBaneProjectile : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.CloneDefaults(595);

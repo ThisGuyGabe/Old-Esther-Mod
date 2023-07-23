@@ -4,7 +4,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Dusts;
+namespace CascadeMod.Content.Dusts;
 
 public sealed class GlowLine : ModDust {
 	public override Color? GetAlpha(Dust dust, Color lightColor) {
@@ -20,7 +20,7 @@ public sealed class GlowLine : ModDust {
 		dust.frame = new Rectangle(0, 0, 8, 128);
 		dust.customData = dust.scale;
 
-		dust.shader = new Terraria.Graphics.Shaders.ArmorShaderData(new Ref<Effect>(ModContent.Request<Effect>("EstherMod/Effects/GlowingDust", AssetRequestMode.ImmediateLoad).Value), "GlowingDustPass");
+		dust.shader = new Terraria.Graphics.Shaders.ArmorShaderData(new Ref<Effect>(ModContent.Request<Effect>("CascadeMod/Effects/GlowingDust", AssetRequestMode.ImmediateLoad).Value), "GlowingDustPass");
 	}
 
 	public override bool Update(Dust dust) {

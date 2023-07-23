@@ -1,11 +1,11 @@
 using System.IO;
-using EstherMod.Common;
-using EstherMod.Content;
-using EstherMod.Core.Quests;
+using CascadeMod.Common;
+using CascadeMod.Content;
+using CascadeMod.Core.Quests;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace EstherMod;
+namespace CascadeMod;
 
 public sealed class Esther : Mod {
 	public static Esther Instance { get; private set; }

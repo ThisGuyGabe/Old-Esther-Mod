@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace EstherMod.Common.Systems
+namespace CascadeMod.Common.Systems
 {
 	public class ModSupportSystem : ModSystem
 	{

@@ -1,9 +1,9 @@
-using EstherMod.Content.Items.Weapons.Melee;
+using CascadeMod.Content.Items.Weapons.Melee;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod {
+namespace CascadeMod {
 	public class WorldLoot : ModSystem {
 		int itemstoPlaceInChestChoice = 0;
 		public override void PostWorldGen() {

@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class RubyoProj : ModProjectile {
 		const int ShootRate = 60;
 		const float ShootDistance = 500f;

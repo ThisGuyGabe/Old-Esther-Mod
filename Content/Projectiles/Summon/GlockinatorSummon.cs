@@ -3,10 +3,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
-using EstherMod.Content.Buffs;
+using CascadeMod.Content.Buffs;
 using Terraria.Audio;
 
-namespace EstherMod.Content.Projectiles.Summon
+namespace CascadeMod.Content.Projectiles.Summon
 {
     public class GlockinatorSummon : ModProjectile
     {

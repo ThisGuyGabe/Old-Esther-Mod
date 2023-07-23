@@ -1,14 +1,14 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EstherMod.Content.Projectiles;
+using CascadeMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
-using EstherMod.Content.Dusts;
+using CascadeMod.Content.Dusts;
 using System;
 using static Terraria.NPC;
-using EstherMod.Core;
+using CascadeMod.Core;
 
-namespace EstherMod.Content.Items.Weapons.Melee
+namespace CascadeMod.Content.Items.Weapons.Melee
 {
     public class StellarSlasher : BaseItem
     {

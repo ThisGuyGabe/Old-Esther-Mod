@@ -3,11 +3,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
-using EstherMod.Content.Buffs;
-using EstherMod.Content.Projectiles.Summon;
-using EstherMod.Core;
+using CascadeMod.Content.Buffs;
+using CascadeMod.Content.Projectiles.Summon;
+using CascadeMod.Core;
 
-namespace EstherMod.Content.Items.Weapons.Summon
+namespace CascadeMod.Content.Items.Weapons.Summon
 {
     public class Glockinator : BaseItem
     {

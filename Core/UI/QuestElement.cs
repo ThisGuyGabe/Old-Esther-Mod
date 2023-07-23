@@ -1,10 +1,10 @@
-﻿using EstherMod.Core.Quests;
+﻿using CascadeMod.Core.Quests;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.UI;
 
-namespace EstherMod.Core.UI;
+namespace CascadeMod.Core.UI;
 
 public sealed class QuestElement : UIPanel {
 	public ModQuest quest;

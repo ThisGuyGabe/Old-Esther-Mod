@@ -1,18 +1,18 @@
 ﻿using System.Collections.Immutable;
-using EstherMod.Common.Conditions;
-using EstherMod.Content.Items.Weapons.Melee;
-using EstherMod.Content.Items.Weapons.Ranged;
-using EstherMod.Content.Quests.Goals;
-using EstherMod.Content.Quests.Rewards;
-using EstherMod.Core.Quests;
+using CascadeMod.Common.Conditions;
+using CascadeMod.Content.Items.Weapons.Melee;
+using CascadeMod.Content.Items.Weapons.Ranged;
+using CascadeMod.Content.Quests.Goals;
+using CascadeMod.Content.Quests.Rewards;
+using CascadeMod.Core.Quests;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Quests;
+namespace CascadeMod.Content.Quests;
 
 public sealed class EyeSpyQuest : ModQuest {
-	public override string Texture => "EstherMod/Assets/Quests/EyeSpyQuest";
+	public override string Texture => "CascadeMod/Assets/Quests/EyeSpyQuest";
 	public override QuestFrame QuestFrame => QuestFrames.Bounty;
 	public override float Order => 2f;
 

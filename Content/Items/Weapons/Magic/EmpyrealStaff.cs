@@ -1,13 +1,13 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EstherMod.Content.Projectiles;
+using CascadeMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.Linq;
-using EstherMod.Core;
+using CascadeMod.Core;
 
-namespace EstherMod.Content.Items.Weapons.Magic
+namespace CascadeMod.Content.Items.Weapons.Magic
 {
     public class EmpyrealStaff : BaseItem
     {

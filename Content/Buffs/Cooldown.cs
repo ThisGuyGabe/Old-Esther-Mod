@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Buffs {
+namespace CascadeMod.Content.Buffs {
 	public class Cooldown : ModBuff {
 		public override void SetStaticDefaults() {
 			Main.buffNoTimeDisplay[Type] = false;

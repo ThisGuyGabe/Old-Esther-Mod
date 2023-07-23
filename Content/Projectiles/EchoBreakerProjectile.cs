@@ -5,7 +5,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class EchoBreakerProjectile : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.width = 1;
@@ -59,7 +59,7 @@ namespace EstherMod.Content.Projectiles {
 			SpriteBatch spriteBatch = Main.spriteBatch;
 			SpriteEffects effects = player.gravDir == -1f ? (player.direction > 0 ? SpriteEffects.FlipVertically : SpriteEffects.None) : (player.direction <= 0 ? SpriteEffects.FlipVertically : SpriteEffects.None);
 
-			Texture2D slash = ModContent.Request<Texture2D>("EstherMod/Content/Projectiles/EchoBreakerProjectile", AssetRequestMode.AsyncLoad).Value;
+			Texture2D slash = ModContent.Request<Texture2D>("CascadeMod/Content/Projectiles/EchoBreakerProjectile", AssetRequestMode.AsyncLoad).Value;
 
 			Rectangle rect = new Rectangle(0, 0, slash.Width, slash.Height);
 			Vector2 vector = new Vector2(slash.Width / 2f, slash.Height / 2f);

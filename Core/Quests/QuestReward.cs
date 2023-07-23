@@ -1,6 +1,6 @@
 ﻿using Terraria;
 
-namespace EstherMod.Core.Quests;
+namespace CascadeMod.Core.Quests;
 
 public abstract class QuestReward : IQuestProperty {
 	public ModQuest Quest { get; set; }

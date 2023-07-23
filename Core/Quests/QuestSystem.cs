@@ -5,7 +5,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace EstherMod.Core.Quests;
+namespace CascadeMod.Core.Quests;
 
 public sealed class QuestSystem : ModSystem {
 	public static Asset<Texture2D>[] IconById { get; private set; }

@@ -1,11 +1,11 @@
-using EstherMod.Content.Projectiles;
-using EstherMod.Core;
+using CascadeMod.Content.Projectiles;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Ranged;
+namespace CascadeMod.Content.Items.Weapons.Ranged;
 
 public sealed class ForgedFury : BaseItem {
 	public override void SetDefaults() {

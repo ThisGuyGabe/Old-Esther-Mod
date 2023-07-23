@@ -1,11 +1,11 @@
 ﻿using System;
-using EstherMod.Core;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace EstherMod.Content.NPCs;
+namespace CascadeMod.Content.NPCs;
 
 public sealed class PooSpider : BaseNPC {
 	public override void SetStaticDefaults() {

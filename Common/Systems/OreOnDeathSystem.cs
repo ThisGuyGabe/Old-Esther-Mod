@@ -1,9 +1,9 @@
 /*using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using EstherMod.Content.Tiles;
+using CascadeMod.Content.Tiles;
 
-namespace EstherMod.Common.Systems;
+namespace CascadeMod.Common.Systems;
 
 public sealed class OreOnDeathSystem : GlobalNPC {
 	public static bool spawnHypnoplate = false;

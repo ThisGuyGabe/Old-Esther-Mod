@@ -3,7 +3,7 @@ using Mono.Cecil;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 
-namespace EstherMod.Core;
+namespace CascadeMod.Core;
 
 public static class ILHelper {
 	public static int AddVariable<T>(this ILCursor c) => c.Context.AddVariable<T>();

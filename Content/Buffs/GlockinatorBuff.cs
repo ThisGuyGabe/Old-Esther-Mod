@@ -1,8 +1,8 @@
 using Terraria.ModLoader;
 using Terraria;
-using EstherMod.Content.Projectiles.Summon;
+using CascadeMod.Content.Projectiles.Summon;
 
-namespace EstherMod.Content.Buffs;
+namespace CascadeMod.Content.Buffs;
 
 public class GlockinatorBuff : ModBuff
 {

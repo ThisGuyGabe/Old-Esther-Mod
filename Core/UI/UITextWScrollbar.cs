@@ -5,7 +5,7 @@ using Terraria.GameContent.UI.Elements;
 using Terraria.Localization;
 using Terraria.UI;
 
-namespace EstherMod.Core.UI;
+namespace CascadeMod.Core.UI;
 
 public sealed class UITextWScrollbar : UIElement {
 	private sealed class UIInnerText : UIText {

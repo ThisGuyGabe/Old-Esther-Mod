@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class ChantSpark : ModProjectile {
 		public override void SetDefaults() {
 			Projectile.width = 10;

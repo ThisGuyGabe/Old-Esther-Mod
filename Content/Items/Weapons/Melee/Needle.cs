@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using EstherMod.Core;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Melee;
+namespace CascadeMod.Content.Items.Weapons.Melee;
 
 public sealed class Needle : BaseItem {
 	public override void SetDefaults() {

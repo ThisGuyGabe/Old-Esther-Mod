@@ -1,5 +1,5 @@
 Mods: {
-	EstherMod: {
+	CascadeMod: {
 		Items: {
 			HauntedCandle: {
 				DisplayName: Nawiedzona Świeczka
@@ -92,7 +92,7 @@ Mods: {
 
 			EmpyrealStaff: {
 				DisplayName: Różdżka Empirejska
-				// Tooltip: Use this during night for a mana discount, faster speed, but less damage.
+				// Tooltip: Creates starlight at your cursor
 			}
 
 			Esther: {
@@ -401,6 +401,201 @@ Mods: {
 							''' */
 					}
 				}
+
+				Magic: {
+					BonestromStaff: {
+						// DisplayName: Bonestrom Staff
+						// Tooltip: ""
+					}
+
+					CopperTrumpet: {
+						// DisplayName: Copper Trumpet
+						// Tooltip: ""
+					}
+
+					EmpyrealStaff: {
+						// DisplayName: Empyreal Staff
+						// Tooltip: ""
+					}
+
+					EthericalChant: {
+						// DisplayName: Etherical Chant
+						// Tooltip: ""
+					}
+
+					FloraGaleStaff: {
+						// DisplayName: Flora Gale Staff
+						// Tooltip: ""
+					}
+				}
+
+				Melee: {
+					BloomingBane: {
+						// DisplayName: Blooming Bane
+						// Tooltip: ""
+					}
+
+					Calcium: {
+						// DisplayName: Calcium
+						// Tooltip: ""
+					}
+
+					CultSaber: {
+						// DisplayName: Cult Saber
+						// Tooltip: ""
+					}
+
+					EthericalRapier: {
+						// DisplayName: Etherical Rapier
+						// Tooltip: ""
+					}
+
+					FireStormSlasher: {
+						// DisplayName: Fire Storm Slasher
+						// Tooltip: ""
+					}
+
+					GoldenReckage: {
+						// DisplayName: Golden Reckage
+						// Tooltip: ""
+					}
+
+					Needle: {
+						// DisplayName: Needle
+						// Tooltip: ""
+					}
+
+					PermaFrost: {
+						// DisplayName: Perma Frost
+						// Tooltip: ""
+					}
+
+					PristineMallet: {
+						// DisplayName: Pristine Mallet
+						// Tooltip: ""
+					}
+
+					Rubyo: {
+						// DisplayName: Rubyo
+						// Tooltip: ""
+					}
+
+					SantasLittleHelper: {
+						// DisplayName: Santas Little Helper
+						// Tooltip: ""
+					}
+
+					SludgeSlider: {
+						// DisplayName: Sludge Slider
+						// Tooltip: ""
+					}
+
+					SoulSlaughter: {
+						// DisplayName: Soul Slaughter
+						// Tooltip: ""
+					}
+
+					StellarRain: {
+						// DisplayName: Stellar Rain
+						// Tooltip: ""
+					}
+
+					StellarSlasher: {
+						// DisplayName: Stellar Slasher
+						// Tooltip: ""
+					}
+				}
+
+				Ranged: {
+					BeamBow: {
+						// DisplayName: Beam Bow
+						// Tooltip: ""
+					}
+
+					CactusBow: {
+						// DisplayName: Cactus Bow
+						// Tooltip: ""
+					}
+
+					EthericalBow: {
+						// DisplayName: Etherical Bow
+						// Tooltip: ""
+					}
+
+					Fishtol: {
+						// DisplayName: Fishtol
+						// Tooltip: ""
+					}
+
+					ForgedFury: {
+						// DisplayName: Forged Fury
+						// Tooltip: ""
+					}
+
+					FoulLongbow: {
+						// DisplayName: Foul Longbow
+						// Tooltip: ""
+					}
+
+					SilverCrippler: {
+						// DisplayName: Silver Crippler
+						// Tooltip: ""
+					}
+
+					SolarRecurve: {
+						// DisplayName: Solar Recurve
+						// Tooltip: ""
+					}
+
+					Vulcano: {
+						// DisplayName: Vulcano
+						// Tooltip: ""
+					}
+				}
+			}
+
+			Accessories: {
+				HauntedCandle: {
+					// DisplayName: Haunted Candle
+					// Tooltip: ""
+				}
+
+				MagneticDynamo: {
+					// DisplayName: Magnetic Dynamo
+					// Tooltip: ""
+				}
+
+				ManaNecklace: {
+					// DisplayName: Mana Necklace
+					// Tooltip: ""
+				}
+
+				TheSoul: {
+					// DisplayName: The Soul
+					// Tooltip: ""
+				}
+			}
+
+			Placeables: {
+				PixilWood: {
+					// DisplayName: Pixil Wood
+					// Tooltip: ""
+				}
+
+				PixilWoodWall: {
+					// DisplayName: Pixil Wood Wall
+					// Tooltip: ""
+				}
+
+				RetroWood: {
+					// DisplayName: Retro Wood
+					// Tooltip: ""
+				}
+
+				RetroWoodWall: {
+					// DisplayName: Retro Wood Wall
+					// Tooltip: ""
+				}
 			}
 		}
 
@@ -450,6 +645,9 @@ Mods: {
 			// StellarSlash.DisplayName: Stellar Slash
 			// GlockinatorSummon.DisplayName: Glockinator Summon
 			// VulcanoHomingArrow.DisplayName: Vulcano Homing Arrow
+			// FloraLeaf.DisplayName: Flora Leaf
+			// FoulArrow.DisplayName: Foul Arrow
+			// SludgeSliderProjectile.DisplayName: Sludge Slider Projectile
 		}
 
 		NPCs: {
@@ -468,12 +666,17 @@ Mods: {
 				}
 
 				// Census.SpawnCondition: Requires you to have 200 health
-				// Cenus.SpawnCondition: Mods.EstherMod.NPCs.BloodCultist.Cenus.SpawnCondition
+				// Cenus.SpawnCondition: Mods.CascadeMod.NPCs.BloodCultist.Cenus.SpawnCondition
 			}
 
 			// AbyssalAbhorrence.DisplayName: Abyssal Abhorrence
 			// SpiritualConstruct.DisplayName: Spiritual Construct
 			// PooSpider.DisplayName: Poo Spider
+
+			PooSpiderItem: {
+				// DisplayName: Poo Spider Item
+				// Tooltip: ""
+			}
 		}
 
 		Buffs: {
@@ -491,6 +694,11 @@ Mods: {
 				// DisplayName: Glockinator Buff
 				// Description: Gun?
 			}
+
+			Cooldown: {
+				// DisplayName: Cooldown
+				// Description: Mods.CascadeMod.Buffs.Cooldown.Description
+			}
 		}
 
 		Tiles: {
@@ -500,9 +708,12 @@ Mods: {
 			// Hypnoplate.MapEntry: Hypnoplate
 		}
 
-		// Conditions.QuestCompletion: Requires quest completed: {0}
+		Conditions: {
+			// QuestCompletion: Requires quest completed: {0}
+			// AtLeastMaxHealth: Mods.CascadeMod.Conditions.AtLeastMaxHealth
+		}
 
-		EstherMod: {
+		CascadeMod: {
 			Quests: {
 				// QuestCompleted: Quest is completed!
 				// TakeQuest: Take Quest
@@ -541,6 +752,10 @@ Mods: {
 						And since that interferes with my plans, I want you to end his petty reign!
 						''' */
 				}
+
+				// EyeSpyQuest.DisplayName: Eye Spy Quest
+				// EaterOfWorldsQuest.DisplayName: Eater Of Worlds Quest
+				// PestControlQuest.DisplayName: Pest Control Quest
 			}
 		}
 	}

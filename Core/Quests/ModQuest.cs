@@ -6,12 +6,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace EstherMod.Core.Quests;
+namespace CascadeMod.Core.Quests;
 
 public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 	// The reason that its not 'Quests' is cause many mods tend to add their own quests
 	// and we don't want to confuse our quest localization with theirs.
-	public string LocalizationCategory => "EstherMod.Quests";
+	public string LocalizationCategory => "CascadeMod.Quests";
 	public virtual QuestFrame QuestFrame => QuestFrames.Main;
 	public virtual LocalizedText DisplayName => this.GetLocalization("DisplayName", PrettyPrintName);
 	public virtual LocalizedText Description => this.GetLocalization("Description", () => string.Empty);

@@ -1,12 +1,12 @@
-﻿using EstherMod.Content.Projectiles;
-using EstherMod.Core;
+﻿using CascadeMod.Content.Projectiles;
+using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Melee;
+namespace CascadeMod.Content.Items.Weapons.Melee;
 
 public sealed class SantasLittleHelper : BaseItem {
 	public override void SetDefaults() {

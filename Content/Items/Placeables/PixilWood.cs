@@ -1,10 +1,10 @@
-using EstherMod.Content.Tiles;
-using EstherMod.Core;
+using CascadeMod.Content.Tiles;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Placeables;
+namespace CascadeMod.Content.Items.Placeables;
 
 public sealed class PixilWood : BaseItem {
 	public override void SetStaticDefaults() {

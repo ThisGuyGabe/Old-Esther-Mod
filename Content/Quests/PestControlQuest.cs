@@ -1,15 +1,15 @@
 ﻿using System.Collections.Immutable;
-using EstherMod.Common.Conditions;
-using EstherMod.Content.Quests.Goals;
-using EstherMod.Content.Quests.Rewards;
-using EstherMod.Core.Quests;
+using CascadeMod.Common.Conditions;
+using CascadeMod.Content.Quests.Goals;
+using CascadeMod.Content.Quests.Rewards;
+using CascadeMod.Core.Quests;
 using Terraria;
 using Terraria.ID;
 
-namespace EstherMod.Content.Quests;
+namespace CascadeMod.Content.Quests;
 
 public sealed class PestControlQuest : ModQuest {
-	public override string Texture => "EstherMod/Assets/Quests/PestControlQuest";
+	public override string Texture => "CascadeMod/Assets/Quests/PestControlQuest";
 	public override QuestFrame QuestFrame => QuestFrames.Hunter;
 	public override float Order => 2.2f;
 

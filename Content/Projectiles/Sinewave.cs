@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class Sinewave : ModProjectile {
 		public Vector2 initialCenter;
 
@@ -89,7 +89,7 @@ namespace EstherMod.Content.Projectiles {
 			sineTimer++;
 		}
 		public override bool PreDraw(ref Color lightColor) {
-			Texture2D texture2D = ModContent.Request<Texture2D>("EstherMod/Assets/Textures/Glow").Value;
+			Texture2D texture2D = ModContent.Request<Texture2D>("CascadeMod/Assets/Textures/Glow").Value;
 			Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
 			for (int k = 0; k < Projectile.oldPos.Length; k++) {
 				float scale = Projectile.scale * (Projectile.oldPos.Length - k) / Projectile.oldPos.Length * .45f;

@@ -5,14 +5,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
 using Terraria;
-using EstherMod.Backgrounds;
-namespace EstherMod.Common
+using CascadeMod.Backgrounds;
+namespace CascadeMod.Common
 {
     public class EstherMenu : ModMenu
 	{
-		private const string menuAssetPath = "EstherMod/Assets/Textures/Menu";
+		private const string menuAssetPath = "CascadeMod/Assets/Textures/Menu";
 
-		public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("EstherMod/Assets/Textures/Logo");
+		public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("CascadeMod/Assets/Textures/Logo");
 
 		public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>($"{menuAssetPath}/ExampleSun"); 
 
@@ -20,7 +20,7 @@ namespace EstherMod.Common
 
 		public override int Music => MusicLoader.GetMusicSlot(Mod, "Assets/Music/EstherianMusic");
 
-		public override ModSurfaceBackgroundStyle MenuBackgroundStyle => ModContent.GetInstance<EstherModBackgroundStyle>();
+		public override ModSurfaceBackgroundStyle MenuBackgroundStyle => ModContent.GetInstance<CascadeModBackgroundStyle>();
 
 		public override string DisplayName => "Esther";
 

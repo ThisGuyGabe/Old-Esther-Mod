@@ -1,5 +1,5 @@
-displayName = The Esther Mod
-author = The Esther Mod Team
+displayName = The Cascade Mod
+author = The Cascade Mod Team
 version = 0.2
 
 hideCode = true

@@ -5,9 +5,9 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
-using EstherMod.Core;
+using CascadeMod.Core;
 
-namespace EstherMod.Content.Items.Weapons.Ranged
+namespace CascadeMod.Content.Items.Weapons.Ranged
 {
     public class Fishtol : BaseItem
     {
@@ -46,7 +46,7 @@ namespace EstherMod.Content.Items.Weapons.Ranged
 
     public class FishProjectile : ModProjectile
     {
-        public override string Texture => "EstherMod/Assets/Weapons/Ranged/FishProjectile";
+        public override string Texture => "CascadeMod/Assets/Weapons/Ranged/FishProjectile";
         public override void SetStaticDefaults()
         {
             Main.projFrames[Projectile.type] = 3;
@@ -101,9 +101,9 @@ namespace EstherMod.Content.Items.Weapons.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D orangefish = (Texture2D)ModContent.Request<Texture2D>("EstherMod/Assets/Weapons/Ranged/OrangeFish");
-            Texture2D greenfish = (Texture2D)ModContent.Request<Texture2D>("EstherMod/Assets/Weapons/Ranged/GreenFish");
-            Texture2D purplefish = (Texture2D)ModContent.Request<Texture2D>("EstherMod/Assets/Weapons/Ranged/PurpleFish");
+            Texture2D orangefish = (Texture2D)ModContent.Request<Texture2D>("CascadeMod/Assets/Weapons/Ranged/OrangeFish");
+            Texture2D greenfish = (Texture2D)ModContent.Request<Texture2D>("CascadeMod/Assets/Weapons/Ranged/GreenFish");
+            Texture2D purplefish = (Texture2D)ModContent.Request<Texture2D>("CascadeMod/Assets/Weapons/Ranged/PurpleFish");
 
 
             Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);

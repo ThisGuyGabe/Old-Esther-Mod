@@ -6,7 +6,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Projectiles {
+namespace CascadeMod.Content.Projectiles {
 	public class PartyBombProjectile : ModProjectile {
 		private const int pulseCount = 3;
 		private const int rippleSize = 15;

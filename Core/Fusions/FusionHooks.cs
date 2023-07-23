@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ModLoader.Core;
 
-namespace EstherMod.Core.Fusions;
+namespace CascadeMod.Core.Fusions;
 
 public interface IItemOnFuseHook {
 	public static readonly GlobalHookList<GlobalItem> Hook = ItemLoader.AddModHook(new GlobalHookList<GlobalItem>(typeof(IItemOnFuseHook).GetMethod(nameof(OnFuse))));

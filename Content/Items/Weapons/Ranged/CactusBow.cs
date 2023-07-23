@@ -1,9 +1,9 @@
-﻿using EstherMod.Core;
+﻿using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EstherMod.Content.Items.Weapons.Ranged
+namespace CascadeMod.Content.Items.Weapons.Ranged
 {
 	public class CactusBow : BaseItem
 	{

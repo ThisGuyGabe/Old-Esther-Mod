@@ -1,4 +1,4 @@
-﻿namespace EstherMod.Common.Extensions;
+﻿namespace CascadeMod.Common.Extensions;
 
 public static class GeneralExtensions {
 	public static T Assign<T>(this T self, out T value) {

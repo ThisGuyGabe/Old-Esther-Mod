@@ -1,8 +1,8 @@
 ﻿using System;
-using EstherMod.Core.Quests;
+using CascadeMod.Core.Quests;
 using Terraria;
 
-namespace EstherMod.Content.Quests.Goals;
+namespace CascadeMod.Content.Quests.Goals;
 
 public sealed class MultipleNPCsKillQuestGoal : QuestGoal {
 	public Predicate<NPC> NPCPredicate { get; init; }

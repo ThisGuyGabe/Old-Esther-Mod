@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using System;
 
-namespace EstherMod.Content.Projectiles
+namespace CascadeMod.Content.Projectiles
 {
     public class StellarSlash : ModProjectile
     {

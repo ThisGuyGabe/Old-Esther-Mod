@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 
-namespace EstherMod.Common;
+namespace CascadeMod.Common;
 
 public class DynamicShaderData : ShaderData {
 	public delegate void ApplyDelegate(ShaderData shaderData, DrawData? drawData = null);

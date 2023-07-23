@@ -1,13 +1,13 @@
 ﻿using System.Collections.Immutable;
-using EstherMod.Content.Quests.Goals;
-using EstherMod.Content.Quests.Rewards;
-using EstherMod.Core.Quests;
+using CascadeMod.Content.Quests.Goals;
+using CascadeMod.Content.Quests.Rewards;
+using CascadeMod.Core.Quests;
 using Terraria.ID;
 
-namespace EstherMod.Content.Quests;
+namespace CascadeMod.Content.Quests;
 
 public sealed class EaterOfWorldsQuest : ModQuest {
-	public override string Texture => "EstherMod/Assets/Quests/EaterOfWorldsQuest";
+	public override string Texture => "CascadeMod/Assets/Quests/EaterOfWorldsQuest";
 	public override QuestFrame QuestFrame => QuestFrames.Main;
 	public override float Order => 3f;
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EstherMod.Common.Extensions;
+namespace CascadeMod.Common.Extensions;
 
 public static class SpriteBatchExtensions {
 	private static Snapshot TakeSnapshot(this SpriteBatch spriteBatch) => new(spriteBatch);

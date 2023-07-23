@@ -1,8 +1,8 @@
-using EstherMod.Core;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 
-namespace EstherMod.Content.Items.Accessories;
+namespace CascadeMod.Content.Items.Accessories;
 
 public sealed class ManaNecklace : BaseItem {
 	public override void SetStaticDefaults() {

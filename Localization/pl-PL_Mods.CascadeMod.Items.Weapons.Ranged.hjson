@@ -1,0 +1,59 @@
+BeamBow: {
+}
+
+CopperPopper: {
+	// DisplayName: Copper Popper
+	// Tooltip: ""
+}
+
+EthericalBow: {
+}
+
+ForgedFury: {
+}
+
+HypnosStorm: {
+	// DisplayName: Hypnos Storm
+	// Tooltip: ""
+}
+
+PeaShooter: {
+	// DisplayName: Peashooter
+	// Tooltip: "'There's A Zombie On Your Lawn'"
+}
+
+PhoenixFlame: {
+	// DisplayName: Phoenix Flame
+	/* Tooltip:
+		'''
+		Shoot in a 3 shot rapid burst.
+		Turns arrows into Phoenix arrows.
+		''' */
+}
+
+// SilverCrippler.DislayName: Silver Crippler
+
+SolarRecurve: {
+}
+
+Tinuzi: {
+	// DisplayName: Tinuzi
+	// Tooltip: Shoots out bullets at high speeds!
+}
+
+Vulcano: {
+}
+
+FoulLongbow: {
+}
+
+EmberFlamethrower: {
+	// DisplayName: Ember Flamethrower
+	// Tooltip: ""
+}
+
+CactusBow: {
+}
+
+Fishtol: {
+}

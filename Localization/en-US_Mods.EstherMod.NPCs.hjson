@@ -1,9 +1,0 @@
-BloodCultist: {
-	TownNPCMood: {
-	}
-}
-
-PooSpiderItem: {
-	DisplayName: Poo Spider
-	Tooltip: ""
-}

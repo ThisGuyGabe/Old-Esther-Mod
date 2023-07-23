@@ -1,8 +1,8 @@
-using EstherMod.Core;
+using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 
-namespace EstherMod.Content.Items;
+namespace CascadeMod.Content.Items;
 
 public sealed class SoulPearl : BaseItem {
 	public override void SetStaticDefaults() {
