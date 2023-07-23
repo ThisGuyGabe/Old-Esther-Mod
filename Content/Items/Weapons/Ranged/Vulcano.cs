@@ -17,7 +17,7 @@ namespace CascadeMod.Content.Items.Weapons.Ranged;
 public sealed class Vulcano : BaseItem {
 
 	int shoot;
-	public sealed override string Texture => "EstherMod/Assets/Weapons/Ranged/Vulcano";
+	public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/Vulcano";
 	public override void SetDefaults() {
 		Item.damage = 78;
 		Item.rare = ItemRarityID.Pink;
@@ -78,7 +78,7 @@ public sealed class Vulcano : BaseItem {
 			.Register();
 	}
 	public sealed class VulcanoBowProj : ModProjectile {
-		public sealed override string Texture => "EstherMod/Assets/Weapons/Ranged/Vulcano";
+		public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/Vulcano";
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 8;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 1;
@@ -178,7 +178,7 @@ public sealed class Vulcano : BaseItem {
 	}
 
 	public sealed class VulcanoArrow : ModProjectile {
-		public sealed override string Texture => "EstherMod/Assets/Weapons/Ranged/VulcanoArrow";
+		public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/VulcanoArrow";
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 8;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 3;
