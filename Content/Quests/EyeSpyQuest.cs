@@ -25,8 +25,8 @@ public sealed class EyeSpyQuest : ModQuest {
 	}
 
 	public override void AddRewards(ImmutableList<QuestReward>.Builder rewards) {
-		rewards.Add(new ItemQuestReward(ModContent.ItemType<FoulLongbow>(), 1));
-		rewards.Add(new ItemQuestReward(ModContent.ItemType<CultSaber>(), 1));
+		rewards.Add(new ItemQuestReward(ItemID.Starfury, 1));
+		rewards.Add(new ItemQuestReward(ItemID.Trimarang, 1));
 		rewards.Add(new ItemQuestReward(ItemID.GoldCoin, 10));
 	}
 }
