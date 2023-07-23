@@ -28,7 +28,7 @@ public static class EstherEffects {
 		if (Main.netMode == NetmodeID.Server)
 			return;
 
-		var screenRef = new Ref<Effect>(Esther.Instance.Assets.Request<Effect>("Effects/CustomScreenShaders", AssetRequestMode.ImmediateLoad).Value);
+		var screenRef = new Ref<Effect>(Cascade.Instance.Assets.Request<Effect>("Effects/CustomScreenShaders", AssetRequestMode.ImmediateLoad).Value);
 
 		Filters.Scene[HydraShockwaveID] = CreateAndGetFilter(new(screenRef, "HydraShockwave"), EffectPriority.VeryHigh);
 		Filters.Scene[ConfettiID] = CreateAndGetFilter(new(screenRef, "Confetti"), EffectPriority.VeryHigh);
@@ -44,7 +44,7 @@ public static class EstherEffects {
 
 			using var slimEvent = new ManualResetEventSlim();
 			Main.QueueMainThreadAction(() => {
-				effect = new(Main.graphics.GraphicsDevice, Esther.Instance.GetFileBytes(path + ".fxb"));
+				effect = new(Main.graphics.GraphicsDevice, Cascade.Instance.GetFileBytes(path + ".fxb"));
 				slimEvent.Set();
 			});
 			slimEvent.Wait();

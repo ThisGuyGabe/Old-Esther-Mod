@@ -14,7 +14,7 @@ public abstract class QuestGoal : IQuestProperty {
 		questPlayer.GoalsCompletedByQuest[Quest.FullName][Ordinal] = true;
 
 		if (Main.netMode == NetmodeID.MultiplayerClient) {
-			Esther.Instance.Packet_GoalCompletion(player.whoAmI, Ordinal, Quest.FullName);
+			Cascade.Instance.Packet_GoalCompletion(player.whoAmI, Ordinal, Quest.FullName);
 		}
 	}
 

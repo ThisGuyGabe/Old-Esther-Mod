@@ -260,9 +260,9 @@ public sealed class Vulcano : BaseItem {
 		}
 
 		public sealed class VulcanoHomingArrow : ModProjectile {
-			public sealed override string Texture => "EstherMod/Assets/Textures/Glow";
+			public sealed override string Texture => "CascadeMod/Assets/Textures/Glow";
 			public override void SetStaticDefaults() {
-				ProjectileID.Sets.TrailCacheLength[Projectile.type] = 25;
+				ProjectileID.Sets.TrailCacheLength[Projectile.type] = 17;
 				ProjectileID.Sets.TrailingMode[Projectile.type] = 3;
 			}
 

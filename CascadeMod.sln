@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.2.32602.215
+VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstherMod", "EstherMod.csproj", "{45413713-3448-4037-9B0E-85E5F52FF5C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CascadeMod", "CascadeMod.csproj", "{15CFED4C-D3E3-45C0-BD2D-8123140364FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{45413713-3448-4037-9B0E-85E5F52FF5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45413713-3448-4037-9B0E-85E5F52FF5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45413713-3448-4037-9B0E-85E5F52FF5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45413713-3448-4037-9B0E-85E5F52FF5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CFED4C-D3E3-45C0-BD2D-8123140364FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CFED4C-D3E3-45C0-BD2D-8123140364FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CFED4C-D3E3-45C0-BD2D-8123140364FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CFED4C-D3E3-45C0-BD2D-8123140364FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FAFF53AD-662E-462A-8DD7-01BE35C75F81}
+		SolutionGuid = {2BAD44D6-4E9D-4B51-9655-47B45CE2A443}
 	EndGlobalSection
 EndGlobal

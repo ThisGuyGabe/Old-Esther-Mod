@@ -2,7 +2,7 @@
 
 namespace CascadeMod;
 
-public static class EstherPackets {
+public static class CascadePackets {
 	public enum MessageID {
 		/// <summary>
 		/// byte playerIndex<br/>
@@ -29,7 +29,7 @@ public static class EstherPackets {
 	}
 
 	public static void Packet_GoalCompletion(
-		this Esther esther,
+		this Cascade esther,
 		int playerIndex,
 		int ordinal,
 		string quote
@@ -43,7 +43,7 @@ public static class EstherPackets {
 	}
 
 	public static void Packet_ClaimQuestRewards(
-		this Esther esther,
+		this Cascade esther,
 		int playerIndex,
 		string quote
 		) {
@@ -55,7 +55,7 @@ public static class EstherPackets {
 	}
 
 	public static void Packet_AssignQuest(
-		this Esther esther,
+		this Cascade esther,
 		int playerIndex,
 		string quote,
 		int count
@@ -69,7 +69,7 @@ public static class EstherPackets {
 	}
 
 	public static void Packet_CompleteQuest(
-		this Esther esther,
+		this Cascade esther,
 		int playerIndex,
 		string quote
 		) {

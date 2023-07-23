@@ -253,7 +253,7 @@ public sealed class BloodCultistUI : ILoadable {
 							questPlayer.CompletedQuests2.Add(currentQuestChosen.quest.FullName);
 
 							if (Main.netMode == NetmodeID.MultiplayerClient) {
-								Esther.Instance.Packet_ClaimQuestRewards(Main.myPlayer, currentQuestChosen.quest.FullName);
+								Cascade.Instance.Packet_ClaimQuestRewards(Main.myPlayer, currentQuestChosen.quest.FullName);
 							}
 						}
 					}
@@ -889,7 +889,7 @@ public sealed class BloodCultistUI : ILoadable {
 			c.Emit(OpCodes.Ldloc, oldAmountOfLinesIndex);
 		}
 		catch {
-			MonoModHooks.DumpIL(Esther.Instance, il);
+			MonoModHooks.DumpIL(Cascade.Instance, il);
 		}
 	}
 }

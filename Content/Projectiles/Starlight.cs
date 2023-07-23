@@ -5,13 +5,13 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
-using EstherMod.Content.Items.Weapons.Magic;
+using CascadeMod.Content.Items.Weapons.Magic;
 using System;
 
-namespace EstherMod.Content.Projectiles
+namespace CascadeMod.Content.Projectiles
 {
     public class Starlight : ModProjectile {
-		public override string Texture => "EstherMod/Assets/Textures/EmptyPixel";
+		public override string Texture => "CascadeMod/Assets/Textures/EmptyPixel";
 		public override void SetStaticDefaults()
         {
 			
@@ -37,7 +37,7 @@ namespace EstherMod.Content.Projectiles
         public override void AI()
         {
             Player owner = Main.player[Projectile.owner];
-            if (owner.channel && owner.HeldItem.type == ModContent.ItemType<StarStaff>())
+            if (owner.channel && owner.HeldItem.type == ModContent.ItemType<EmpyrealStaff>())
             {
 
                 Projectile.ai[0]++;

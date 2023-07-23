@@ -77,7 +77,7 @@ public abstract class ModQuest : ModTexturedType, ILocalizedModType {
 				questPlayer.GoalsCompletedByQuest[quest] = new bool[Goals.Count];
 
 				if (Main.netMode == NetmodeID.MultiplayerClient) {
-					Esther.Instance.Packet_AssignQuest(Main.myPlayer, quest, Goals.Count);
+					Cascade.Instance.Packet_AssignQuest(Main.myPlayer, quest, Goals.Count);
 				}
 				return true;
 			}

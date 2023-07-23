@@ -7,10 +7,10 @@ using Terraria.ModLoader;
 
 namespace CascadeMod;
 
-public sealed class Esther : Mod {
-	public static Esther Instance { get; private set; }
+public sealed class Cascade : Mod {
+	public static Cascade Instance { get; private set; }
 
-	public Esther() {
+	public Cascade() {
 		Instance = this;
 	}
 
@@ -21,8 +21,8 @@ public sealed class Esther : Mod {
 
 	public override void HandlePacket(BinaryReader reader, int whoAmI) {
 		byte messageId = reader.ReadByte();
-		switch ((EstherPackets.MessageID)messageId) {
-			case EstherPackets.MessageID.GoalCompletion: {
+		switch ((CascadePackets.MessageID)messageId) {
+			case CascadePackets.MessageID.GoalCompletion: {
 				byte playerIndex = reader.ReadByte();
 				byte ordinal = reader.ReadByte();
 				byte quoteIndex = reader.ReadByte();
@@ -32,7 +32,7 @@ public sealed class Esther : Mod {
 				}
 			}
 			break;
-			case EstherPackets.MessageID.ClaimQuestRewards: {
+			case CascadePackets.MessageID.ClaimQuestRewards: {
 				byte playerIndex = reader.ReadByte();
 				byte quoteIndex = reader.ReadByte();
 
@@ -41,7 +41,7 @@ public sealed class Esther : Mod {
 				}
 			}
 			break;
-			case EstherPackets.MessageID.AssignQuest: {
+			case CascadePackets.MessageID.AssignQuest: {
 				byte playerIndex = reader.ReadByte();
 				byte quoteIndex = reader.ReadByte();
 				byte count = reader.ReadByte();
@@ -51,7 +51,7 @@ public sealed class Esther : Mod {
 				}
 			}
 			break;
-			case EstherPackets.MessageID.CompleteQuest: {
+			case CascadePackets.MessageID.CompleteQuest: {
 				byte playerIndex = reader.ReadByte();
 				byte quoteIndex = reader.ReadByte();
 
