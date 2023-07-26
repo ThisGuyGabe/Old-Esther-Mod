@@ -29,12 +29,6 @@ public sealed class BeamBow : ModItem {
 		type = ProjectileID.GreenLaser;
 	}
 
-	public override void UpdateInventory(Player player) {
-		// Concerning.
-		Item.useTime = Main.rand.Next(5, 15);
-		Item.useAnimation = Item.useTime;
-	}
-
 	public override void AddRecipes() {
 		CreateRecipe()
 			.AddIngredient(ItemID.MeteoriteBar, 10)
