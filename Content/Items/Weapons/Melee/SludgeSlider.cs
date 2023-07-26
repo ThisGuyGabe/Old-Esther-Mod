@@ -1,13 +1,12 @@
 ﻿using System;
 using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Melee;
 
-public sealed class SludgeSlider : BaseItem {
+public sealed class SludgeSlider : ModItem {
 	public override void SetStaticDefaults() {
 		ItemID.Sets.Yoyo[Item.type] = true;
 		ItemID.Sets.GamepadExtraRange[Item.type] = 15;

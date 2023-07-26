@@ -54,5 +54,23 @@ namespace CascadeMod.Content.Items.Weapons.Summon
             }
             return false;
         }
-    }
+
+		public override void AddRecipes() {
+			CreateRecipe()
+				.AddIngredient(ModContent.ItemType<SoulPebble>(), 3)
+				.AddIngredient(ItemID.FlintlockPistol, 1)
+				.AddIngredient(ItemID.IronBar, 12)
+				.AddIngredient(ModContent.ItemType<SoulPearl>(), 1)
+				.AddTile(TileID.Anvils)
+				.Register();
+
+			CreateRecipe()
+				.AddIngredient(ModContent.ItemType<SoulPebble>(), 3)
+				.AddIngredient(ItemID.FlintlockPistol, 1)
+				.AddIngredient(ItemID.LeadBar, 12)
+				.AddIngredient(ModContent.ItemType<SoulPearl>(), 1)
+				.AddTile(TileID.Anvils)
+				.Register();
+		}
+	}
 }

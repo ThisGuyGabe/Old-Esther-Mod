@@ -1,10 +1,10 @@
-using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Accessories;
 
-public sealed class ManaNecklace : BaseItem {
+public sealed class ManaNecklace : ModItem {
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 1;
 	}

@@ -1,6 +1,5 @@
 ﻿using CascadeMod.Common;
 using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Magic;
 
-public sealed class BonestromStaff : BaseItem {
+public sealed class BonestromStaff : ModItem {
 	public override void SetStaticDefaults() {
 		Item.staff[Item.type] = true;
 	}

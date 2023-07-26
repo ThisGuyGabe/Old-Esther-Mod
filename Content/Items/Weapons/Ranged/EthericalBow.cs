@@ -1,5 +1,4 @@
 using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Ranged;
 
-public sealed class EthericalBow : BaseItem {
+public sealed class EthericalBow : ModItem {
 	public override void SetDefaults() {
 		Item.width = 24;
 		Item.height = 50;
@@ -42,11 +41,12 @@ public sealed class EthericalBow : BaseItem {
 	public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) {
 		type = ModContent.ProjectileType<Sinewave>();
 	}
-
 	public override void AddRecipes() {
 		CreateRecipe()
-			.AddIngredient(ModContent.ItemType<EthericScrap>(), 5)
-			.AddTile(TileID.WorkBenches)
+			.AddIngredient(ModContent.ItemType<EthericScrap>(), 4)
+			.AddIngredient(ItemID.WoodenBow, 1)
+			.AddIngredient(ItemID.Sapphire, 2)
+			.AddTile(TileID.Anvils)
 			.Register();
 	}
 }

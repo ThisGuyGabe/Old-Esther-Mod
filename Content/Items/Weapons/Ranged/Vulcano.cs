@@ -1,4 +1,3 @@
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Linq;
@@ -10,11 +9,11 @@ using Terraria.GameContent.Drawing;
 using Terraria.Graphics.Renderers;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CascadeMod.Content.Items.Weapons.Ranged.Vulcano.VulcanoArrow;
+using static CascadeMod.Content.Items.Weapons.Ranged.VulcanoBowProj;
 
 namespace CascadeMod.Content.Items.Weapons.Ranged;
 
-public sealed class Vulcano : BaseItem {
+public sealed class Vulcano : ModItem {
 
 	int shoot;
 	public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/Vulcano";
@@ -23,7 +22,7 @@ public sealed class Vulcano : BaseItem {
 		Item.rare = ItemRarityID.Pink;
 		Item.width = 28;
 		Item.height = 70;
-		Item.useAnimation = 12;
+		Item.useAnimation = 10;
 		Item.useTime = 12;
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.knockBack = 4.5f;
@@ -35,6 +34,7 @@ public sealed class Vulcano : BaseItem {
 		Item.UseSound = SoundID.Item5;
 		Item.useAmmo = AmmoID.Arrow;
 		Item.noMelee = true;
+		Item.useLimitPerAnimation = 1;
 	}
 	public override bool CanUseItem(Player player) {
 		if (!Main.projectile.Any(n => n.active && n.owner == player.whoAmI && n.type == ModContent.ProjectileType<VulcanoBowProj>())) {
@@ -46,7 +46,7 @@ public sealed class Vulcano : BaseItem {
 		if (!Main.projectile.Any(n => n.active && n.owner == player.whoAmI && n.type == ModContent.ProjectileType<VulcanoBowProj>())) {
 			shoot++;
 			if (shoot >= 5) {
-				Projectile.NewProjectile(source, position, velocity, ModContent.ProjectileType<VulcanoBowProj>(), damage, knockback, player.whoAmI);
+				Projectile.NewProjectile(source, position - new Vector2(0, 15), velocity, ModContent.ProjectileType<VulcanoBowProj>(), damage, knockback, player.whoAmI);
 				shoot = 0;
 				Item.useStyle = ItemUseStyleID.Shoot;
 				Item.noUseGraphic = true;
@@ -59,7 +59,7 @@ public sealed class Vulcano : BaseItem {
 				Projectile.NewProjectile(source, position, velocity, ModContent.ProjectileType<VulcanoArrow>(), damage, knockback, player.whoAmI);
 				Item.useStyle = ItemUseStyleID.Shoot;
 				Item.noUseGraphic = false;
-				
+
 				if (shoot == 4) {
 					Item.UseSound = null;
 					Item.useAmmo = AmmoID.None;
@@ -77,30 +77,40 @@ public sealed class Vulcano : BaseItem {
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 	}
+}
 	public sealed class VulcanoBowProj : ModProjectile {
-		public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/Vulcano";
+		public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/VulcanoProjectile";
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 8;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 1;
 		}
 		public override void SetDefaults() {
-			Projectile.width = 28;
-			Projectile.height = 70;
+			Projectile.width = 70;
+			Projectile.height = 28;
 			Projectile.hostile = false;
 			Projectile.friendly = true;
 			Projectile.ignoreWater = true;
-			Projectile.aiStyle = 2;
-			AIType = ProjectileID.WoodenArrowFriendly;
 			Projectile.tileCollide = true;
 			Projectile.penetrate = -1;
 		}
 		public override void AI() {
+		Projectile.rotation = Projectile.velocity.ToRotation() - MathHelper.ToRadians(90);
+			Projectile.ai[0]++;
 			if (Projectile.ai[0] < 20) {
 				if (Projectile.ai[0] % 2 == 1) {
-					Projectile.tileCollide = !Projectile.tileCollide;
+					Projectile.velocity.Y += 1;
 				}
-				Main.player[Projectile.owner].SetCompositeArmFront(true, Player.CompositeArmStretchAmount.Full, MathHelper.ToRadians(120 + (Projectile.ai[0] * (10f + Projectile.ai[1]))));
-				Projectile.ai[1] += 0.4f;
+				if (Projectile.ai[0] < 10)
+				{
+					if (Main.player[Projectile.owner].direction == 1)
+					{
+						Main.player[Projectile.owner].SetCompositeArmFront(true, Player.CompositeArmStretchAmount.Full, MathHelper.ToRadians(120 + (Projectile.ai[0] * (21 - Projectile.ai[1]))));
+					}
+					if (Main.player[Projectile.owner].direction == -1)
+					{
+						Main.player[Projectile.owner].SetCompositeArmFront(true, Player.CompositeArmStretchAmount.Full, MathHelper.ToRadians(300 - (Projectile.ai[0] * (21 - Projectile.ai[1]))));
+					}
+				}
 			}
 			if (Projectile.ai[0] == 41) {
 			FadingParticle flameParticle = ParticleOrchestrator._poolFading.RequestParticle();
@@ -117,10 +127,13 @@ public sealed class Vulcano : BaseItem {
 			}
 			
 			Lighting.AddLight(Projectile.Center, new Vector3(1, 0.65f, 0.25f));
+			if (Projectile.ai[0] == 10)
+			{
+			}
 			if (Projectile.ai[0] > 40 && Projectile.ai[0] < 110) {
 				Projectile.velocity = ((Projectile.velocity * 4) + Vector2.Zero) / 53;
-				if (Projectile.ai[0] > 50) {
-					Projectile.rotation = MathHelper.ToRadians(-90);
+				if (Projectile.ai[0] > 47) {
+					Projectile.rotation = MathHelper.ToRadians(-180);
 				}
 
 				if (Projectile.ai[0] > 50) {
@@ -148,11 +161,12 @@ public sealed class Vulcano : BaseItem {
 			}
 		}
 		public override bool OnTileCollide(Vector2 oldVelocity) {
-			Projectile.velocity *= -0.9f;
-			return false;
+            Projectile.Center -= Projectile.velocity * 2;
+            Projectile.velocity *= -1;
+            return false;
 		}
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
-			if (Projectile.ai[0] < 120) {
+			if (Projectile.ai[0] < 110) {
 				Projectile.velocity *= -1.5f;
 			}
 			
@@ -162,7 +176,16 @@ public sealed class Vulcano : BaseItem {
 
 		public override void Kill(int timeLeft) {
 			SoundEngine.PlaySound(SoundID.MaxMana, Projectile.position);
-		}
+			if (Projectile.owner == Main.myPlayer)
+			{
+                for (int i = 0; i < 5; i++)
+                {
+                    Dust d = Dust.NewDustPerfect(Main.LocalPlayer.Top - new Vector2(Main.rand.Next(-6,6), Main.rand.Next(-32,-20)), DustID.ManaRegeneration, Vector2.Zero, 125, Scale: 1.5f);
+                    d.noGravity = true;
+                }
+            }
+
+        }
 
 		public override bool PreDraw(ref Color lightColor) {
 			Main.instance.LoadProjectile(Projectile.type);
@@ -171,94 +194,102 @@ public sealed class Vulcano : BaseItem {
 			for (int k = 0; k < Projectile.oldPos.Length; k++) {
 				Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
 				Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
-				Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
+				Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.FlipVertically, 0);
 			}
-			return true;
+			return false;
 		}
-	}
+        public override void PostDraw(Color lightColor)
+        {
+			Main.EntitySpriteDraw(TextureAssets.Projectile[Projectile.type].Value, Projectile.Center, null, Color.White, Projectile.rotation, Vector2.Zero, Projectile.scale, SpriteEffects.FlipVertically, 0);;
+    }
 
-	public sealed class VulcanoArrow : ModProjectile {
-		public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/VulcanoArrow";
-		public override void SetStaticDefaults() {
-			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 8;
-			ProjectileID.Sets.TrailingMode[Projectile.type] = 3;
-		}
-		public override void SetDefaults() {
-			Projectile.width = 22;
-			Projectile.height = 46;
-			Projectile.hostile = false;
-			Projectile.friendly = true;
-			Projectile.aiStyle = 1;
-			AIType = ProjectileID.WoodenArrowFriendly;
-			Projectile.ignoreWater = false; // because it's a fire arrow
-			Projectile.tileCollide = true;
-			Projectile.penetrate = 5;
-		}
-
-		public override void AI() {
-			Lighting.AddLight(Projectile.Center, new Vector3(1, 0.25f, 0.1f));
-			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.FlameBurst, 0f, 0f, 0, default, 0.8f);
-			Main.dust[dust].velocity *= 1.5f;
-			Main.dust[dust].noGravity = true;
-			if (Projectile.timeLeft <= 5) {
-				Projectile.velocity = Vector2.Zero;
+		public sealed class VulcanoArrow : ModProjectile
+		{
+			public sealed override string Texture => "CascadeMod/Assets/Weapons/Ranged/VulcanoArrow";
+			public override void SetStaticDefaults()
+			{
+				ProjectileID.Sets.TrailCacheLength[Projectile.type] = 8;
+				ProjectileID.Sets.TrailingMode[Projectile.type] = 3;
 			}
-		}
-		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
-			target.AddBuff(BuffID.OnFire, 300); // 5 seconds
-		}
-		public override bool PreDraw(ref Color lightColor) {
-			Main.instance.LoadProjectile(Projectile.type);
-			Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
-
-			Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
-			for (int k = 0; k < Projectile.oldPos.Length; k++) {
-				Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
-				Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
-				Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
+			public override void SetDefaults()
+			{
+				Projectile.width = 26;
+				Projectile.height = 22;
+				Projectile.hostile = false;
+				Projectile.friendly = true;
+				Projectile.aiStyle = 1;
+				AIType = ProjectileID.WoodenArrowFriendly;
+				Projectile.ignoreWater = false; // because it's a fire arrow
+				Projectile.tileCollide = true;
+				Projectile.penetrate = 5;
 			}
-			
-			return true;
-		}
-		public override void Kill(int timeLeft) {
-			SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode, Projectile.position);
-			FadingParticle flameParticle = ParticleOrchestrator._poolFading.RequestParticle();
-			flameParticle.SetBasicInfo(TextureAssets.Projectile[540], new Rectangle?(), Vector2.Zero, Projectile.Center + (Projectile.velocity.SafeNormalize(Vector2.Zero) * 10));
-			flameParticle.SetTypeInfo(10);
-			flameParticle.Rotation = Projectile.rotation + 1.5708f;
-			flameParticle.FadeInNormalizedTime = 0.0025f;
-			flameParticle.FadeOutNormalizedTime = 0.125f;
-			flameParticle.ScaleAcceleration = Vector2.One * -0.01666667f / 2;
-			flameParticle.Scale = new Vector2(0.2f, 0.2f);
-			flameParticle.ColorTint = new Color(1, 0.25f, 0.15f);
-			flameParticle.ScaleVelocity = new Vector2(0.3f, 0.3f);
-			flameParticle._texture = TextureAssets.Projectile[540];
-			Main.ParticleSystem_World_OverPlayers.Add(flameParticle);
-		}
-		public override bool OnTileCollide(Vector2 oldVelocity) {
-			for (int i = 0; i < 5; i++) {
-				int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.FlameBurst, 0f, 0f, 0, default, 0.8f);
+
+			public override void AI()
+			{
+				Lighting.AddLight(Projectile.Center, new Vector3(1, 0.25f, 0.1f));
+				int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.FlameBurst, Main.rand.Next(-1, 1), Main.rand.Next(-1, 1), 0, default, 0.8f);
+				Main.dust[dust].velocity *= 1.5f;
 				Main.dust[dust].noGravity = true;
 			}
-			SoundEngine.PlaySound(SoundID.DD2_GoblinBomb, Projectile.position);
-			FadingParticle flameParticle = ParticleOrchestrator._poolFading.RequestParticle();
-			flameParticle.SetBasicInfo(TextureAssets.Projectile[540], new Rectangle?(), Vector2.Zero, Projectile.Center + (Projectile.velocity.SafeNormalize(Vector2.Zero) * 10) );
-			flameParticle.SetTypeInfo(10);
-			flameParticle.Rotation = Projectile.rotation + 1.5708f;
-			flameParticle.FadeInNormalizedTime = 0.0025f;
-			flameParticle.FadeOutNormalizedTime = 0.125f;
-			flameParticle.ScaleAcceleration = Vector2.One * -0.01666667f / 2;
-			flameParticle.Scale = new Vector2(0.2f, 0.2f);
-			flameParticle.ColorTint = new Color(1, 0.25f, 0.15f);
-			flameParticle.ScaleVelocity = new Vector2(0.3f, 0.3f);
-			flameParticle._texture = TextureAssets.Projectile[540];
-			Main.ParticleSystem_World_OverPlayers.Add(flameParticle);
-			Projectile.timeLeft = 5;
-			Projectile.tileCollide = false;
-			return false;
+			public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+			{
+				target.AddBuff(BuffID.OnFire, 300); // 5 seconds
+			}
+			public override bool PreDraw(ref Color lightColor)
+			{
+				Main.instance.LoadProjectile(Projectile.type);
+				Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
 
+				Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
+				for (int k = 0; k < Projectile.oldPos.Length; k++)
+				{
+					Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+					Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+					Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
+				}
+
+				return true;
+			}
+			public override void Kill(int timeLeft)
+			{
+				SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode, Projectile.position);
+				FadingParticle flameParticle = ParticleOrchestrator._poolFading.RequestParticle();
+				flameParticle.SetBasicInfo(TextureAssets.Projectile[540], new Rectangle?(), Vector2.Zero, Projectile.Center + (Projectile.velocity.SafeNormalize(Vector2.Zero) * 10));
+				flameParticle.SetTypeInfo(10);
+				flameParticle.Rotation = Projectile.rotation + 1.5708f;
+				flameParticle.FadeInNormalizedTime = 0.0025f;
+				flameParticle.FadeOutNormalizedTime = 0.125f;
+				flameParticle.ScaleAcceleration = Vector2.One * -0.01666667f / 2;
+				flameParticle.Scale = new Vector2(0.2f, 0.2f);
+				flameParticle.ColorTint = new Color(1, 0.25f, 0.15f);
+				flameParticle.ScaleVelocity = new Vector2(0.3f, 0.3f);
+				flameParticle._texture = TextureAssets.Projectile[540];
+				Main.ParticleSystem_World_OverPlayers.Add(flameParticle);
+			}
+			public override bool OnTileCollide(Vector2 oldVelocity)
+			{
+				for (int i = 0; i < 5; i++)
+				{
+					int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.FlameBurst, 0f, 0f, 0, default, 0.8f);
+					Main.dust[dust].noGravity = true;
+				}
+				SoundEngine.PlaySound(SoundID.DD2_GoblinBomb, Projectile.position);
+				FadingParticle flameParticle = ParticleOrchestrator._poolFading.RequestParticle();
+				flameParticle.SetBasicInfo(TextureAssets.Projectile[540], new Rectangle?(), Vector2.Zero, Projectile.Center + (Projectile.velocity.SafeNormalize(Vector2.Zero) * 10));
+				flameParticle.SetTypeInfo(10);
+				flameParticle.Rotation = Projectile.rotation + 1.5708f;
+				flameParticle.FadeInNormalizedTime = 0.0025f;
+				flameParticle.FadeOutNormalizedTime = 0.125f;
+				flameParticle.ScaleAcceleration = Vector2.One * -0.01666667f / 2;
+				flameParticle.Scale = new Vector2(0.2f, 0.2f);
+				flameParticle.ColorTint = new Color(1, 0.25f, 0.15f);
+				flameParticle.ScaleVelocity = new Vector2(0.3f, 0.3f);
+				flameParticle._texture = TextureAssets.Projectile[540];
+				Main.ParticleSystem_World_OverPlayers.Add(flameParticle);
+				return true;
+
+			}
 		}
-
 		public sealed class VulcanoHomingArrow : ModProjectile {
 			public sealed override string Texture => "CascadeMod/Assets/Textures/Glow";
 			public override void SetStaticDefaults() {
@@ -360,7 +391,7 @@ public sealed class Vulcano : BaseItem {
 				flameParticle.SetTypeInfo(10);
 				flameParticle.FadeInNormalizedTime = 0.0005f;
 				flameParticle.FadeOutNormalizedTime = 0.05f;
-				flameParticle.ScaleAcceleration = Vector2.One * -0.01666667f / 2;
+				flameParticle.ScaleAcceleration = Vector2.One * -0.01666667f / 2; 
 				flameParticle.Scale = new Vector2(0.05f, 0.05f);
 				flameParticle.ColorTint = new Color(1, 0.55f, 0.15f);
 				flameParticle.ScaleVelocity = new Vector2(0.3f, 0.3f);
@@ -384,4 +415,3 @@ public sealed class Vulcano : BaseItem {
 			}
 		}
 	}
-}

@@ -16,14 +16,14 @@ Mods: {
 				DisplayName: Magnetyczne Dynamo
 				/* Tooltip:
 					'''
-					Makes you attack faster but at the cost of some damage
-					Increases attack speed by 12% and decreases damage by 6%
+					Makes you attack faster but at the cost of some damage.
+					Increases attack speed by 12% and decreases damage by 6%.
 					''' */
 			}
 
 			ManaNecklace: {
 				DisplayName: Naszyjnik Many
-				// Tooltip: Effects of the Mana Regeneration Band and Mana Flower
+				// Tooltip: Effects of the Mana Regeneration Band and Mana Flower.
 			}
 
 			ArcaneLens: {
@@ -75,8 +75,8 @@ Mods: {
 				DisplayName: Kwitnący Pogromca
 				/* Tooltip:
 					'''
-					Wielded by the purest of warriors 
-					Has a chance to inflict poison for a short duration when hitting an enemy
+					Wielded by the purest of warriors.
+					Has a chance to inflict poison for a short duration when hitting an enemy.
 					''' */
 			}
 
@@ -90,9 +90,14 @@ Mods: {
 				// Tooltip: ""
 			}
 
+			ForgedFury: {
+				DisplayName: Wykuta Furia
+				// Tooltip: ""
+			}
+
 			EmpyrealStaff: {
 				DisplayName: Różdżka Empirejska
-				// Tooltip: Creates starlight at your cursor
+				// Tooltip: Creates starlight at your cursor.
 			}
 
 			Esther: {
@@ -103,15 +108,6 @@ Mods: {
 			FireStormSlasher: {
 				DisplayName: Rzeźnik Ognistej Burzy
 				// Tooltip: Upon hitting an enemy they explode dealing 2 times more damage than the sword itself.
-			}
-
-			ForgedFury: {
-				DisplayName: Wykuta Furia
-				/* Tooltip:
-					'''
-					Turns arrows into flaming arrows.
-					Turns flaming arrows into fury arrows.
-					''' */
 			}
 
 			GoldenReckage: {
@@ -202,15 +198,6 @@ Mods: {
 					'''
 					Shoot in a 3 shot rapid burst.
 					Turns arrows into Phoenix arrows.
-					''' */
-			}
-
-			Vulcano: {
-				DisplayName: Wulkan
-				/* Tooltip:
-					'''
-					Rain arrows from the sky!
-					Turns most arrows into lava
 					''' */
 			}
 
@@ -321,6 +308,11 @@ Mods: {
 
 			CopperTrumpet: {
 				// DisplayName: Copper Trumpet
+				// Tooltip: ""
+			}
+
+			Vulcano: {
+				DisplayName: Wulkan
 				// Tooltip: ""
 			}
 
@@ -599,6 +591,16 @@ Mods: {
 					// Tooltip: ""
 				}
 			}
+
+			FloraGaleStaff: {
+				// DisplayName: Flora Gale Staff
+				// Tooltip: ""
+			}
+
+			SludgeSlider: {
+				// DisplayName: Sludge Slider
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -650,6 +652,9 @@ Mods: {
 			// FloraLeaf.DisplayName: Flora Leaf
 			// FoulArrow.DisplayName: Foul Arrow
 			// SludgeSliderProjectile.DisplayName: Sludge Slider Projectile
+			// ForgedFuryBowProj.DisplayName: Forged Fury Bow Proj
+			// ForgedFuryArrow.DisplayName: Forged Fury Arrow
+			// ForgedFuryFireBall.DisplayName: Forged Fury Fire Ball
 		}
 
 		NPCs: {

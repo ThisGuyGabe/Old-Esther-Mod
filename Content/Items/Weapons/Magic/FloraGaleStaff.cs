@@ -1,4 +1,3 @@
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Magic;
 
-public sealed class FloraGaleStaff : BaseItem {
+public sealed class FloraGaleStaff : ModItem {
 	public sealed override string Texture => "CascadeMod/Assets/Weapons/Magic/FloraGaleStaff";
 
 	public override void SetStaticDefaults() {
@@ -19,12 +18,14 @@ public sealed class FloraGaleStaff : BaseItem {
 		Item.DefaultToStaff(ModContent.ProjectileType<FloraGale>(), 5f, 25, 8);
 		Item.width = 40;
 		Item.height = 52;
+		Item.rare = ItemRarityID.Green;
 	}
 
 	public override void AddRecipes() {
 		CreateRecipe()
 			.AddIngredient(ItemID.RichMahogany, 15)
-			.AddIngredient(ItemID.JungleSpores, 3)
+			.AddIngredient(ItemID.JungleSpores, 6)
+			.AddIngredient(ItemID.Stinger, 3)
 			.AddTile(TileID.Anvils)
 			.Register();
 	}
@@ -110,7 +111,7 @@ public sealed class FloraGale : ModProjectile {
 	public sealed override string Texture => "CascadeMod/Assets/Weapons/Magic/FloraGale";
 	public override void SetDefaults() {
 		Projectile.width = 30;
-		Projectile.height = 30;
+		Projectile.height = 32;
 
 		Projectile.hostile = false;
 		Projectile.friendly = false;

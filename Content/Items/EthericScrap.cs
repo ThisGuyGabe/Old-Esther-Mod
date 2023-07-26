@@ -1,10 +1,10 @@
-﻿using CascadeMod.Core;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items;
 
-public sealed class EthericScrap : BaseItem {
+public sealed class EthericScrap : ModItem {
 	public override void SetDefaults() {
 		Item.width = 22;
 		Item.height = 32;

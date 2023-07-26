@@ -1,6 +1,5 @@
 using CascadeMod.Common;
 using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Melee;
 
-public sealed class GoldenReckage : BaseItem {
+public sealed class GoldenReckage : ModItem {
 	public override void SetDefaults() {
 		Item.damage = 29;
 		Item.DamageType = DamageClass.Melee;
@@ -20,7 +19,7 @@ public sealed class GoldenReckage : BaseItem {
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.knockBack = 2;
 		Item.value = Item.sellPrice(gold: 1, silver: 30);
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Orange;
 		Item.UseSound = SoundID.Item1;
 		Item.noUseGraphic = true;
 		Item.shoot = ModContent.ProjectileType<GoldenReckageProjectile>();

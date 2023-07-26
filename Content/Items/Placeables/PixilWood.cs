@@ -1,12 +1,11 @@
 using CascadeMod.Content.Tiles;
-using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Placeables;
 
-public sealed class PixilWood : BaseItem {
+public sealed class PixilWood : ModItem {
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 100;
 	}

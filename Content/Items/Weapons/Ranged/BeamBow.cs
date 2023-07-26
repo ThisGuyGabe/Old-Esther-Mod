@@ -1,12 +1,11 @@
-﻿using CascadeMod.Core;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Ranged;
 
-public sealed class BeamBow : BaseItem {
+public sealed class BeamBow : ModItem {
 	public override void SetDefaults() {
 		Item.width = 22;
 		Item.height = 34;

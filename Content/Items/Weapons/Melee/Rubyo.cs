@@ -1,12 +1,11 @@
 ﻿using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Melee;
 
-public sealed class Rubyo : BaseItem {
+public sealed class Rubyo : ModItem {
 	public override void SetStaticDefaults() {
 		ItemID.Sets.Yoyo[Item.type] = true;
 	}

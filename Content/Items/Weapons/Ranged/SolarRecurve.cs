@@ -1,5 +1,4 @@
-﻿using CascadeMod.Core;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -7,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Ranged;
 
-public sealed class SolarRecurve : BaseItem {
+public sealed class SolarRecurve : ModItem {
 	private int amountshot = 2;
 
 	public override void SetDefaults() {

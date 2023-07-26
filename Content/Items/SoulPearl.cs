@@ -1,10 +1,10 @@
-using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items;
 
-public sealed class SoulPearl : BaseItem {
+public sealed class SoulPearl : ModItem {
 	public override void SetStaticDefaults() {
 		Item.ResearchUnlockCount = 25;
 	}
@@ -12,7 +12,7 @@ public sealed class SoulPearl : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 22;
 		Item.height = 34;
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Orange;
 		Item.maxStack = Item.CommonMaxStack;
 		Item.value = Item.sellPrice(silver: 12);
 	}

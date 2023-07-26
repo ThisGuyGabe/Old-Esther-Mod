@@ -1,5 +1,4 @@
 ﻿using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Melee;
 
-public sealed class SoulSlaughter : BaseItem {
+public sealed class SoulSlaughter : ModItem {
 	public override void SetDefaults() {
 		Item.width = 32;
 		Item.height = 22;
@@ -22,7 +21,7 @@ public sealed class SoulSlaughter : BaseItem {
 		Item.knockBack = 5;
 		Item.noUseGraphic = true;
 		Item.value = Item.sellPrice(gold: 2, silver: 86);
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Orange;
 		Item.UseSound = SoundID.Item1;
 	}
 

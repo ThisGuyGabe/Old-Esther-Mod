@@ -1,4 +1,3 @@
-using CascadeMod.Core;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -6,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Accessories;
 
-public sealed class MagneticDynamo : BaseItem {
+public sealed class MagneticDynamo : ModItem {
 	public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(12, 6);
 
 	public override void SetStaticDefaults() {
@@ -16,7 +15,7 @@ public sealed class MagneticDynamo : BaseItem {
 	public override void SetDefaults() {
 		Item.width = 34;
 		Item.height = 30;
-		Item.rare = ItemRarityID.Green;
+		Item.rare = ItemRarityID.Orange;
 
 		Item.accessory = true;
 		Item.value = Item.sellPrice(gold: 2, silver: 32);

@@ -1,5 +1,4 @@
 ﻿using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Magic;
 
-public sealed class EthericalChant : BaseItem {
+public sealed class EthericalChant : ModItem {
 	public override void SetDefaults() {
 		Item.width = 30;
 		Item.height = 36;
@@ -35,5 +34,12 @@ public sealed class EthericalChant : BaseItem {
 			Projectile.NewProjectile(source, position, newVelocity, type, damage, knockback, player.whoAmI);
 		}
 		return false;
+	}
+	public override void AddRecipes() {
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<EthericScrap>(), 4)
+			.AddIngredient(ItemID.Sapphire, 2)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

@@ -50,12 +50,6 @@ public class SpiritualConstruct : BaseNPC
 		Player target = Main.player[NPC.target];
 		Vector2 ToPlayer = NPC.DirectionTo(target.Center) * 3;
 		NPC.velocity = ToPlayer;
-
-		NPC.ai[0] += 1f;
-		if (NPC.ai[0] >= 30f) 
-		{
-			Projectile.NewProjectile(NPC.GetSource_FromAI(), target.Center, target.Center, ProjectileID.TerraBeam, 0, 0f, Main.myPlayer);
-		}
 	}
 
 	public override void ModifyNPCLoot(NPCLoot npcLoot) {
