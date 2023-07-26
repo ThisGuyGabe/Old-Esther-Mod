@@ -297,11 +297,9 @@ Mods: {
 			TheSoul: {
 				Tooltip:
 					'''
-					Increases damage by 4%. 
-					Decreases damage reduction by 5%.
-					Increases max life by 50.
-					Gives a jump boost.
-					Increases attack speed by 5%.
+					Increases damage by 4%. and Decreases damage reduction by 5%.
+					Also Increases max life by 50.
+					Gives a jump boost, Increases attack speed by 5%.
 					And decreases defense by 6.
 					'''
 				DisplayName: The Soul
@@ -372,12 +370,12 @@ Mods: {
 
 			StellarSlasher: {
 				DisplayName: Stellar Slasher
-				Tooltip: Send your foes to space, amd your fruits.
+				Tooltip: Send your foes to space, and your fruits.
 			}
 
 			CactusBow: {
 				DisplayName: Cactus Bow
-				Tooltip: Is this a Joost Mod Reference
+				Tooltip: Is this a Joost Mod Reference?
 			}
 
 			Fishtol: {
@@ -387,7 +385,11 @@ Mods: {
 
 			Glockinator: {
 				DisplayName: The Glockinator
-				Tooltip: ""
+				Tooltip:
+					'''
+					What is this tomfoolery, I wanted a ranged weapon!
+					You can only summon one.
+					'''
 			}
 
 			Weapons: {

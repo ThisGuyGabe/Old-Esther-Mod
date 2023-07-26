@@ -5,18 +5,17 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
-using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Ranged
 {
-    public class Fishtol : BaseItem
+    public class Fishtol : ModItem
     {
         public override void SetDefaults()
         {
             Item.damage = 18;
             Item.DamageType = DamageClass.Ranged;
-            Item.width = 20;
-            Item.height = 38;
+            Item.width = 42;
+            Item.height = 20;
             Item.useTime = 21;
             Item.useAnimation = 21;
             Item.useStyle = ItemUseStyleID.Shoot;

@@ -17,6 +17,8 @@ public sealed class FloraGaleStaff : BaseItem {
 	public override void SetDefaults() {
 		Item.damage = 7;
 		Item.DefaultToStaff(ModContent.ProjectileType<FloraGale>(), 5f, 25, 8);
+		Item.width = 40;
+		Item.height = 52;
 	}
 
 	public override void AddRecipes() {

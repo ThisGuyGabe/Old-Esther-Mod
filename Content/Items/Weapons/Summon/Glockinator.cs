@@ -5,11 +5,10 @@ using Terraria;
 using Microsoft.Xna.Framework;
 using CascadeMod.Content.Buffs;
 using CascadeMod.Content.Projectiles.Summon;
-using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Summon
 {
-    public class Glockinator : BaseItem
+    public class Glockinator : ModItem
     {
         public override void SetStaticDefaults()
         {

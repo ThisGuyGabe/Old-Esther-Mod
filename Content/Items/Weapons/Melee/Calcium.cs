@@ -6,11 +6,10 @@ using Terraria.Audio;
 using System.Linq;
 using Terraria.DataStructures;
 using Terraria.GameContent.Drawing;
-using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Melee;
 
-public class Calcium : BaseItem
+public class Calcium : ModItem
 {
     public override void SetDefaults()
     {

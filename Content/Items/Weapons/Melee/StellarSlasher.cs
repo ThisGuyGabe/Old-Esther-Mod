@@ -6,18 +6,17 @@ using Microsoft.Xna.Framework;
 using CascadeMod.Content.Dusts;
 using System;
 using static Terraria.NPC;
-using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Melee
 {
-    public class StellarSlasher : BaseItem
+    public class StellarSlasher : ModItem
     {
         public override void SetDefaults()
         {
             Item.damage = 14;
             Item.DamageType = DamageClass.Melee;
-            Item.width = 40;
-            Item.height = 40;
+            Item.width = 56;
+            Item.height = 56;
             Item.useTime = 31;
             Item.useAnimation = 31;
             Item.useStyle = ItemUseStyleID.Swing;

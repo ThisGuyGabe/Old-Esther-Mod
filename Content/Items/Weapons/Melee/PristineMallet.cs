@@ -4,11 +4,10 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
 using CascadeMod.Content.Projectiles;
-using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Melee
 {
-    public class PristineMallet : BaseItem
+    public class PristineMallet : ModItem
     {
         public override void SetDefaults()
         {

@@ -1,11 +1,10 @@
-﻿using CascadeMod.Core;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CascadeMod.Content.Items.Weapons.Ranged
 {
-	public class CactusBow : BaseItem
+	public class CactusBow : ModItem
 	{
 		public override void SetDefaults()
 		{

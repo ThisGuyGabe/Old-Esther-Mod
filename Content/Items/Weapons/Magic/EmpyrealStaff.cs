@@ -5,11 +5,10 @@ using CascadeMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.Linq;
-using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Magic
 {
-    public class EmpyrealStaff : BaseItem
+    public class EmpyrealStaff : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -20,8 +19,8 @@ namespace CascadeMod.Content.Items.Weapons.Magic
         {
             Item.damage = 15;
             Item.DamageType = DamageClass.Magic;
-            Item.width = 20;
-            Item.height = 38;
+            Item.width = 46;
+            Item.height = 46;
             Item.useTime = 25;
             Item.useAnimation = 25;
             Item.mana = 4;

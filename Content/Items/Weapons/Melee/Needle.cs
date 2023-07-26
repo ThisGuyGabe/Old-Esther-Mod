@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CascadeMod.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,10 +9,11 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CascadeMod.Core;
 
 namespace CascadeMod.Content.Items.Weapons.Melee;
 
-public sealed class Needle : BaseItem {
+public sealed class Needle : ModItem {
 	public override void SetDefaults() {
 		Item.damage = 25;
 		Item.DamageType = DamageClass.Melee;
