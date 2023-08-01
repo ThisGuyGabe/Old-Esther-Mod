@@ -70,10 +70,9 @@ public sealed class Vulcano : ModItem {
 	}
 	public override void AddRecipes() {
 		CreateRecipe()
-			.AddIngredient(ItemID.SoulofFright, 10)
 			.AddIngredient<ForgedFury>()
-			.AddIngredient(ModContent.ItemType<ForgedFury>(), 1)
-			.AddIngredient(ItemID.HallowedBar, 20)
+			.AddIngredient(ItemID.ChlorophyteBar, 12)
+			.AddIngredient(ItemID.SoulofFright, 10)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();
 	}
