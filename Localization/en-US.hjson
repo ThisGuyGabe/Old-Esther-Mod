@@ -68,7 +68,7 @@ Mods: {
 
 			BeamBow: {
 				DisplayName: Beam Bow
-				Tooltip: Converts ALL arrows to lazers, and it seems its bugged.
+				Tooltip: Converts ALL arrows to lazers.
 			}
 
 			BloomingBane: {
@@ -92,7 +92,7 @@ Mods: {
 
 			ForgedFury: {
 				DisplayName: Forged Fury
-				Tooltip: ""
+				Tooltip: This bow has a mind of its own.
 			}
 
 			EmpyrealStaff: {
@@ -313,7 +313,7 @@ Mods: {
 
 			Vulcano: {
 				DisplayName: Vulcano
-				Tooltip: ""
+				Tooltip: Who needs to shoot a bow when they can throw it?
 			}
 
 			FlaxenMoss: {
