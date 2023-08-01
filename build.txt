@@ -1,10 +1,5 @@
 displayName = The Cascade Mod
 author = The Cascade Mod Team
 version = 0.2
-
-hideCode = true
-includePDB = true
-hideResources = false
-includeSource = false
-
 homepage = https://discord.gg/j9gbbXaUQ5
+hideCode = true

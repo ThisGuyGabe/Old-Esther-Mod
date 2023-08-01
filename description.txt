@@ -1,18 +1,20 @@
-The Esther Mod is a mod that adds weapons we plan to add some custom biomes multiple bosses and much more.
-Currently there is some hardmode, prehardmode and even Endgame weapons.
+This is a beta build of The Cascade Mod, currently it adds a few enemys and a bunch of interesting weapons as well as an NPC.
+The NPC has a quest system where you get loot for doing things. 
+Quests are still being worked on so don't worry about how they suddenly cut off. 
 
-
-
-
-Thank you to the Esther Mod Team
 
 Credits
-Karve - Musician and Occasional Coder
-Mati - Spriter
-Torrah - Spriter
-ThatGuyGabe - Coder
-Graydee - Spriter and Occasional Coder
+Karve - Coder, Musician, and Owner
+ThatGuyGabe - Coder and Owner
+Stranza - Coder
+Mati - Spriter and Ex-Co Owner
 PashaVerti - Spriter
-God of Bird - Spriter
-DapCuber - Tester
+CloverUnlucky - Spriter
+LuckyCat - Spriter
+Torrah - Contributor
+P3XY7 - Musician
+Mumb - Musician
 
+Our Previous Devs
+Graydee - Spriter and made Needle
+BasicallyIAmALittleCat - Coder and did all of the quest system with the npc
