@@ -10,8 +10,8 @@ public sealed class SolarRecurve : ModItem {
 	private int amountshot = 2;
 
 	public override void SetDefaults() {
-		Item.width = 22;
-		Item.height = 34;
+		Item.width = 38;
+		Item.height = 74;
 		Item.rare = ItemRarityID.Green;
 		Item.damage = 8;
 		Item.knockBack = 2f;

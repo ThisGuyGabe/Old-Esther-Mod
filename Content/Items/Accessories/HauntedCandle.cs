@@ -51,8 +51,7 @@ public sealed class HauntedCandle : ModItem {
 		CreateRecipe()
 			.AddIngredient<SoulPebble>(10)
 			.AddIngredient<SoulPearl>()
-			.AddIngredient(ItemID.TinkerersWorkshop)
-			.AddTile(TileID.Anvils)
+			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 	}
 }

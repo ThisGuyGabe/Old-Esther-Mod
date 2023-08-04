@@ -85,7 +85,7 @@ public sealed class ForgedFury : ModItem
             .AddIngredient(ItemID.Obsidian, 15)
             .AddIngredient(ItemID.HellstoneBar, 15)
 			.AddIngredient(ItemID.SoulofNight, 10)
-			.AddTile(TileID.Anvils)
+			.AddTile(TileID.MythrilAnvil)
             .Register();
 
         CreateRecipe()
