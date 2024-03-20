@@ -12,7 +12,7 @@ Credits
 Karve - Coder, Musician, and Owner
 ThatGuyGabe - Coder and Owner
 Stranza - Coder
-Mati - Spriter and Ex-Co Owner
+Mati - Spriter and Ex Creative Director
 PashaVerti - Spriter
 CloverUnlucky - Spriter
 LuckyCat - Spriter
